@@ -197,6 +197,30 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     }
 
+    // Фиксирование сайдбара при скролле
+    // sidebarFixed()
+    function sidebarFixed() {
+        const sidebarContainer = document.querySelector('.aside__body')
+        const sidebar = document.querySelector('.aside__list')
+        const footerHeight = document.querySelector('.footer').scrollHeight
+        console.log(sidebar.offsetTop)
+        console.log(sidebar.clientTop)
+        console.log(sidebar.getBoundingClientRect())
+
+        window.addEventListener('scroll', () => {
+            if (sidebarContainer.getBoundingClientRect().top < 32) {
+                sidebar.classList.add('_fixed')
+            }
+            else {
+                sidebar.classList.remove('_fixed')
+            }
+            console.log(sidebar.getBoundingClientRect().top + pageYOffset)
+            console.log(sidebar.scrollHeight)
+            console.log(sidebar.scrollHeight + sidebar.getBoundingClientRect().top + pageYOffset)
+            console.log(document.documentElement.scrollHeight)
+        })
+    }
+
     accordion()
     function accordion() {
         const accHeaderElems = document.querySelectorAll('.accordion__header')

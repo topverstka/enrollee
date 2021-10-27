@@ -1,4 +1,5 @@
 .aside {
+    min-width: 80px;
     width: 80px;
     min-height: 100%;
     background: #fff;
@@ -12,13 +13,19 @@
 
 .aside__body {
     // overflow-y: auto;
+
 }
 
 .aside__list {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 32px 9px;
+    margin: 32px 9px; 
+
+    &._fixed {
+        position: fixed;
+        top: 0;
+    }
 }
 
 .aside__link {

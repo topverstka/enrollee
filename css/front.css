@@ -1629,6 +1629,7 @@ h2 {
 }
 
 .aside {
+  min-width: 80px;
   width: 80px;
   min-height: 100%;
   background: #fff;
@@ -1657,7 +1658,12 @@ h2 {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 32px 9px;
+  margin: 32px 9px;
+}
+
+.aside__list._fixed {
+  position: fixed;
+  top: 0;
 }
 
 .aside__link {
@@ -2674,7 +2680,7 @@ h2 {
       -ms-transform: translate(0, -100%);
           transform: translate(0, -100%);
   background: #fff;
-  z-index: 3;
+  z-index: 4;
   -webkit-transition: .3s ease-in-out;
   -o-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
