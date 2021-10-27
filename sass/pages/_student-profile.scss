@@ -1,0 +1,230 @@
+.student-profile {
+
+}
+
+.student-profile__body {
+
+}
+
+.student-profile-main {
+    display: flex;
+    // justify-content: space-between;
+
+    @media (max-width: $wwa2 + px) {
+      flex-direction: column;
+    }
+}
+
+.student-profile-main__img {
+    min-width: 260px;
+    width: 260px;
+    height: 260px;
+
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.student-profile-main__info {
+    max-width: 500px;
+    margin: 0 12px 0 96px;
+
+    @media (max-width: $wwa + px) {
+      margin: 0 0 0 40px;
+    }
+
+    @media (max-width: $wwa2 + px) {
+      margin: 20px 0 0 0;
+    }
+}
+
+.student-profile-main__name {
+    font-size: 28px;
+    font-weight: 700;
+
+    @media (max-width: $wwa3 + px) {
+        font-size: 20px;
+    }
+
+    &::after {
+        content: '';
+        width: 26px;
+        height: 26px;
+        background: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13 0C5.83151 0 0 5.83151 0 13C0 20.1685 5.83151 26 13 26C20.1685 26 26 20.1685 26 13C26 5.83151 20.1685 0 13 0Z' fill='%2327B0C7'/%3E%3Cpath d='M19.5888 10.2451L12.5471 17.2866C12.3358 17.4978 12.0585 17.6042 11.7812 17.6042C11.5039 17.6042 11.2266 17.4978 11.0153 17.2866L7.49454 13.7658C7.07083 13.3423 7.07083 12.6576 7.49454 12.2341C7.91804 11.8103 8.6026 11.8103 9.02631 12.2341L11.7812 14.9889L18.057 8.71329C18.4805 8.28958 19.1651 8.28958 19.5888 8.71329C20.0123 9.13679 20.0123 9.82135 19.5888 10.2451Z' fill='%23FAFAFA'/%3E%3C/svg%3E") no-repeat center;
+        background-size: contain;
+        display: inline-block; 
+        margin: 0 0 0 8px;
+        transform: translate(0px, 4px);
+
+        @media (max-width: $wwa3 + px) {
+            width: 20px;
+            height: 20px;
+            transform: translate(0px, 2px);
+        }
+    
+    }
+}
+
+.student-profile-main__text {
+    font-size: 22px;
+    font-weight: 400;
+    margin: 50px 0 0 0;
+
+    @media (max-width: $wwa2 + px) {
+      font-size: 18px;
+      margin: 20px 0 0 0;
+    }
+
+    @media (max-width: px) {
+      
+    }
+}
+
+.student-profile-main__edit {
+    display: flex;
+    height: fit-content;
+    margin: 0 0 0 auto;
+
+    @media (max-width: $wwa2 + px) {
+      display: none;
+    }
+}
+
+.student-profile-main__edit-mobile {
+    display: none;
+
+    @media (max-width: $wwa2 + px) {
+        width: fit-content;
+        display: block;
+        margin: 0 0 16px auto;
+    }
+}
+
+.student-profile-section {
+    padding: 50px 0;
+
+    @media (max-width: $wwa3 + px) {
+      padding: 30px 0;
+
+      & .section-title {
+          justify-content: flex-start;
+      }
+    }
+}
+
+.student-profile-info {
+    padding-top: 0;
+}
+
+.student-profile-section__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 24px;
+    row-gap: 40px;
+    margin: 30px 0 0 0;
+
+    @media (max-width: $wwa3 + px) {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 20px;
+    }
+
+    @media (max-width: 450px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.student-profile-section__block {
+
+}
+
+.student-profile-section__title {
+    font-size: 12px;
+    font-weight: 500;
+    color: #838383;
+    text-transform: none;
+}
+
+.student-profile-section__content {
+    display: flex;
+    align-items: center;
+    margin: 5px 0 0 0;
+}
+
+.student-profile-section__content-icon {
+    min-width: 14px;
+    width: 14px;
+    height: 14px;
+    margin: -4px 5px 0 0;
+
+    & img,
+    & svg {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.student-profile-section__content-text {
+    font-size: 16px;
+}
+
+// Документы
+.student-profile-docs {
+    padding: 50px 0 0 0;
+}
+
+.student-profile-docs__body {
+    margin: 20px 0 0 0;
+}
+
+.student-profile-docs__list {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    column-gap: 30px;
+    row-gap: 16px;
+
+    @media (max-width: $wwa + px) {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    @media (max-width: $wwa2 + px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media (max-width: $wwa3 + px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: 490px) {
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
+}
+
+.student-profile-docs__doc {
+    width: 127px;
+    height: 180px;
+    background: #E5E5E5;
+
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.student-profile-how {
+    padding: 50px 0;
+
+    @media (max-width: $wwa3 + px) {
+      padding: 40px 0;
+    }
+}
+
+.student-profile-how__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 30px 0 0 0;
+}

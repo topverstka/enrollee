@@ -1,0 +1,64 @@
+@import '_interface';
+@import '_grid';
+@import '_section';
+
+
+// Элементы
+@import 'elements/_titles'; 
+@import 'elements/_buttons';
+@import 'elements/_swiper';
+@import 'elements/_student__card'; 
+@import 'elements/_search';
+@import 'elements/_page';
+@import 'elements/_aside';
+@import 'elements/_breadcrumbs';
+@import 'elements/_forms'; 
+@import 'elements/_accordion'; 
+@import 'elements/_filter'; 
+@import 'elements/_estim';
+@import 'elements/_course-card';
+@import 'elements/_review-card';
+
+// Секции
+@import '_header';
+@import 'sections/_popular';
+@import 'sections/_advisor';
+@import 'sections/_works';
+@import 'sections/_about';
+@import 'sections/_students';
+@import 'sections/_rating';
+@import 'sections/_modal';
+
+// Страницы 
+@import 'pages/_main';
+@import 'pages/_help';
+@import 'pages/_faq';
+@import 'pages/_students';
+@import 'pages/_requests';
+@import 'pages/_no-requests';
+@import 'pages/_abit';
+@import 'pages/_abit-edit';
+@import 'pages/_student-profile';
+@import 'pages/_student-profile-edit';
+@import 'pages/_payment';
+@import 'pages/_categories';
+@import 'pages/_universities';
+@import 'pages/_university';
+@import 'pages/_faculty';
+@import 'pages/_404';
+@import 'pages/_login';
+@import 'pages/_signup';
+
+// @import 'sections/_popular-categories';
+// @import 'sections/_find-consultant';
+// @import 'sections/_how-work';
+// @import 'sections/_find-here';
+// @import 'sections/_studenten';
+
+// Страницы
+// @import 'pages/profile_requests';
+
+
+// @import 'all-pages';
+// @import 'modal';
+@import '_footer';

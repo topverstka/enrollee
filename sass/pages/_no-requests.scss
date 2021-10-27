@@ -1,0 +1,34 @@
+.no-requests {
+
+}
+
+.no-requests__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 0 0 0;
+}
+
+.no-requests__img {
+    width: 116px;
+    height: 116px;
+
+    @media (max-width: $wwa3 + px) {
+      width: 66px;
+      height: 66px;
+    }
+
+    & svg {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.no-requests__text {
+    max-width: 410px;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 44px 0 0 0;
+    text-align: center;
+}

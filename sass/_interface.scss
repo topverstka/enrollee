@@ -1,0 +1,138 @@
+@import '_fonts';
+
+// USER VARIABLES SECTION
+$ffMain: 'Maven Pro', sans-serif;
+// $ffHeader: 'PT Sans Narrow', sans-serif;
+
+$minHover: 768; // если хочешь убрать hover на телефонах, укажи - 768px
+$tr: .3s;
+
+// Переменные разрешения экрана (адаптив)
+$wwa: 1200;
+$wwa2: 900;
+$wwa3: 670;
+
+// Переменные цвета
+:root {
+    --main: #152142;
+    --second: #C8C8C8;
+    --accent: #27B0C7;
+    --accent-hover: #212C52;
+    --accent2: #4744E9;
+    --accent2-hover: #4744E9;
+    --outline: #C0C0C0;
+    --bg-light: #F0F7F9;
+    --bg-modal: rgba(0, 0, 0, .5);
+}
+
+$main: var(--main);
+$second: var(--second);
+$accent: var(--accent);
+$accent-hover: var(--accent-hover);
+$accent2: var(--accent2);
+$outline: var(--outline);
+$bg-light: var(--bg-light);
+$bg-modal: var(--bg-modal);
+
+
+@import '_reset';
+
+
+// GENERAL DOCUMENT STYLES
+
+body {
+    color: $main;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.2;
+
+    &._lock {
+        overflow: hidden;
+    }
+
+    @media (max-width: $wwa3 + px) {
+        font-size: 14px;
+    }
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+@import '_grid';
+
+// Для ленивой загрузки изображений
+// img[data-src] {
+//     opacity: 0;
+//     transition: all 0.2s;
+// }
+
+// section {
+//     padding-top: 60px;
+//     padding-bottom: 60px;
+// }
+
+
+
+// .text--success {
+//     font-size: 15px;
+//     text-transform: uppercase;
+//     color: #63CEA1;
+//     font-weight: 600;
+//     margin-left: 20px;
+// }
+
+// .centred--elem {
+//     position: relative;
+//     display: flex;
+//     align-items: center;
+//     flex-direction: column;
+//     justify-content: center;
+//     height: 100%;
+//     min-height: 460px;
+
+//     .page__breadcrumbs {
+//         position: absolute;
+//         top: 60px;
+//     }
+// }
+
+// .blockquote {
+//     background-color: #EFEFEF;
+//     border-left: 4px solid $accent;
+//     width: 100%;
+//     display: block;
+//     margin-left: 0;
+//     padding: 20px 16px;
+//     font-size: 16px;
+//     color: $textcolor;
+//     font-family: 'Roboto-Bold';
+
+//     p {
+//         margin: 0;
+//     }
+// }
+
+// .non--desctop {
+//     display: none;
+// }
+
+// .section-desr {
+//     display: block;
+// }
+
+
+// @media (max-width: 1023px) {
+//     section {
+//         padding: 30px 0;
+//     }
+
+//     .non--desctop {
+//         display: block;
+//     }
+// }

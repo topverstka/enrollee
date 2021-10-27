@@ -1,0 +1,41 @@
+.students-section {
+
+}
+
+.container_students-section {
+    
+    @media (max-width: 900px) {      
+        max-width: none;
+        padding: 0;
+    }
+}
+
+.students__header {
+
+}
+
+.students-title {
+
+}
+
+.students-section__body {
+    margin: 20px 0 0 0;
+}
+
+.students-section-slider {
+    overflow: hidden;
+    padding: 20px 16px;
+
+    & .swiper-wrapper {
+        transition-timing-function: linear;
+    }
+}
+
+.students-section-slide {
+    display: flex;
+    justify-content: center;
+
+    & .student-card {
+        max-width: none;
+    }
+}

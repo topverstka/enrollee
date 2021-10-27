@@ -1,0 +1,638 @@
+.student-card {
+    max-width: 240px;
+    width: 100%;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.25);
+    padding: 12px 18px 30px;
+}
+
+.student-card_main-slider {
+
+    & .estim__rating {
+        display: none;
+    }
+
+    & .estim-like {
+        display: none;
+    }
+
+    & .student-briefly__call {
+        pointer-events: none;
+    }
+}
+
+.student-card_big {
+    padding: 0;
+
+    @media (max-width: $wwa2 + px) {
+      max-width: none;
+    }
+
+    & .student-briefly {
+        width: 25%;
+        position: relative;
+        padding: 7px 21px 20px;
+
+        @media (max-width: $wwa2 + px) {
+            width: 100%;
+        }
+    }
+
+    & .student-about,
+    & .student-message {
+        position: relative;
+        width: 77%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 21px 28px;
+        background: #F0F7F9;
+
+        @media (max-width: $wwa2 + px) {
+            width: 100%;
+        }
+    }
+    
+
+    & .student-message {
+
+        @media (max-width: $wwa3 + px) {
+            position: initial;
+        }
+    }
+
+    @media (min-width: $wwa2 + px) {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        max-width: none;
+        overflow: hidden;
+    
+        & .students-box__phone {
+            display: none;
+        }
+    }
+}
+
+
+// Основная информация о студенте
+.student-briefly__avatar {
+    position: relative;
+    max-width: 142px;
+    margin: 10px auto 0 auto;
+}
+
+.student-briefly__avatar-img {
+    border-radius: 200px;
+    overflow: hidden;
+
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.student-briefly__call {
+    position: absolute;
+    bottom: -8px;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $accent;
+    border-radius: 100px;
+    transition: $tr;
+
+    &:hover {
+        background: $accent-hover;
+    }
+}
+
+.student-briefly__call-icon {
+    width: 22px;
+    height: 22px;
+
+
+    & svg {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.student-briefly__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0 0 0;
+}
+
+.student-briefly__info-title {
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.student-briefly__info-block {
+    display: flex;
+    align-items: center;
+    margin: 10px 0 0 0;
+}
+
+.student-briefly__info-block-icon {
+    width: 14px;
+    height: 14px;
+
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+.student-briefly__info-block-text {
+    font-size: 12px;
+    margin: 0 0 0 5px;
+}
+
+.student-briefly__info-subtitle {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 10px 0 0 0;
+}
+
+
+
+// Подробнее о студенте
+.student-about {
+    display: none;
+}
+
+.student-about__content {
+    text-align: left;
+
+    &:not(:last-child) {
+        margin: 0 0 24px 0;
+    }
+
+    &:last-child {
+        padding: 0 90px 0 0;
+    }
+}
+
+.student-about__title {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0 0 11px 0;
+    text-transform: uppercase;
+}
+
+.student-about__text {
+
+}
+
+.student-abroad {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.student-abroad__title {
+    font-size: 12px;
+    font-weight: 500;
+    color: #838383;
+    margin: 0 0 5px 0;
+}
+
+.student-abroad__item {
+    margin: 6px 0;
+
+    &:not(:last-child) {
+        margin-right: 60px;
+    }
+}
+
+.student-abroad__info {
+    display: flex;
+    align-items: center;
+}
+
+.student-abroad__info-icon {
+    display: flex;
+    width: 14px;
+    height: 14px;
+    margin: 0 5px 0 0;
+
+    & svg {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.student-abroad__info-text {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.student-about__content-help {
+
+}
+
+.student-about__list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.student-about__list-item {
+    display: block;
+    font-size: 16px;
+    background: #fff;
+    padding: 12px;
+    border-radius: 6px;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 12px 12px 0;
+
+    &:hover {
+        transform: translate(2px, 4px);
+        box-shadow: 2px 0 6px rgba(0, 0, 0, 0);
+    }
+
+    @media (max-width: $wwa3 + px) {
+      font-size: 12px;
+      padding: 6px 12px;
+      margin: 0 6px 6px 0;
+    }
+}
+
+.student-call__block {
+    position: absolute;
+    bottom: 20px;
+    right: 11px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.student-call__label {
+    font-size: 12px;
+    font-weight: 500;
+    color: #838383;
+}
+
+.student-call__price {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.student-call__link {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $accent;
+    border-radius: 100px;
+    margin: 10px 0 0 0;
+    transition: $tr;
+
+    &:hover {
+        background: $accent-hover;
+    }
+    
+    & svg {
+        width: 50%;
+        height: 50%;
+    }
+}
+
+.student-call-icon {
+}
+
+// Состояние сообщения
+.student-card_condition {
+    
+    @media (max-width: $wwa2 + px) {
+      position: relative;
+    }
+
+    & .student-briefly {
+        
+        @media (max-width: $wwa2 + px) {
+            padding-top: 45px;
+        }
+    }
+
+    & .student-message {
+
+        @media (max-width: $wwa2 + px) {
+            position: initial;
+        }
+    }
+
+    & .student-message-condition {
+        display: flex;
+    }
+}
+
+.student-message-condition {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 72px;
+    height: 72px;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 5px;
+    border-radius: 0 5px 0 5px;
+
+    @media (max-width: $wwa2 + px) {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: center;
+        border-radius: 5px 5px 0 0;
+        padding: 9px 5px;
+    }
+}
+
+.student-message-condition__text {
+    font-size: 12px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.student-message-condition__icon {
+    width: 32px;
+    height: 32px;
+    margin: 5px 0 0 0;
+
+    @media (max-width: $wwa2 + px) {
+        width: 20px;
+        height: 20px;
+        margin: 0 0 0 9px;
+    }
+
+    & svg {
+        width: 100%;
+        height: 100%;
+    }
+}  
+
+// На стадии одобрения
+.student-message_approval .student-message-condition {
+    background: #EF9868;
+}
+
+// Принятое
+.student-message_done .student-message-condition {
+    background: #63CEA1;
+}
+
+// Отмененное
+.student-message_canceled .student-message-condition {
+    background: #FD6467;
+}
+
+
+// Сообщение студенту
+.student-message__block {
+    margin: 0 0 20px 0;
+}
+
+.student-message__title {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0 0 10px 0;
+}
+
+.student-message__text {
+    max-width: 550px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0 50px 0 0;
+}
+
+// Чекбоксы
+.student-message__checkbox-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.student-message__checkbox {
+    position: relative;
+    width: fit-content;
+    margin: 6px 0;
+
+    &:not(:last-child) {
+        margin-right: 20px;
+    }
+
+    & input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+
+        &:checked {
+
+            & + label::before {
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+                background-size: 70%;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-color: #0075FF;
+                border: 2px solid #0075FF;
+
+            }
+
+            &:hover {
+                
+                & + label::before {
+                    background-color: #005CC8;
+                    border-color: #005CC8;
+                }
+            }
+        }
+
+        &:hover {
+            
+            & + label::before {
+                background-color: #fafafa;
+            }
+        }
+
+    }
+
+    & label {
+        display: flex;
+        align-items: center;
+
+        &::before {
+            content: '';
+            display: inline-block;
+            min-width: 26px;
+            height: 26px;
+            border: 2px solid $outline;
+            background: #fff;
+            border-radius: 5px;
+            margin: 0 10px 0 0;
+            transition: background-color $tr, border-color $tr;
+        }
+    }
+}
+
+// Предложения студента
+.student-message__suggest-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.student-message__suggest {
+    display: flex;
+    align-items: center;
+    margin: 6px 0;
+
+    &:not(:last-child) {
+        margin-right: 20px;
+    }
+}
+
+.student-message__suggest-icon {
+    display: block;
+    width: 14px;
+    height: 14px;
+    margin: -4px 0 0 0;
+
+    & svg {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.student-message__suggest-text {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 0 0 7px;
+}
+
+// Состояние оплаты и расценка студента
+.student-message__payment {
+    display: flex;
+    // align-items: center;
+    // flex-wrap: wrap;
+
+    @media (max-width: 400px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+}
+
+.student-message__payment-text {
+    display: block;
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+.student-message__payment-condition {
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0 0 0 20px;
+    text-transform: uppercase;
+
+    @media (max-width: 400px) {
+      margin: 8px 0 0 0;
+    }
+}
+
+.student-message__payment-condition_success {
+    color: #63CEA1;
+}
+
+.student-message__payment-condition_canceled {
+    color: #EF9868;
+}
+
+// Footer карточки
+.student-message-footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: auto 0 0 0;
+
+    @media (max-width: 540px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+}
+
+.student-message-footer__support {
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: underline;
+    margin: 0 12px 0 0;
+
+    @media (max-width: 540px) {
+        margin: 0 0 20px 0;
+    }
+}
+
+.student-message-footer__button-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 0 0 auto;
+
+    @media (max-width: 540px) {
+      margin: 0;
+    }
+
+    & .btn {
+        margin: 10px 0;
+    }
+}
+
+.student-message-footer__btn {
+
+    &:not(:last-child) {
+        margin: 0 20px 0 0;
+    }
+}
+
+.student-message-footer__btn_refuse {
+    color: $accent;
+}
+
+.student-message-footer__confirm {
+
+}
+
+// Рейтинг
+.student-message__rating-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 50px 0 0;
+
+    & .rating-card__type {
+        margin: 6px 0;
+
+        &:not(:last-child) {
+            margin-right: 60px;
+        }
+    }
+}

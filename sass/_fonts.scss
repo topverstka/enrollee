@@ -1,0 +1,17 @@
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl){
+    @font-face{
+        font-family: $fname;
+        font-style: $fstyle;
+        font-weight: $fweight;
+        // font-display: swap // Uncomment to initially display system fonts
+        src: local($fname), url($furl) format('woff2');
+    }
+}
+
+@include font('Maven Pro', normal, 400, '../fonts/Maven_Pro/MavenProRegular.woff2');
+@include font('Maven Pro', normal, 500, '../fonts/Maven_Pro/MavenProMedium.woff2');
+@include font('Maven Pro', normal, 700, '../fonts/Maven_Pro/MavenProBold.woff2');
+@include font('Montserrat', normal, 400, '../fonts/Montserrat/Montserrat-Regular.woff');
+@include font('Montserrat', normal, 700, '../fonts/Montserrat/Montserrat-Bold.woff');

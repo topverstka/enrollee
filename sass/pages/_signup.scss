@@ -1,0 +1,371 @@
+// Прогрессбар
+.signup__progress {
+    position: absolute;
+    top: -12px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    transform: translate(0, -100%);
+    background: #D6D6D6;
+    border-radius: 2px;
+
+    &._step-1 .signup__progress-line {
+        width: 33.333%;
+    }
+
+    &._step-2 .signup__progress-line {
+        width: 66.666%;
+    }
+
+    &._step-3 .signup__progress-line {
+        width: 100%;
+    }
+}
+
+.signup__progress-line {
+    display: block;
+    width: 0;
+    height: 100%;
+    background: #63CEA1;
+    border-radius: 2px;
+}
+
+// Главный экран регистрации
+.signup__content {
+    position: relative;
+}
+
+.signup__form {
+    width: 100%;
+}
+
+.signup__body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signup__body_step-student-2 {
+    max-width: 440px;
+    width: 100%;
+    margin: 30px auto 0;
+}
+
+.signup-who__title {
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: none;
+    margin: 20px 0 0 0;
+    text-align: center;
+}
+
+.signup__checkbox-list {
+    display: grid;
+    grid-template-columns: repeat(3, 140px);
+    gap: 10px;
+    margin: 10px 0 0 0;
+}
+
+.signup__checkbox {
+    position: relative;
+}
+
+.signup__checkbox-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; 
+    cursor: pointer;
+
+    &:checked {
+
+        & + .signup__checkbox-label {
+            color: #fff;
+            background: $accent;
+            border-color: $accent;
+        }
+    }
+}
+
+.signup__checkbox-label {
+    width: 100%;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border: 1px solid $outline;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: 400;
+    transition: $tr;
+}
+
+.signup__service-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 24px 0 0 0;
+}
+
+.signup__service-link {
+    display: flex;
+    align-items: center;
+    padding: 5px 18px 5px 12px;
+    background: #F3F4F6;
+    border-radius: 44px;
+    transition: $tr;
+
+    &:hover {
+        background: #EDEEF0;
+    }
+
+    &:first-child {
+        margin: 0 16px 0 0;
+    }
+}
+
+.signup__service-link-icon {
+    width: 34px;
+    height: 34px;
+
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+.signup__service-link-text {
+    font-size: 16px;
+    font-weight: 500;
+    color: #7F7E7F;
+    margin: 0 0 0 24px;
+}
+
+// форма
+.signup__form-block {
+    max-width: 330px;
+    width: 100%;
+    margin: 24px auto 0 auto;
+
+    & .form__block {
+
+        &:not(:last-child) {
+            margin: 0 0 20px 0;
+        }
+    }
+
+    & .form__label {
+        font-weight: 500;
+    }
+}
+
+.signup__form-sended {
+    margin-top: 14px;
+}
+
+.signup-who__pass-line {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 9px 0 0 0;
+
+    &._bad {
+
+        & .signup-who__pass-line-part {
+
+            &:nth-child(1) {
+                background: #FA3600;
+            }
+        }
+    }
+
+    &._good {
+
+        & .signup-who__pass-line-part {
+
+            &:nth-child(1) {
+                background: #FA3600;
+            }
+
+            &:nth-child(2) {
+                background: #F6C182;
+            }
+        }
+    }
+
+    &._perfect {
+
+        & .signup-who__pass-line-part {
+
+            &:nth-child(1) {
+                background: #FA3600;
+            }
+
+            &:nth-child(2) {
+                background: #F6C182;
+            }
+
+            &:nth-child(3) {
+                background: #63CEA1;
+            }
+        }
+    }
+}
+
+.signup-who__pass-line-part {
+    width: 33.333%;
+    height: 8px;
+    background: #D6D6D6;
+    border-radius: 2px;
+    transition: $tr;
+
+    &:not(:last-child) {
+        margin: 0 7px 0 0;
+    }
+}
+
+
+.signup__policy {
+    font-size: 14px;
+    color: #C0C0C0;
+    text-align: center;
+    margin: 20px 0 0 0;
+
+    & a {
+        color: $accent;
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+// Второй шаг студента
+.signup-student__img-block {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.signup-student__img-title {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: none;
+}
+
+.signup-student__img-img {
+    width: 96px;
+    height: 96px;
+    background: url(../img/signup/empty-block-img.svg) no-repeat center;
+    background-size: 49px;
+    background-color: #C0C0C0;
+    border-radius: 100%;
+
+}
+
+.signup-student__img-upload {
+    font-size: 16px;
+    color: $accent;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+// Блок с информацией, которую должен заполнить пользователь
+.signup-info {
+    width: 100%;
+
+    &:not(:last-child) {
+        margin: 0 0 30px 0;
+    }
+}
+
+.signup-info__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 0 0 0;
+}
+
+.signup-info__title {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 0 9px 0;
+    text-align: center;
+    text-transform: none;
+}
+
+.signup__input {
+    width: 100%;
+}
+
+.signup__input-input {
+    width: 100%;
+    height: 38px;
+    border: 1px solid $outline;
+    border-radius: 3px;
+    font-size: 18px;
+    padding: 0 20px;
+}
+
+.signup__input-textarea {
+    width: 100%;
+    min-height: 130px;
+    height: 130px;
+    border: 1px solid $outline;
+    border-radius: 3px;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 10px 20px;
+
+}
+
+// Выбор языка
+.signup__checkbox-list-lang {
+
+    & .signup__checkbox {
+        
+        &:nth-child(n + 6) {
+            display: none;
+        }
+    }
+}
+
+.signup__lang-more {
+    width: 100%;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border: 1px solid $outline;
+    position: relative;
+
+    &._show {
+
+        & .signup__lang-more-icon svg {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.signup__lang-more-text {
+    font-size: 16px;
+}
+
+.signup__lang-more-icon {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translate(0,-50%)
+}
+
+.signup-info__btn-next {
+    margin: 0 auto;
+}

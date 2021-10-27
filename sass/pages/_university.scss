@@ -1,0 +1,234 @@
+// Главный экран
+.univer__main__block {
+    display: flex;
+    margin: 28px 0 0 0;
+
+    @media screen and (max-width: 1024px) {
+      flex-direction: column-reverse;
+      margin: 12px 0 0 0;
+    }
+}
+
+.univer__main__header {
+
+    & .estim__rating-text,
+    & .estim__rating-quantity {
+        font-size: 16px;
+    }
+}
+
+.univer__main__content {
+    width: 50%;
+
+    @media screen and (max-width: 1024px) {
+        width: 100%;
+        margin: 24px 0 0 0;
+    }
+
+    @media screen and (max-width: 768px) {
+        margin: 20px 0 0 0;
+    }
+}
+
+.univer__estim {
+
+    & .estim__city {
+        margin: 0;
+    }
+
+    & .estim__city-text {
+        font-size: 16px;
+    }
+}
+
+.univer__main-estim-text {
+    font-size: 16px;
+    color: #838383;
+    margin: 0 0 0 20px;
+}
+
+.univer__main-title {
+    font-size: 28px;
+    font-weight: 700;
+
+    @media screen and (max-width: 768px) {
+        font-size: 20px;
+    }
+}
+
+.univer__main-text {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.3;
+    margin: 20px 0 0 0;
+
+    & button {
+        display: inline-block;
+        font-size: 16px;
+        color: $accent;
+        text-decoration: underline;
+        background: none;
+        // margin: 0 0 0 12px;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: 18px;
+        margin: 10px 0 0 0;
+    }
+}
+
+.univer__main-img {
+    width: 50%;
+    // max-height: 270px;
+    height: 100%;
+    margin: 0 0 0 24px;
+
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    @media screen and (max-width: 1024px) {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+// Блок с адресами, контактами и пр.
+
+.univer__main__info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 12px;
+    margin: 30px 0 0 0;
+
+    @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+    }
+}
+
+.univer__main__info__block {
+    display: flex;
+    flex-direction: column;
+}
+
+.univer__main__info-title {
+    font-size: 12px;
+    font-weight: 500;
+    color: #838383
+}
+
+.univer__main__info-text {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 5px 0 0 0;
+}
+
+.univer__main__info-link {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 5px 0 0 0;
+}
+
+// Карточки курсов
+.univer-course {
+    margin: 80px 0;
+}
+
+.univer-course__body {
+    margin: 40px 0 0 0;
+}
+
+.univer-course__card-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+
+    @media (max-width: $wwa + px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: $wwa3 + px) {
+        grid-template-columns: minmax(min-content, 330px);
+        justify-content: center;
+    }
+}
+
+// раздел с карточками студентов
+.univer-students {
+    padding: 60px 0;
+}
+
+.univer-students__body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin: 40px 0 0 0;
+
+    @media (max-width: $wwa2 + px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 480px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    & .student-card {
+        max-width: none;
+    }
+}
+
+// раздел с отзывами
+.univer-review {
+    margin: 80px 0;
+
+    @media (max-width: $wwa3 + px) {
+        margin: 50px 0;
+    }
+
+    & .section-title {
+
+        @media (max-width: $wwa3 + px) {
+            text-align: left;
+            justify-content: flex-start;
+        }
+    }
+}
+
+.univer-review__body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin: 30px 0 0 0;
+
+    @media (max-width: $wwa2 + px) {
+        grid-template-columns: 1fr;
+    }
+
+    @media (max-width: $wwa3 + px) {
+        margin: 20px 0 0 0;
+    }
+}
+
+.univer-review__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 40px 0 0 0;
+
+    & .btn {
+        margin: 6px 20px;
+    }
+}
+
+.univer-review__btn-write {
+    color: $accent;
+    margin: 0 0 0 40px;
+}

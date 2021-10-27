@@ -1,0 +1,353 @@
+.header {
+    position: relative;
+    padding: 20px 0;
+    background: #fff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 3;
+
+    @media (max-width: $wwa3 + px) {
+      padding: 13px 0;
+    }
+
+    &._fixed {
+        position: fixed;
+        top: -100px;
+        left: 0;
+        width: 100%;
+        transform: translate(0, -100%);
+        background: #fff;
+        z-index: 3;
+        transition: .3s ease-in-out;
+
+        & .logo__link_light {
+            
+            & svg,
+            & img {
+                filter: none    ;
+            }
+        }
+    }
+
+    &._show {
+        top: 0;
+        transform: translate(0,0);
+    }
+}
+
+.header_page-main {
+    background: none;
+    box-shadow: none;
+
+    @media (max-width: $wwa3 + px) {
+        background: linear-gradient(90deg, #212C52 0%, #27B0C7 100%);
+    }
+
+    & .burger span {
+        background: #fff;
+
+        &::before, 
+        &::after {
+            background: #fff; 
+        }
+    } 
+
+    & .menu__item {
+
+        & a {
+            color: #fff;
+        }
+
+        & a::before {
+            background: #fff;
+        }
+    }
+
+    & .auth__signup {
+        color: #fff;
+    }
+
+    & .auth__login {
+        background: #fff;
+        color: $main;
+    }
+}
+
+.header_auth {
+
+    & .user {
+        display: flex;
+        align-items: center;
+        margin: 0 0 0 auto;
+
+        @media (max-width: $wwa3 + px) {
+          display: none;
+        }
+    }
+
+    & .auth {
+        display: none;
+    }
+
+}
+
+.user__notif {
+    position: absolute;
+    top: 0;
+    right: -12px;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FA3600;
+    border-radius: 50%;
+    
+    & span {
+        font-size: 10px;
+        font-weight: 700;
+        color: #fff;
+    }
+}
+
+.header__body {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+}
+
+.logo__link {
+    display: block;
+    width: fit-content;
+    height: 50px;
+
+    & svg {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    @media (max-width: $wwa3 + px) {
+      height: 32px;
+    }
+}
+
+.logo_header {
+    margin: 0 auto 0 0;
+}
+
+.logo__link_light {
+    
+    & svg,
+    & img {
+        filter: contrast(0%) brightness(2);
+    }
+}
+
+.menu {
+    max-width: 650px;
+    width: 100%;
+
+    @media (max-width: $wwa + px) {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      max-width: none;
+      width: 100%;
+      height: 100%;
+      background: $main;
+      z-index: 1;
+      transition: $tr;
+      overflow-y: auto;
+      
+      &._show {
+          right: 0;
+        }
+        
+        & .menu__body {
+            min-height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 48px 0;
+
+            & .menu__item {
+
+                & a {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+.menu__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: $wwa + px) {
+      flex-direction: column;
+    }
+}
+
+.menu__item {
+
+    &:not(:last-child) {
+        margin: 0 24px 0 0;
+    }
+
+    & a {
+        font-size: 16px;
+        color: $main;
+        text-transform: uppercase;
+        transition: $tr;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            width: 0;
+            height: 1px;
+            transform: translate(-50%,0);
+            background: $main;
+            transition: $tr;
+        }
+
+        &:hover {
+
+            &::before {
+                width: 100%;
+            }
+        }
+    }
+
+    @media (max-width: $wwa + px) {
+
+        &:not(:last-child) {
+            margin: 0 0 24px 0;
+        }
+    }
+}
+
+.auth {
+    margin: 0 0 0 auto;
+
+    @media (max-width: 600px) {
+      display: none;
+    }
+}
+
+.auth__signup {
+    color: $accent; 
+}
+
+.auth__login {
+    color: #fff;
+    background: $accent;
+    margin: 0 0 0 20px;
+
+    &:hover {
+        color: #fff;
+        background: $accent-hover;
+    }
+}
+
+.user {
+    display: none;
+}
+
+.user__name {
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.user__img-block {
+    position: relative;
+    margin: 0 0 0 12px;
+}
+
+.user__img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+.burger {
+    display: none;
+
+    @media (max-width: $wwa + px) {
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 0 0 24px;
+    
+        & span {
+            position: relative;
+            width: 100%;
+            height: 3px;
+            display: block;
+            background: $main;
+    
+            &::before {
+                content: '';
+                position: absolute;
+                top: -8px;
+                left: 0;
+                width: 100%;
+                height: 3px;
+                background: $main;
+                transform: translate(0, -50%);
+                transition: $tr;
+            }
+    
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -8px;
+                left: 0;
+                width: 100%;
+                height: 3px;
+                background: $main;
+                transform: translate(0, 50%);
+                transition: $tr;
+            }
+        }
+
+        &._active {
+            position: relative;
+            z-index: 1;
+            
+            & span {
+                background: rgba(0,0,0,0);
+
+                &::before {
+                    top: 0;
+                    transform: rotate(45deg);
+                    background: #fff;
+                }
+    
+                &::after {
+                    bottom: 0;
+                    transform: rotate(-45deg);
+                    background: #fff;
+                }
+            }
+
+        }
+    }
+}

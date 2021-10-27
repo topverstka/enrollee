@@ -1,0 +1,19 @@
+.container {
+    max-width: 1208px;
+    margin: 0 auto;
+    padding: 0 24px;
+
+    @media (max-width: $wwa + px) {
+        max-width: 888px;
+        padding: 0 24px;
+    }
+
+    @media (max-width: $wwa2 + px) {
+        max-width: 644px;
+        padding: 0 16px;
+    }
+}
+
+.container_header {
+    max-width: 1368px;
+}

@@ -1,0 +1,84 @@
+.login__header {
+    display: flex;
+    align-items: center;
+}
+
+.login__header-tab {
+    font-size: 36px;
+    font-weight: 500;
+    color: #C0C0C0;
+    text-transform: uppercase;
+
+    &:last-child {
+        margin: 0 0 0 30px;
+    }
+
+    &._active {
+        color: $main; 
+    }
+
+    &:hover {
+        color: $main;
+    }
+}
+
+.login__body {
+    max-width: 330px;
+    width: 100%;
+    margin: 60px 0 0 0;
+}
+
+.login__form {
+
+    & .form__block {
+
+        &:not(:last-child) {
+            margin: 0 0 20px 0;
+        }
+
+        & .form__label {
+            font-weight: 500;
+        }
+
+        & .form__field {
+
+            & input {
+                padding: 7px 20px;
+            }
+        }
+    }
+}
+
+.login__form-forgot-pass {
+    width: fit-content;
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 15px auto 0;
+    text-align: center;
+}
+
+// Восстановление пароля
+.forgot__text {
+    max-width: none;
+}
+
+.forgot__form {
+    max-width: 330px;
+    width: 100%;
+    margin: 50px auto 0 auto;
+}
+
+// Новый пароль
+.new-pass__form {
+    max-width: 330px;
+    width: 100%;
+    margin: 40px auto 0;
+
+    & .form__block {
+
+        &:not(:last-child) {
+            margin: 0 0 20px 0;
+        }
+    }
+}

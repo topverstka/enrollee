@@ -1,0 +1,33 @@
+.accordion {
+    
+}
+
+
+.accordion__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    cursor: pointer;
+    
+}
+
+.accordion__title {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 auto 0 0;
+}
+
+.accordion__icon {
+    margin-left: 12px;
+}
+
+.accordion__body {
+    max-height: 0;
+    overflow: hidden;
+    transition: $tr;
+}
+
+.accordion__body-content {
+    padding: 10px 20px;
+}

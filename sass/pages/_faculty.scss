@@ -1,0 +1,199 @@
+.faculty__header {
+    width: fit-content;
+
+    & .estim__rating-text,
+    & .estim__rating-quantity {
+        font-size: 16px;
+    }
+}
+
+.faculty__header-lang {
+    margin: 0 0 0 24px;
+}
+
+// Основная информация
+.faculty-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 24px;
+    margin: 20px 0 0 0;
+}
+
+.faculty-main__content {
+    max-width: 500px;
+    width: 100%;
+}
+
+.faculty-main__title {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.faculty-main__text {
+    font-size: 22px;
+    font-weight: 400;
+    margin: 20px 0 0 0;
+    line-height: 1.4;
+}
+
+.faculty-main__text-more {
+    display: inline;
+    font-size: 16px;
+    text-decoration: underline;
+    color: $accent;
+    margin: 0 0 0 8px;
+}
+
+.faculty-main__img-block {
+    position: relative;
+    margin: 0 0 0 26px;
+}
+
+.faculty-main__semester {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 72px;
+    height: 72px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: $accent;
+    border-radius: 5px;
+}
+
+.faculty-main__semester-text {
+    font-size: 12px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.faculty-main__semester-num {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 4px 0 0 0;
+    color: #fff;
+}
+
+// раздел с информацией о факультете
+.faculty-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 26px;
+    padding: 40px 0;
+}
+
+.faculty-info__main {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+}
+
+.faculty-info__block {
+    display: flex;
+    flex-direction: column;
+}
+
+.faculty-info__title {
+    font-size: 12px;
+    font-weight: 500;
+    color: #838383;
+    text-transform: none;
+}
+
+.faculty-info__block-content {
+    display: flex;
+    margin: 2px 0 0 0;
+}
+
+.faculty-info__icon {
+    width: 14px;
+    height: 14px;
+    margin: 2px 5px 0 0;
+
+    & svg {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.faculty-info__text {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.faculty-info__more {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 56px;
+    row-gap: 40px;
+    margin: 0 0 0 26px;
+    padding: 0 0 0 20px;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 2px;
+        height: 117%;
+        background: #B7BAE3;
+    }
+}
+
+
+// раздел с карточками студентов
+.faculty-students {
+    padding: 60px 0;
+}
+
+.faculty-students__body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin: 40px 0 0 0;
+
+    @media (max-width: $wwa2 + px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 480px) {
+        // grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: minmax(min-content, 240px);
+        justify-content: center;
+    }
+
+    & .student-card {
+        max-width: none;
+    }
+}
+
+// раздел с отзывами
+.faculty-review {
+    margin: 80px 0;
+}
+
+.faculty-review__body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin: 30px 0 0 0;
+
+    @media (max-width: $wwa2 + px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.faculty-review__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0 0 0;
+}
+
+.faculty-review__btn-write {
+    color: $accent;
+    margin: 0 0 0 40px;
+}
