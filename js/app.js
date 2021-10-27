@@ -197,13 +197,6 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     }
 
-    // Фиксирование сайдбара при скролле
-    sidebarFixed()
-    function sidebarFixed() {
-        const sidebar = document.querySelector('.aside__list')
-        console.log(sidebar.offsetTop)
-    }
-
     accordion()
     function accordion() {
         const accHeaderElems = document.querySelectorAll('.accordion__header')
