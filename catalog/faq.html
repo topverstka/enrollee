@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="RU">
+
+<head>
+    <meta charset="utf-8">
+    <title>Project name</title>
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Описание проекта">
+    <link rel="icon" href="../img/favicon.ico">
+    <!-- <link rel="stylesheet" href="../css/normalize.css"> -->
+    <link rel="stylesheet" href="../css/aos.css">
+
+    <!-- <link rel="stylesheet" type="text/css" href="../css/slick.css"/> -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
+    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+
+    <!-- Кастомые анимации -->
+    <link rel="stylesheet" href="../css/animation.css">
+    <!-- / Кастомые анимации -->
+
+    <link rel="stylesheet" href="../css/lightgallery.min.css">
+    <link rel="stylesheet" href="../css/front.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header header_auth">
+            <div class="container container_header">
+                <div class="header__body">
+                    <div class="logo logo_header">
+                        <a href="#" class="logo__link">
+                            <svg width="163" height="50" viewBox="0 0 163 50" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0 44.6749L7.90467 26.1943H9.83996L17.7446 44.6749H15.3732L13.0018 39.1144H4.63377L2.28963 44.6749H0ZM5.47876 37.0156H12.1023L8.80417 29.1654L5.47876 37.0156Z"
+                                    fill="#202021" />
+                                <path
+                                    d="M23.3594 44.6748V26.3032H25.6217L32.5179 35.7343L39.1415 26.3032H41.2675V44.6748H39.0324V29.8194L32.5179 38.9507H32.1635L25.5672 29.9012V44.6748H23.3594Z"
+                                    fill="#202021" />
+                                <path
+                                    d="M49.2812 44.6748V26.3032H51.5436L58.4398 35.7343L65.0633 26.3032H67.1894V44.6748H64.9543V29.8194L58.4398 38.9507H58.0854L51.4891 29.9012V44.6748H49.2812Z"
+                                    fill="#202021" />
+                                <path
+                                    d="M72.832 44.6749L80.7367 26.1943H82.672L90.5767 44.6749H88.2053L85.8339 39.1144H77.4658L75.1217 44.6749H72.832ZM78.3108 37.0156H84.9344L81.6362 29.1654L78.3108 37.0156Z"
+                                    fill="#202021" />
+                                <path
+                                    d="M91.8857 28.402V26.3032H106.986V28.402H100.554V44.6748H98.3185V28.402H91.8857V28.402Z"
+                                    fill="#202021" />
+                                <path
+                                    d="M103.605 28.402V26.3032H118.706V28.402H112.273V44.6748H110.038V28.402H103.605V28.402Z"
+                                    fill="#202021" />
+                                <path d="M127.756 44.1296V32.3271H129.936V44.1296H127.756Z" fill="#202021" />
+                                <path
+                                    d="M137.487 0C127.756 0 119.279 5.4515 114.972 13.4652H7.98633V17.6083H123.122V28.4841H134.025V39.4143H144.983V49.9357C145.146 49.8812 145.31 49.854 145.391 49.8267C155.613 46.5013 163 36.8794 163 25.5403C163.027 11.4481 151.606 0 137.487 0ZM128.846 25.4585C127.347 25.4585 126.148 24.2592 126.148 22.76C126.148 21.2609 127.347 20.0615 128.846 20.0615C130.345 20.0615 131.545 21.2609 131.545 22.76C131.517 24.2592 130.318 25.4585 128.846 25.4585Z"
+                                    fill="url(#paint0_linear_344:5651)" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_344:5651" x1="7.98055" y1="24.9805" x2="163.029"
+                                        y2="24.9805" gradientUnits="userSpaceOnUse">
+                                        <stop offset="0.00531915" stop-color="#0F2356" />
+                                        <stop offset="0.3298" stop-color="#164193" />
+                                        <stop offset="0.4342" stop-color="#12509B" />
+                                        <stop offset="0.6551" stop-color="#0074B0" />
+                                        <stop offset="0.9724" stop-color="#27AEC7" />
+                                        <stop offset="1" stop-color="#2CB3C8" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </a>
+                    </div>
+                    <nav class="menu">
+                        <div class="menu__body">
+                            <ul class="menu__list">
+                                <li class="menu__item"><a href="#">Kategorien</a></li>
+                                <li class="menu__item"><a href="#">Universitäten</a></li>
+                                <li class="menu__item"><a href="#">Für Studenten </a></li>
+                                <li class="menu__item"><a href="#">Studiengänge</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="auth">
+                        <a href="#" class="btn btn_border auth__signup">Registrieren</a>
+                        <a href="#" class="btn auth__login"> Log In</a>
+                    </div>
+                    <a href="#" class="user">
+                        <span class="user__name">max f.</span>
+                        <div class="user__img-block">
+                            <div class="user__img"><img src="../img/avatar.png" alt=""></div>
+                            <div class="user__notif"><span>2</span></div>
+                        </div>
+                    </a>
+                    <button class="burger"><span></span></button>
+                </div>
+            </div>
+        </header>
+
+        <div class="page">
+            <aside class="aside">
+                <div class="aside__body">
+                    <div class="aside__list">
+                        <a class="aside__link aside__link_current" href="#">
+                            <span class="aside__link-icon">
+                                <svg width="46" height="45" viewBox="0 0 46 45" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_427:1624)">
+                                        <path
+                                            d="M23.0376 0C23.0253 0.0120568 23.0007 0.0120568 22.9638 0.0120568C10.5277 0.0120568 0.414062 9.93483 0.414062 22.1363C0.414062 27.1158 2.14677 31.9506 5.31726 35.845L2.03617 43.3202C1.76582 43.9351 2.06075 44.6465 2.67518 44.8997C2.89638 44.9961 3.14216 45.0202 3.37564 44.9841L15.4063 42.9103C17.8149 43.7663 20.3463 44.2004 22.9024 44.1883C35.3386 44.1883 45.4522 34.2655 45.4522 22.064C45.4767 9.89866 35.4369 0.0120568 23.0376 0ZM22.9147 41.789C20.543 41.789 18.1958 41.367 15.9716 40.5471C15.7627 40.4627 15.5415 40.4507 15.3203 40.4868L5.19437 42.223L7.87331 36.1102C8.05764 35.6882 7.9839 35.1939 7.67669 34.8442C6.22662 33.1925 5.07148 31.3116 4.26043 29.274C3.35106 26.9953 2.88409 24.5718 2.88409 22.1243C2.88409 11.249 11.904 2.41137 22.9761 2.41137C34.0237 2.38725 42.9944 11.1526 43.0067 21.9917C43.0067 22.0158 43.0067 22.0399 43.0067 22.064C43.0067 32.9513 33.9868 41.789 22.9147 41.789Z"
+                                            fill="#C8C8C8" />
+                                        <path
+                                            d="M21.9556 17.6875H15.3197C14.6438 17.6875 14.0908 18.2301 14.0908 18.8932C14.0908 19.5563 14.6438 20.0989 15.3197 20.0989H21.9556C22.6315 20.0989 23.1845 19.5563 23.1845 18.8932C23.1845 18.2301 22.6315 17.6875 21.9556 17.6875Z"
+                                            fill="#C8C8C8" />
+                                        <path
+                                            d="M30.5577 23.7158H15.3197C14.6438 23.7158 14.0908 24.2584 14.0908 24.9215C14.0908 25.5846 14.6438 26.1272 15.3197 26.1272H30.5577C31.2336 26.1272 31.7866 25.5846 31.7866 24.9215C31.7866 24.2584 31.2336 23.7158 30.5577 23.7158Z"
+                                            fill="#C8C8C8" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_427:1624">
+                                            <rect width="45.8654" height="45" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </span>
+                            <span class="aside__link-text">requests</span>
+                        </a>
+                        <a class="aside__link" href="#">
+                            <span class="aside__link-icon">
+                                <svg width="45" height="45" viewBox="0 0 45 45" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M41.1058 11.6055V8.64979C41.1058 6.5553 39.3588 4.8513 37.2115 4.8513H18.9866L18.3065 3.76797C18.0705 3.39218 17.6513 3.16309 17.1995 3.16309H3.89423C1.74695 3.16309 0 4.86709 0 6.96157V39.0377C0 41.1322 1.74695 42.8362 3.89423 42.8362H41.1058C43.253 42.8362 45 41.1322 45 39.0377V15.404C45 13.3095 43.253 11.6055 41.1058 11.6055ZM37.2115 7.38363C37.9273 7.38363 38.5096 7.95163 38.5096 8.64979V11.6042H23.2264L21.4891 8.8371L20.5765 7.38363H37.2115ZM42.4038 39.0377C42.4038 39.7358 41.8215 40.3038 41.1058 40.3038H3.89423C3.17847 40.3038 2.59615 39.7358 2.59615 39.0377V6.96157C2.59615 6.26341 3.17847 5.69541 3.89423 5.69541H16.4723L17.1524 6.77848C17.1524 6.77857 17.1524 6.77865 17.1525 6.77874L19.655 10.7645L21.3931 13.533C21.6291 13.9087 22.0483 14.1378 22.5001 14.1378H41.1059C41.8216 14.1378 42.4039 14.7058 42.4039 15.404V39.0377H42.4038Z"
+                                        fill="#C8C8C8" />
+                                </svg>
+                            </span>
+                            <span class="aside__link-text">faq</span>
+                        </a>
+                        <a class="aside__link" href="#">
+                            <span class="aside__link-icon">
+                                <svg width="45" height="45" viewBox="0 0 45 45" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M38.4099 7.44363C34.1603 3.28842 28.5099 1 22.5 1C16.4898 1 10.8397 3.28842 6.59008 7.44363C2.34043 11.5988 0 17.1234 0 23C0 28.8763 2.34043 34.4012 6.59008 38.5564C10.8397 42.7116 16.4898 45 22.5 45C28.5099 45 34.1603 42.7116 38.4099 38.5564C42.6596 34.4012 45 28.8763 45 23C45 17.1234 42.6596 11.5988 38.4099 7.44363ZM11.2799 39.0176C12.2209 33.7197 16.9162 29.8119 22.5 29.8119C28.0841 29.8119 32.7791 33.7197 33.7201 39.0176C30.5255 41.1637 26.6604 42.4219 22.5 42.4219C18.3396 42.4219 14.4745 41.1637 11.2799 39.0176ZM15.3458 20.2386C15.3458 16.3811 18.5552 13.2434 22.5 13.2434C26.4448 13.2434 29.6542 16.3815 29.6542 20.2386C29.6542 24.0957 26.4448 27.2338 22.5 27.2338C18.5552 27.2338 15.3458 24.0957 15.3458 20.2386ZM36.0039 37.2294C35.2943 34.763 33.8849 32.5253 31.9094 30.7773C30.6975 29.7048 29.318 28.8585 27.8349 28.262C30.5156 26.5523 32.2912 23.5945 32.2912 20.2386C32.2912 14.9598 27.8988 10.6653 22.5 10.6653C17.1012 10.6653 12.7091 14.9598 12.7091 20.2386C12.7091 23.5945 14.4848 26.5523 17.1651 28.262C15.6823 28.8585 14.3025 29.7045 13.0906 30.777C11.1154 32.525 9.70573 34.7627 8.99609 37.229C5.08736 33.6797 2.63672 28.6148 2.63672 23C2.63672 12.2907 11.5473 3.57812 22.5 3.57812C33.4527 3.57812 42.3633 12.2907 42.3633 23C42.3633 28.6151 39.9126 33.6801 36.0039 37.2294Z"
+                                        fill="#C8C8C8" />
+                                </svg>
+                            </span>
+                            <span class="aside__link-text">profile</span>
+                        </a>
+                        <a class="aside__link" href="#">
+                            <span class="aside__link-icon">
+                                <svg width="41" height="41" viewBox="0 0 41 41" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M39.1358 21.1678V15.5458C39.1358 13.6395 37.6202 12.0892 35.7052 11.9388L30.3538 2.81965C29.8579 1.97626 29.0571 1.37345 28.0988 1.12315C27.1452 0.874542 26.1479 1.00511 25.2943 1.48979L6.94921 11.9095H3.72724C1.67165 11.9095 0 13.5403 0 15.5458V37.3637C0 39.3691 1.67157 41 3.72724 41H35.4086C37.4642 41 39.1358 39.3692 39.1358 37.3637V31.7417C40.2181 31.3652 40.9994 30.3656 40.9994 29.182V23.7275C40.9994 22.5439 40.2181 21.5443 39.1358 21.1678ZM33.5398 11.9095H25.4181L31.5094 8.44967L33.5398 11.9095ZM30.5835 6.87189L21.7143 11.9095H18.0355L29.6637 5.3045L30.5835 6.87189ZM26.2325 3.0611C26.6538 2.8205 27.146 2.75658 27.6165 2.87914C28.0925 3.0034 28.4892 3.30348 28.7358 3.72339L28.7378 3.72671L14.3318 11.9095H10.6531L26.2325 3.0611ZM37.2722 37.3637C37.2722 38.3659 36.4359 39.1818 35.4086 39.1818H3.72724C2.69993 39.1818 1.86366 38.3659 1.86366 37.3637V15.5458C1.86366 14.5436 2.69993 13.7277 3.72724 13.7277H35.4086C36.4359 13.7277 37.2722 14.5436 37.2722 15.5458V21.0003H31.6813C28.5983 21.0003 26.0905 23.447 26.0905 26.4547C26.0905 29.4625 28.5983 31.9092 31.6813 31.9092H37.2722V37.3637ZM39.1358 29.182C39.1358 29.6835 38.7182 30.0911 38.204 30.0911H31.6813C29.6257 30.0911 27.9541 28.4603 27.9541 26.4547C27.9541 24.4493 29.6257 22.8184 31.6813 22.8184H38.204C38.7181 22.8184 39.1358 23.2259 39.1358 23.7275V29.182Z"
+                                        fill="#C8C8C8" />
+                                    <path
+                                        d="M31.681 24.6367C30.6536 24.6367 29.8174 25.4526 29.8174 26.4548C29.8174 27.4571 30.6536 28.273 31.681 28.273C32.7083 28.273 33.5445 27.4571 33.5445 26.4548C33.5446 25.4526 32.7084 24.6367 31.681 24.6367Z"
+                                        fill="#C8C8C8" />
+                                </svg>
+                            </span>
+                            <span class="aside__link-text">payment</span>
+                        </a>
+                    </div>
+                </div>
+            </aside>
+
+            <div class="page__body">
+                <section class="bread">
+                    <div class="container">
+                        <div class="bread__body">
+                            <span>
+                                <a class="bread__link" href="#"><span>Startseite</span></a>
+                            </span>
+                            <span class="bread__separator">/</span>
+                            <span class="bread__current">Help</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="faq">
+                    <div class="container">
+                        <div class="section-title section-title_center">
+                            <h2 class="section-title__title">FAQ</h2>
+                            <p class="section-title__descr">Здесь вы найдете ответы на самые распостраненные вопросы относительно данного проекта.</p>
+                        </div>
+                    </div>
+                    <div class="container container_faq">
+                        <div class="faq__body">
+                            <div class="accordion accordion_faq_section">
+                                <div class="accordion__header">
+                                  <h4 class="accordion__title">Über Uns?</h4>
+                                  <div class="accordion__icon">
+                                    <svg width="26" height="15" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.639118 0.595763C1.49128 -0.19858 2.87293 -0.198587 3.7251 0.595746L13.0047 9.24547L22.2741 0.596475C23.1259 -0.198262 24.5075 -0.198907 25.3601 0.595032C26.2127 1.38897 26.2134 2.67685 25.3616 3.47158L13.0063 15L0.639138 3.47231C-0.213039 2.67798 -0.213048 1.39011 0.639118 0.595763Z" fill="#212329"/>
+                                    </svg>                                        
+                                  </div>
+                                </div>
+                                <div class="accordion__body">
+                                    <div class="accordion__body-content">
+
+                                        <div class="accordion accordion_faq">
+                                            <div class="accordion__header">
+                                              <h4 class="accordion__title">Was ist Ammatti?</h4>
+                                              <div class="accordion__icon"></div>
+                                            </div>
+                                            <div class="accordion__body">
+                                                <div class="accordion__body-content">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion accordion_faq">
+                                            <div class="accordion__header">
+                                              <h4 class="accordion__title">Wie Funktioniert Ammatti?</h4>
+                                              <div class="accordion__icon"></div>
+                                            </div>
+                                            <div class="accordion__body">
+                                                <div class="accordion__body-content">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion accordion_faq">
+                                            <div class="accordion__header">
+                                              <h4 class="accordion__title">Was ist das Ziel von Ammatti?</h4>
+                                              <div class="accordion__icon"></div>
+                                            </div>
+                                            <div class="accordion__body">
+                                                <div class="accordion__body-content">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion accordion_faq">
+                                            <div class="accordion__header">
+                                              <h4 class="accordion__title">Ist die Information auf der Webseite aktuell?</h4>
+                                              <div class="accordion__icon"></div>
+                                            </div>
+                                            <div class="accordion__body">
+                                                <div class="accordion__body-content">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion accordion_faq_section">
+                                <div class="accordion__header">
+                                  <h4 class="accordion__title">Was passiert mit meinen Daten?</h4>
+                                  <div class="accordion__icon">
+                                    <svg width="26" height="15" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.639118 0.595763C1.49128 -0.19858 2.87293 -0.198587 3.7251 0.595746L13.0047 9.24547L22.2741 0.596475C23.1259 -0.198262 24.5075 -0.198907 25.3601 0.595032C26.2127 1.38897 26.2134 2.67685 25.3616 3.47158L13.0063 15L0.639138 3.47231C-0.213039 2.67798 -0.213048 1.39011 0.639118 0.595763Z" fill="#212329"/>
+                                    </svg>                                        
+                                  </div>
+                                </div>
+                                <div class="accordion__body">
+                                    <div class="accordion__body-content">
+
+                                        <div class="accordion accordion_faq">
+                                            <div class="accordion__header">
+                                              <h4 class="accordion__title">Was ist Ammatti?</h4>
+                                              <div class="accordion__icon"></div>
+                                            </div>
+                                            <div class="accordion__body">
+                                                <div class="accordion__body-content">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion accordion_faq">
+                                            <div class="accordion__header">
+                                              <h4 class="accordion__title">Wie Funktioniert Ammatti?</h4>
+                                              <div class="accordion__icon"></div>
+                                            </div>
+                                            <div class="accordion__body">
+                                                <div class="accordion__body-content">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion accordion_faq">
+                                            <div class="accordion__header">
+                                              <h4 class="accordion__title">Was ist das Ziel von Ammatti?</h4>
+                                              <div class="accordion__icon"></div>
+                                            </div>
+                                            <div class="accordion__body">
+                                                <div class="accordion__body-content">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion accordion_faq">
+                                            <div class="accordion__header">
+                                              <h4 class="accordion__title">Ist die Information auf der Webseite aktuell?</h4>
+                                              <div class="accordion__icon"></div>
+                                            </div>
+                                            <div class="accordion__body">
+                                                <div class="accordion__body-content">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn_full btn_center">Задать вопрос</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <nav class="footer__body">
+                    <div class="footer__block">
+                        <div class="logo footer-logo logo__link_light">
+                            <a href="#" class="logo__link">
+                                <svg width="163" height="50" viewBox="0 0 163 50" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M0 44.6749L7.90467 26.1943H9.83996L17.7446 44.6749H15.3732L13.0018 39.1144H4.63377L2.28963 44.6749H0ZM5.47876 37.0156H12.1023L8.80417 29.1654L5.47876 37.0156Z"
+                                        fill="#202021" />
+                                    <path
+                                        d="M23.3594 44.6748V26.3032H25.6217L32.5179 35.7343L39.1415 26.3032H41.2675V44.6748H39.0324V29.8194L32.5179 38.9507H32.1635L25.5672 29.9012V44.6748H23.3594Z"
+                                        fill="#202021" />
+                                    <path
+                                        d="M49.2812 44.6748V26.3032H51.5436L58.4398 35.7343L65.0633 26.3032H67.1894V44.6748H64.9543V29.8194L58.4398 38.9507H58.0854L51.4891 29.9012V44.6748H49.2812Z"
+                                        fill="#202021" />
+                                    <path
+                                        d="M72.832 44.6749L80.7367 26.1943H82.672L90.5767 44.6749H88.2053L85.8339 39.1144H77.4658L75.1217 44.6749H72.832ZM78.3108 37.0156H84.9344L81.6362 29.1654L78.3108 37.0156Z"
+                                        fill="#202021" />
+                                    <path
+                                        d="M91.8857 28.402V26.3032H106.986V28.402H100.554V44.6748H98.3185V28.402H91.8857V28.402Z"
+                                        fill="#202021" />
+                                    <path
+                                        d="M103.605 28.402V26.3032H118.706V28.402H112.273V44.6748H110.038V28.402H103.605V28.402Z"
+                                        fill="#202021" />
+                                    <path d="M127.756 44.1296V32.3271H129.936V44.1296H127.756Z" fill="#202021" />
+                                    <path
+                                        d="M137.487 0C127.756 0 119.279 5.4515 114.972 13.4652H7.98633V17.6083H123.122V28.4841H134.025V39.4143H144.983V49.9357C145.146 49.8812 145.31 49.854 145.391 49.8267C155.613 46.5013 163 36.8794 163 25.5403C163.027 11.4481 151.606 0 137.487 0ZM128.846 25.4585C127.347 25.4585 126.148 24.2592 126.148 22.76C126.148 21.2609 127.347 20.0615 128.846 20.0615C130.345 20.0615 131.545 21.2609 131.545 22.76C131.517 24.2592 130.318 25.4585 128.846 25.4585Z"
+                                        fill="url(#paint0_linear_344:5651)" />
+                                    <defs>
+                                        <linearGradient id="paint0_linear_344:5651" x1="7.98055" y1="24.9805"
+                                            x2="163.029" y2="24.9805" gradientUnits="userSpaceOnUse">
+                                            <stop offset="0.00531915" stop-color="#0F2356" />
+                                            <stop offset="0.3298" stop-color="#164193" />
+                                            <stop offset="0.4342" stop-color="#12509B" />
+                                            <stop offset="0.6551" stop-color="#0074B0" />
+                                            <stop offset="0.9724" stop-color="#27AEC7" />
+                                            <stop offset="1" stop-color="#2CB3C8" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </a>
+                        </div>
+                        <ul class="footer__link-list">
+                            <li class="footer__link"><a href="#">Datenschutz</a></li>
+                            <li class="footer__link"><a href="#">Impressum</a></li>
+                        </ul>
+                        <div class="social">
+                            <a href="#" class="social__link">
+                                <span class="social__link-icon">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_385:1233)">
+                                            <path
+                                                d="M18.8949 0.000976562H1.10383C0.494616 0.000976562 0 0.494613 0 1.10482V18.8961C0 19.5064 0.494616 20.0006 1.10383 20.0006H10.682V12.2556H8.07587V9.23681H10.682V7.01067C10.682 4.42789 12.259 3.02075 14.5635 3.02075C15.6683 3.02075 16.6157 3.10341 16.892 3.1393V5.83899L15.2936 5.83965C14.0406 5.83965 13.7989 6.43537 13.7989 7.30903V9.23582H16.7883L16.3974 12.2543H13.7985V19.9997H18.8945C19.5044 19.9997 19.9993 19.5047 19.9993 18.8961V1.10417C19.999 0.494613 19.5047 0.000976562 18.8949 0.000976562Z"
+                                                fill="#8F9ABA" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_385:1233">
+                                                <rect width="20" height="20" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                            </a>
+                            <a href="#" class="social__link">
+                                <span class="social__link-icon">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_385:1236)">
+                                            <path
+                                                d="M18.4211 0H1.57895C0.706919 0 0 0.706289 0 1.57754V18.4046C0 19.2759 0.706919 19.9822 1.57895 19.9822H18.4211C19.2931 19.9822 20 19.2759 20 18.4046V1.57754C20 0.706289 19.2931 0 18.4211 0Z"
+                                                fill="#8F9ABA" />
+                                            <path
+                                                d="M13.5355 5.99463H6.99079C6.72925 5.99463 6.47026 6.04869 6.22864 6.15374C5.98702 6.25878 5.7675 6.41274 5.58262 6.60681C5.39774 6.80089 5.25113 7.03129 5.15116 7.28483C5.05119 7.53837 4.99983 7.8101 5 8.08447V11.7976C4.99983 12.072 5.05119 12.3437 5.15116 12.5972C5.25113 12.8508 5.39774 13.0812 5.58262 13.2753C5.7675 13.4693 5.98702 13.6233 6.22864 13.7283C6.47026 13.8334 6.72925 13.8874 6.99079 13.8874H13.5355C13.7971 13.8874 14.0561 13.8334 14.2977 13.7283C14.5393 13.6233 14.7588 13.4693 14.9437 13.2753C15.1286 13.0812 15.2752 12.8508 15.3752 12.5972C15.4751 12.3437 15.5265 12.072 15.5263 11.7976V8.08447C15.5265 7.8101 15.4751 7.53837 15.3752 7.28483C15.2752 7.03129 15.1286 6.80089 14.9437 6.60681C14.7588 6.41274 14.5393 6.25878 14.2977 6.15374C14.0561 6.04869 13.7971 5.99463 13.5355 5.99463ZM8.87632 11.6333V8.24873L11.65 9.94104L8.87632 11.6333Z"
+                                                fill="#1F2C51" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_385:1236">
+                                                <rect width="20" height="19.9822" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                            </a>
+                            <a href="#" class="social__link">
+                                <span class="social__link-icon">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_385:1249)">
+                                            <path
+                                                d="M14.4769 6.61343C14.3849 6.36411 14.2381 6.13843 14.0474 5.95319C13.8622 5.76245 13.6366 5.61566 13.3871 5.52365C13.1848 5.44507 12.8809 5.35153 12.321 5.32605C11.7154 5.29843 11.5338 5.29248 10.0006 5.29248C8.46725 5.29248 8.28568 5.29828 7.68021 5.3259C7.12036 5.35153 6.81625 5.44507 6.61407 5.52365C6.36459 5.61566 6.13892 5.76245 5.95383 5.95319C5.76309 6.13843 5.6163 6.36395 5.52414 6.61343C5.44556 6.81577 5.35202 7.11987 5.32654 7.67972C5.29892 8.28519 5.29297 8.46677 5.29297 10.0001C5.29297 11.5333 5.29892 11.7149 5.32654 12.3205C5.35202 12.8804 5.44556 13.1843 5.52414 13.3867C5.6163 13.6361 5.76294 13.8617 5.95367 14.0469C6.13892 14.2376 6.36444 14.3844 6.61392 14.4764C6.81625 14.5552 7.12036 14.6487 7.68021 14.6742C8.28568 14.7018 8.4671 14.7076 10.0005 14.7076C11.534 14.7076 11.7155 14.7018 12.3209 14.6742C12.8807 14.6487 13.1848 14.5552 13.3871 14.4764C13.8879 14.2833 14.2838 13.8875 14.4769 13.3867C14.5555 13.1843 14.649 12.8804 14.6747 12.3205C14.7023 11.7149 14.7081 11.5333 14.7081 10.0001C14.7081 8.46677 14.7023 8.28519 14.6747 7.67972C14.6492 7.11987 14.5557 6.81577 14.4769 6.61343ZM10.0006 12.9486C8.37204 12.9486 7.05185 11.6285 7.05185 9.99997C7.05185 8.3714 8.37204 7.05136 10.0006 7.05136C11.629 7.05136 12.9492 8.3714 12.9492 9.99997C12.9492 11.6285 11.629 12.9486 10.0006 12.9486ZM13.0658 7.62387C12.6852 7.62387 12.3767 7.31534 12.3767 6.93478C12.3767 6.55423 12.6852 6.2457 13.0658 6.2457C13.4464 6.2457 13.7549 6.55423 13.7549 6.93478C13.7547 7.31534 13.4464 7.62387 13.0658 7.62387Z"
+                                                fill="#8F9ABA" />
+                                            <path
+                                                d="M11.9141 10C11.9141 11.0571 11.0571 11.9141 10 11.9141C8.94287 11.9141 8.08594 11.0571 8.08594 10C8.08594 8.94287 8.94287 8.08594 10 8.08594C11.0571 8.08594 11.9141 8.94287 11.9141 10Z"
+                                                fill="#8F9ABA" />
+                                            <path
+                                                d="M18.5576 0H1.44241C0.645752 0 0 0.645752 0 1.44241V18.5576C0 19.3542 0.645752 20 1.44241 20H18.5576C19.3542 20 20 19.3542 20 18.5576V1.44241C20 0.645752 19.3542 0 18.5576 0V0ZM15.7076 12.3674C15.6798 12.9787 15.5826 13.396 15.4407 13.7613C15.1424 14.5326 14.5326 15.1424 13.7613 15.4407C13.3961 15.5826 12.9787 15.6796 12.3676 15.7076C11.7552 15.7355 11.5596 15.7422 10.0002 15.7422C8.44055 15.7422 8.24509 15.7355 7.6326 15.7076C7.02148 15.6796 6.604 15.5826 6.23886 15.4407C5.85556 15.2965 5.50858 15.0705 5.22171 14.7783C4.92966 14.4916 4.70367 14.1444 4.55948 13.7613C4.41757 13.3961 4.32037 12.9787 4.2926 12.3676C4.26437 11.7551 4.25781 11.5594 4.25781 10C4.25781 8.44055 4.26437 8.24493 4.29245 7.6326C4.32022 7.02133 4.41727 6.604 4.55917 6.23871C4.70337 5.85556 4.9295 5.50842 5.22171 5.22171C5.50842 4.9295 5.85556 4.70352 6.23871 4.55933C6.604 4.41742 7.02133 4.32037 7.6326 4.29245C8.24493 4.26453 8.44055 4.25781 10 4.25781C11.5594 4.25781 11.7551 4.26453 12.3674 4.2926C12.9787 4.32037 13.396 4.41742 13.7613 4.55917C14.1444 4.70337 14.4916 4.9295 14.7784 5.22171C15.0705 5.50858 15.2966 5.85556 15.4407 6.23871C15.5827 6.604 15.6798 7.02133 15.7077 7.6326C15.7356 8.24493 15.7422 8.44055 15.7422 10C15.7422 11.5594 15.7356 11.7551 15.7076 12.3674Z"
+                                                fill="#8F9ABA" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_385:1249">
+                                                <rect width="20" height="20" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                            </a>
+                            <a href="#" class="social__link">
+                                <span class="social__link-icon">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_385:1242)">
+                                            <path
+                                                d="M18.4211 0H1.57895C0.706919 0 0 0.706289 0 1.57754V18.4046C0 19.2759 0.706919 19.9822 1.57895 19.9822H18.4211C19.2931 19.9822 20 19.2759 20 18.4046V1.57754C20 0.706289 19.2931 0 18.4211 0Z"
+                                                fill="#8F9ABA" />
+                                            <g clip-path="url(#clip1_385:1242)">
+                                                <path
+                                                    d="M8.70859 11.5814L8.51009 14.3709C8.79409 14.3709 8.91709 14.249 9.06459 14.1027L10.3961 12.8313L13.1551 14.85C13.6611 15.1317 14.0176 14.9834 14.1541 14.3849L15.9651 5.90647L15.9656 5.90597C16.1261 5.15864 15.6951 4.8664 15.2021 5.04974L4.55709 9.12161C3.83059 9.40335 3.84159 9.80799 4.43359 9.99133L7.15509 10.8371L13.4766 6.8851C13.7741 6.68828 14.0446 6.79718 13.8221 6.994L8.70859 11.5814Z"
+                                                    fill="#1F2C51" />
+                                            </g>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_385:1242">
+                                                <rect width="20" height="19.9822" fill="white" />
+                                            </clipPath>
+                                            <clipPath id="clip1_385:1242">
+                                                <rect width="12" height="11.9893" fill="white"
+                                                    transform="translate(4 3.99658)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer__block">
+                        <h3 class="footer__title">Kategorien</h3>
+                        <ul class="footer__link-list">
+                            <li class="footer__link"><a href="#">Wirtschaft</a></li>
+                            <li class="footer__link"><a href="#">Informatik</a></li>
+                            <li class="footer__link"><a href="#">Technik</a></li>
+                            <li class="footer__link"><a href="#">Medizin</a></li>
+                            <li class="footer__link"><a href="#">Design</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__block">
+                        <h3 class="footer__title">Universitäten</h3>
+                        <ul class="footer__link-list">
+                            <li class="footer__link"><a href="#">Rating</a></li>
+                            <li class="footer__link"><a href="#">Beliebt</a></li>
+                            <li class="footer__link"><a href="#">Top 15</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__block">
+                        <h3 class="footer__title">Kontakt</h3>
+                        <ul class="footer__link-list">
+                            <li class="footer__link"><a href="tel:123">Телефон: +7(985) 777-21-21</a></li>
+                            <li class="footer__link"><a href="mailto:@gmail.ru">@mail: mail@mail.com</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Подключение скриптов -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../js/app.js" defer></script>
+    <script src="../js/swiper-bundle.min.js"></script>
+
+</body>
+
+</html>
