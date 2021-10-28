@@ -78,8 +78,17 @@ a:visited {
 }
 
 a:hover {
-    text-decoration: none;
-    color: $accent;
+    @media (min-width: $minHover + px) {
+        text-decoration: none;
+        color: $accent;
+    }
+}
+
+a:active {
+    @media (max-width: $minHover + px) {
+        text-decoration: none;
+        color: $accent;
+    }
 }
 
 ul li {

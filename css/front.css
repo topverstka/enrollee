@@ -124,9 +124,18 @@ a:visited {
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: none;
-  color: var(--accent);
+@media (min-width: 768px) {
+  a:hover {
+    text-decoration: none;
+    color: var(--accent);
+  }
+}
+
+@media (max-width: 768px) {
+  a:active {
+    text-decoration: none;
+    color: var(--accent);
+  }
 }
 
 ul li {
@@ -2170,6 +2179,11 @@ h2 {
   width: fit-content;
 }
 
+.estim_univer .estim__city-text {
+  font-size: 16px;
+  font-weight: 500;
+}
+
 .estim__city {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2199,7 +2213,7 @@ h2 {
 
 .estim__city-text {
   font-size: 12px;
-  font-weight: 500px;
+  font-weight: 500;
   color: #838383;
   margin: 0 0 0 5px;
 }
@@ -3719,12 +3733,6 @@ h2 {
   }
 }
 
-@media (max-width: 670px) {
-  .works .container {
-    padding: 0;
-  }
-}
-
 .works-tabs__header {
   max-width: 682px;
   width: 100%;
@@ -3750,6 +3758,12 @@ h2 {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
+}
+
+@media (max-width: 500px) {
+  .works-tabs__tab {
+    font-size: 14px;
+  }
 }
 
 .works-tabs__tab:hover {
@@ -3813,16 +3827,39 @@ h2 {
 }
 
 .works-card {
+  height: auto;
   -webkit-border-radius: 5px;
           border-radius: 5px;
   padding: 20px 24px 50px;
   overflow: hidden;
 }
 
-.works-card:hover .works-card__img::before {
-  -webkit-transform: scale(4);
-      -ms-transform: scale(4);
-          transform: scale(4);
+@media (max-width: 500px) {
+  .works-card {
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+
+@media (min-width: 768px) {
+  .works-card:hover .works-card__img::before {
+    -webkit-transform: scale(4);
+        -ms-transform: scale(4);
+            transform: scale(4);
+  }
+  .works-card:hover .works-card__title {
+    color: var(--main);
+  }
+}
+
+.works-card.swiper-slide-active {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
 }
 
 .works-card__img {
@@ -3862,6 +3899,14 @@ h2 {
   transition: .5s;
 }
 
+@media (max-width: 670px) {
+  .works-card__img::before {
+    -webkit-transform: scale(4);
+        -ms-transform: scale(4);
+            transform: scale(4);
+  }
+}
+
 .works-card__img img {
   width: 100%;
   height: 100%;
@@ -3873,9 +3918,21 @@ h2 {
   margin: 30px 0 0 0;
 }
 
+@media (max-width: 500px) {
+  .works-card__title {
+    font-size: 16px;
+  }
+}
+
 .works-card__text {
   font-size: 16px;
   margin: 20px 0 0 0;
+}
+
+@media (max-width: 500px) {
+  .works-card__text {
+    font-size: 14px;
+  }
 }
 
 .about__body {

@@ -86,7 +86,6 @@ document.addEventListener("DOMContentLoaded", () => {
         slidesPerView: 1.5,
         spaceBetween: 10,
         loop: true,
-        centeredSlides: true,
 
         breakpoints: {
             450: {
@@ -95,6 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
             },
             670: {
                 slidesPerView: 3,
+                centeredSlides: true,
             },
             900: {
                 slidesPerView: 4,
@@ -112,14 +112,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const worksSlider1 = new Swiper('.works-slider_1', {
         slidesPerView: 1.5,
-        spaceBetween: 16,
+        spaceBetween: 0,
         observer: true,
         observeParents: true,
+        centeredSlides: true,
 
         breakpoints: {
             500: {
                 slidesPerView: 2,
                 spaceBetween: 16,
+                centeredSlides: false,
             },
             900: {
                 slidesPerView: 3,
@@ -141,11 +143,13 @@ document.addEventListener("DOMContentLoaded", () => {
         spaceBetween: 16,
         observer: true,
         observeParents: true,
+        centeredSlides: true,
 
         breakpoints: {
             500: {
                 slidesPerView: 2,
                 spaceBetween: 16,
+                centeredSlides: false,
             },
             900: {
                 slidesPerView: 3,

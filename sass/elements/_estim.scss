@@ -5,6 +5,11 @@
 
 .estim_univer {
     width: fit-content;
+
+    & .estim__city-text {
+        font-size: 16px;
+        font-weight: 500;
+    }
 }    
 
 .estim__city {
@@ -27,7 +32,7 @@
 
 .estim__city-text {
     font-size: 12px;
-    font-weight: 500px;
+    font-weight: 500;
     color: #838383;
     margin: 0 0 0 5px;
 }
