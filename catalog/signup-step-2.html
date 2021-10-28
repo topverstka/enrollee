@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="RU">
+<head>
+	<meta charset="utf-8">
+	<title>Project name</title>
+	<meta name="viewport" content="width=device-width">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Описание проекта">
+	<link rel="icon" href="../img/favicon.ico">
+	<link rel="stylesheet" href="../css/aos.css">
+
+	<!-- Кастомые анимации -->
+	<link rel="stylesheet" href="../css/animation.css">
+	<!-- / Кастомые анимации -->
+
+	<link rel="stylesheet" href="../css/lightgallery.min.css">
+    <link rel="stylesheet" href="../css/front.css"> 
+</head> 
+<body class="modal-page">
+	<div class="wrapper">
+        <header class="header header_auth">
+            <div class="container container_header">
+                <div class="header__body">
+                    <div class="logo logo_header">
+                        <a href="#" class="logo__link">
+                            <svg width="163" height="50" viewBox="0 0 163 50" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0 44.6749L7.90467 26.1943H9.83996L17.7446 44.6749H15.3732L13.0018 39.1144H4.63377L2.28963 44.6749H0ZM5.47876 37.0156H12.1023L8.80417 29.1654L5.47876 37.0156Z"
+                                    fill="#202021" />
+                                <path
+                                    d="M23.3594 44.6748V26.3032H25.6217L32.5179 35.7343L39.1415 26.3032H41.2675V44.6748H39.0324V29.8194L32.5179 38.9507H32.1635L25.5672 29.9012V44.6748H23.3594Z"
+                                    fill="#202021" />
+                                <path
+                                    d="M49.2812 44.6748V26.3032H51.5436L58.4398 35.7343L65.0633 26.3032H67.1894V44.6748H64.9543V29.8194L58.4398 38.9507H58.0854L51.4891 29.9012V44.6748H49.2812Z"
+                                    fill="#202021" />
+                                <path
+                                    d="M72.832 44.6749L80.7367 26.1943H82.672L90.5767 44.6749H88.2053L85.8339 39.1144H77.4658L75.1217 44.6749H72.832ZM78.3108 37.0156H84.9344L81.6362 29.1654L78.3108 37.0156Z"
+                                    fill="#202021" />
+                                <path
+                                    d="M91.8857 28.402V26.3032H106.986V28.402H100.554V44.6748H98.3185V28.402H91.8857V28.402Z"
+                                    fill="#202021" />
+                                <path
+                                    d="M103.605 28.402V26.3032H118.706V28.402H112.273V44.6748H110.038V28.402H103.605V28.402Z"
+                                    fill="#202021" />
+                                <path d="M127.756 44.1296V32.3271H129.936V44.1296H127.756Z" fill="#202021" />
+                                <path
+                                    d="M137.487 0C127.756 0 119.279 5.4515 114.972 13.4652H7.98633V17.6083H123.122V28.4841H134.025V39.4143H144.983V49.9357C145.146 49.8812 145.31 49.854 145.391 49.8267C155.613 46.5013 163 36.8794 163 25.5403C163.027 11.4481 151.606 0 137.487 0ZM128.846 25.4585C127.347 25.4585 126.148 24.2592 126.148 22.76C126.148 21.2609 127.347 20.0615 128.846 20.0615C130.345 20.0615 131.545 21.2609 131.545 22.76C131.517 24.2592 130.318 25.4585 128.846 25.4585Z"
+                                    fill="url(#paint0_linear_344:5651)" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_344:5651" x1="7.98055" y1="24.9805" x2="163.029"
+                                        y2="24.9805" gradientUnits="userSpaceOnUse">
+                                        <stop offset="0.00531915" stop-color="#0F2356" />
+                                        <stop offset="0.3298" stop-color="#164193" />
+                                        <stop offset="0.4342" stop-color="#12509B" />
+                                        <stop offset="0.6551" stop-color="#0074B0" />
+                                        <stop offset="0.9724" stop-color="#27AEC7" />
+                                        <stop offset="1" stop-color="#2CB3C8" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </a>
+                    </div>
+                    <nav class="menu">
+                        <div class="menu__body">
+                            <ul class="menu__list">
+                                <li class="menu__item"><a href="#">Kategorien</a></li>
+                                <li class="menu__item"><a href="#">Universitäten</a></li>
+                                <li class="menu__item"><a href="#">Für Studenten </a></li>
+                                <li class="menu__item"><a href="#">Studiengänge</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="auth">
+                        <a href="#" class="btn btn_border auth__signup">Registrieren</a>
+                        <a href="#" class="btn auth__login"> Log In</a>
+                    </div>
+                    <a href="#" class="user">
+                        <span class="user__name">max f.</span>
+                        <div class="user__img-block">
+                            <div class="user__img"><img src="../img/avatar.png" alt=""></div>
+                            <div class="user__notif"><span>2</span></div>
+                        </div>
+                    </a>
+                    <button class="burger"><span></span></button>
+                </div>
+            </div>
+        </header>
+
+        <div class="modal signup">
+            <div class="modal__wrap signup__wrap">
+                <div class="modal__content signup__content">
+                    <div class="login__header">
+                        <h1 class="modal__title modal__title_lowercase">Заполните данные профиля</h1>
+                    </div>
+                    <form action="#" class="signup__form" id="signup-form">
+                        <div class="signup__body signup__body_step-student-2">
+                            <div class="signup-student__img-block">
+                                <h4 class="signup-student__img-title">Your photo</h4>
+                                <div class="signup-student__img-img"></div>
+                                <button class="signup-student__img-upload">upload</button>
+                            </div>
+                            <div class="signup-info__list">
+                                <div class="signup-info">
+                                    <h4 class="signup-info__title">Choose your gender</h4>
+                                    <div class="signup-info__body">
+                                        <div class="signup__checkbox-list">
+                                            <div class="signup__checkbox">
+                                                <input class="signup__checkbox-input" id="signup-gender-female" type="radio" name="signup-gender" value="Female" checked>
+                                                <label for="signup-gender-female" class="signup__checkbox-label">Female</label>
+                                            </div>
+                                            <div class="signup__checkbox">
+                                                <input class="signup__checkbox-input" id="signup__checkbox-male" type="radio" name="signup-gender" value="Male">
+                                                <label for="signup__checkbox-male" class="signup__checkbox-label">Male</label>
+                                            </div>
+                                            <div class="signup__checkbox">
+                                                <input class="signup__checkbox-input" id="signup__checkbox-non-binary" type="radio" name="signup-gender" value="Non binary">
+                                                <label for="signup__checkbox-non-binary" class="signup__checkbox-label">Non binary</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="signup-info">
+                                    <h4 class="signup-info__title">Your birthday</h4>
+                                    <div class="signup-info__body">
+                                        <div class="signup__checkbox-list">
+                                            <div class="signup__input">
+                                                <input class="signup__input-input" id="signup-gender-female" type="text" name="birth-day" placeholder="Day">
+                                            </div>
+                                            <div class="signup__input">
+                                                <input class="signup__input-input" id="signup__checkbox-male" type="text" name="birth-month" placeholder="Month">
+                                            </div>
+                                            <div class="signup__input">
+                                                <input class="signup__input-input" id="signup__checkbox-non-binary" type="text" name="birth-year" placeholder="Year">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="signup-info">
+                                    <h4 class="signup-info__title">Choose language</h4>
+                                    <div class="signup-info__body">
+                                        <div class="signup__checkbox-list signup__checkbox-list-lang">
+                                            <div class="signup__checkbox">
+                                                <input class="signup__checkbox-input" id="signup-gender-female" type="radio" name="signup-lang" value="English" checked>
+                                                <label for="signup-gender-female" class="signup__checkbox-label">English</label>
+                                            </div>
+                                            <div class="signup__checkbox">
+                                                <input class="signup__checkbox-input" id="signup__checkbox-male" type="radio" name="signup-lang" value="Deutsch">
+                                                <label for="signup__checkbox-male" class="signup__checkbox-label">Deutsch</label>
+                                            </div>
+                                            <div class="signup__checkbox">
+                                                <input class="signup__checkbox-input" id="signup__checkbox-non-binary" type="radio" name="signup-lang" value="French">
+                                                <label for="signup__checkbox-non-binary" class="signup__checkbox-label">French</label>
+                                            </div>
+                                            <div class="signup__checkbox">
+                                                <input class="signup__checkbox-input" id="signup-gender-female" type="radio" name="signup-lang" value="Espanol">
+                                                <label for="signup-gender-female" class="signup__checkbox-label">Espanol</label>
+                                            </div>
+                                            <div class="signup__checkbox">
+                                                <input class="signup__checkbox-input" id="signup__checkbox-male" type="radio" name="signup-lang" value="Russian">
+                                                <label for="signup__checkbox-male" class="signup__checkbox-label">Russian</label>
+                                            </div>
+                                            <div class="signup__checkbox">
+                                                <input class="signup__checkbox-input" id="signup__checkbox-non-binary" type="radio" name="signup-lang" value="French">
+                                                <label for="signup__checkbox-non-binary" class="signup__checkbox-label">French</label>
+                                            </div>
+                                            <div class="signup__checkbox">
+                                                <input class="signup__checkbox-input" id="signup-gender-female" type="radio" name="signup-lang" value="Espanol">
+                                                <label for="signup-gender-female" class="signup__checkbox-label">Espanol</label>
+                                            </div>
+                                            <div class="signup__checkbox">
+                                                <input class="signup__checkbox-input" id="signup__checkbox-male" type="radio" name="signup-lang" value="Russian">
+                                                <label for="signup__checkbox-male" class="signup__checkbox-label">Russian</label>
+                                            </div>
+                                            <button class="signup__lang-more">
+                                                <span class="signup__lang-more-text">Other</span>
+                                                <span class="signup__lang-more-icon">
+                                                    <svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.368722 0.357457C0.860357 -0.119148 1.65746 -0.119152 2.1491 0.357447L7.50272 5.54728L12.8505 0.357885C13.3418 -0.118958 14.1389 -0.119344 14.6308 0.357019C15.1227 0.833383 15.1231 1.60611 14.6317 2.08295L7.50362 9L0.368733 2.08339C-0.122907 1.60679 -0.122912 0.834064 0.368722 0.357457Z" fill="#212C52"/>
+                                                    </svg>                                                        
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="signup-info">
+                                    <h4 class="signup-info__title">Text about you</h4>
+                                    <div class="signup-info__body">
+                                        <div class="signup__input">
+                                            <textarea class="signup__input-textarea" id="signup-gender-female" type="text" name="user-experience" placeholder="Опишите ваш опыт"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn btn_full signup-info__btn-next">Next</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="signup__progress _step-2">
+                        <span class="signup__progress-line"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+		<footer class="footer">
+			<div class="container">
+				<nav class="footer__body">
+					<div class="footer__block">
+						<div class="logo">
+							<a href="#" class="logo__link logo__link_light">
+								<svg width="163" height="50" viewBox="0 0 163 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M0 44.6749L7.90467 26.1943H9.83996L17.7446 44.6749H15.3732L13.0018 39.1144H4.63377L2.28963 44.6749H0ZM5.47876 37.0156H12.1023L8.80417 29.1654L5.47876 37.0156Z" fill="#202021"/>
+									<path d="M23.3594 44.6748V26.3032H25.6217L32.5179 35.7343L39.1415 26.3032H41.2675V44.6748H39.0324V29.8194L32.5179 38.9507H32.1635L25.5672 29.9012V44.6748H23.3594Z" fill="#202021"/>
+									<path d="M49.2812 44.6748V26.3032H51.5436L58.4398 35.7343L65.0633 26.3032H67.1894V44.6748H64.9543V29.8194L58.4398 38.9507H58.0854L51.4891 29.9012V44.6748H49.2812Z" fill="#202021"/>
+									<path d="M72.832 44.6749L80.7367 26.1943H82.672L90.5767 44.6749H88.2053L85.8339 39.1144H77.4658L75.1217 44.6749H72.832ZM78.3108 37.0156H84.9344L81.6362 29.1654L78.3108 37.0156Z" fill="#202021"/>
+									<path d="M91.8857 28.402V26.3032H106.986V28.402H100.554V44.6748H98.3185V28.402H91.8857V28.402Z" fill="#202021"/>
+									<path d="M103.605 28.402V26.3032H118.706V28.402H112.273V44.6748H110.038V28.402H103.605V28.402Z" fill="#202021"/>
+									<path d="M127.756 44.1296V32.3271H129.936V44.1296H127.756Z" fill="#202021"/>
+									<path d="M137.487 0C127.756 0 119.279 5.4515 114.972 13.4652H7.98633V17.6083H123.122V28.4841H134.025V39.4143H144.983V49.9357C145.146 49.8812 145.31 49.854 145.391 49.8267C155.613 46.5013 163 36.8794 163 25.5403C163.027 11.4481 151.606 0 137.487 0ZM128.846 25.4585C127.347 25.4585 126.148 24.2592 126.148 22.76C126.148 21.2609 127.347 20.0615 128.846 20.0615C130.345 20.0615 131.545 21.2609 131.545 22.76C131.517 24.2592 130.318 25.4585 128.846 25.4585Z" fill="url(#paint0_linear_344:5651)"/>
+									<defs>
+									<linearGradient id="paint0_linear_344:5651" x1="7.98055" y1="24.9805" x2="163.029" y2="24.9805" gradientUnits="userSpaceOnUse">
+									<stop offset="0.00531915" stop-color="#0F2356"/>
+									<stop offset="0.3298" stop-color="#164193"/>
+									<stop offset="0.4342" stop-color="#12509B"/>
+									<stop offset="0.6551" stop-color="#0074B0"/>
+									<stop offset="0.9724" stop-color="#27AEC7"/>
+									<stop offset="1" stop-color="#2CB3C8"/>
+									</linearGradient>
+									</defs>
+								</svg>
+							</a>
+						</div>
+						<ul class="footer__link-list">
+							<li class="footer__link"><a href="#">Datenschutz</a></li>
+							<li class="footer__link"><a href="#">Impressum</a></li>
+						</ul>
+						<div class="social">
+							<a href="#" class="social__link">
+								<span class="social__link-icon">
+									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_385:1233)">
+										<path d="M18.8949 0.000976562H1.10383C0.494616 0.000976562 0 0.494613 0 1.10482V18.8961C0 19.5064 0.494616 20.0006 1.10383 20.0006H10.682V12.2556H8.07587V9.23681H10.682V7.01067C10.682 4.42789 12.259 3.02075 14.5635 3.02075C15.6683 3.02075 16.6157 3.10341 16.892 3.1393V5.83899L15.2936 5.83965C14.0406 5.83965 13.7989 6.43537 13.7989 7.30903V9.23582H16.7883L16.3974 12.2543H13.7985V19.9997H18.8945C19.5044 19.9997 19.9993 19.5047 19.9993 18.8961V1.10417C19.999 0.494613 19.5047 0.000976562 18.8949 0.000976562Z" fill="#8F9ABA"/>
+										</g>
+										<defs>
+										<clipPath id="clip0_385:1233">
+										<rect width="20" height="20" fill="white"/>
+										</clipPath>
+										</defs>
+									</svg>										
+								</span>
+							</a>
+							<a href="#" class="social__link">
+								<span class="social__link-icon">
+									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_385:1236)">
+										<path d="M18.4211 0H1.57895C0.706919 0 0 0.706289 0 1.57754V18.4046C0 19.2759 0.706919 19.9822 1.57895 19.9822H18.4211C19.2931 19.9822 20 19.2759 20 18.4046V1.57754C20 0.706289 19.2931 0 18.4211 0Z" fill="#8F9ABA"/>
+										<path d="M13.5355 5.99463H6.99079C6.72925 5.99463 6.47026 6.04869 6.22864 6.15374C5.98702 6.25878 5.7675 6.41274 5.58262 6.60681C5.39774 6.80089 5.25113 7.03129 5.15116 7.28483C5.05119 7.53837 4.99983 7.8101 5 8.08447V11.7976C4.99983 12.072 5.05119 12.3437 5.15116 12.5972C5.25113 12.8508 5.39774 13.0812 5.58262 13.2753C5.7675 13.4693 5.98702 13.6233 6.22864 13.7283C6.47026 13.8334 6.72925 13.8874 6.99079 13.8874H13.5355C13.7971 13.8874 14.0561 13.8334 14.2977 13.7283C14.5393 13.6233 14.7588 13.4693 14.9437 13.2753C15.1286 13.0812 15.2752 12.8508 15.3752 12.5972C15.4751 12.3437 15.5265 12.072 15.5263 11.7976V8.08447C15.5265 7.8101 15.4751 7.53837 15.3752 7.28483C15.2752 7.03129 15.1286 6.80089 14.9437 6.60681C14.7588 6.41274 14.5393 6.25878 14.2977 6.15374C14.0561 6.04869 13.7971 5.99463 13.5355 5.99463ZM8.87632 11.6333V8.24873L11.65 9.94104L8.87632 11.6333Z" fill="#1F2C51"/>
+										</g>
+										<defs>
+										<clipPath id="clip0_385:1236">
+										<rect width="20" height="19.9822" fill="white"/>
+										</clipPath>
+										</defs>
+									</svg>																			
+								</span>
+							</a>
+							<a href="#" class="social__link">
+								<span class="social__link-icon">
+									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_385:1249)">
+										<path d="M14.4769 6.61343C14.3849 6.36411 14.2381 6.13843 14.0474 5.95319C13.8622 5.76245 13.6366 5.61566 13.3871 5.52365C13.1848 5.44507 12.8809 5.35153 12.321 5.32605C11.7154 5.29843 11.5338 5.29248 10.0006 5.29248C8.46725 5.29248 8.28568 5.29828 7.68021 5.3259C7.12036 5.35153 6.81625 5.44507 6.61407 5.52365C6.36459 5.61566 6.13892 5.76245 5.95383 5.95319C5.76309 6.13843 5.6163 6.36395 5.52414 6.61343C5.44556 6.81577 5.35202 7.11987 5.32654 7.67972C5.29892 8.28519 5.29297 8.46677 5.29297 10.0001C5.29297 11.5333 5.29892 11.7149 5.32654 12.3205C5.35202 12.8804 5.44556 13.1843 5.52414 13.3867C5.6163 13.6361 5.76294 13.8617 5.95367 14.0469C6.13892 14.2376 6.36444 14.3844 6.61392 14.4764C6.81625 14.5552 7.12036 14.6487 7.68021 14.6742C8.28568 14.7018 8.4671 14.7076 10.0005 14.7076C11.534 14.7076 11.7155 14.7018 12.3209 14.6742C12.8807 14.6487 13.1848 14.5552 13.3871 14.4764C13.8879 14.2833 14.2838 13.8875 14.4769 13.3867C14.5555 13.1843 14.649 12.8804 14.6747 12.3205C14.7023 11.7149 14.7081 11.5333 14.7081 10.0001C14.7081 8.46677 14.7023 8.28519 14.6747 7.67972C14.6492 7.11987 14.5557 6.81577 14.4769 6.61343ZM10.0006 12.9486C8.37204 12.9486 7.05185 11.6285 7.05185 9.99997C7.05185 8.3714 8.37204 7.05136 10.0006 7.05136C11.629 7.05136 12.9492 8.3714 12.9492 9.99997C12.9492 11.6285 11.629 12.9486 10.0006 12.9486ZM13.0658 7.62387C12.6852 7.62387 12.3767 7.31534 12.3767 6.93478C12.3767 6.55423 12.6852 6.2457 13.0658 6.2457C13.4464 6.2457 13.7549 6.55423 13.7549 6.93478C13.7547 7.31534 13.4464 7.62387 13.0658 7.62387Z" fill="#8F9ABA"/>
+										<path d="M11.9141 10C11.9141 11.0571 11.0571 11.9141 10 11.9141C8.94287 11.9141 8.08594 11.0571 8.08594 10C8.08594 8.94287 8.94287 8.08594 10 8.08594C11.0571 8.08594 11.9141 8.94287 11.9141 10Z" fill="#8F9ABA"/>
+										<path d="M18.5576 0H1.44241C0.645752 0 0 0.645752 0 1.44241V18.5576C0 19.3542 0.645752 20 1.44241 20H18.5576C19.3542 20 20 19.3542 20 18.5576V1.44241C20 0.645752 19.3542 0 18.5576 0V0ZM15.7076 12.3674C15.6798 12.9787 15.5826 13.396 15.4407 13.7613C15.1424 14.5326 14.5326 15.1424 13.7613 15.4407C13.3961 15.5826 12.9787 15.6796 12.3676 15.7076C11.7552 15.7355 11.5596 15.7422 10.0002 15.7422C8.44055 15.7422 8.24509 15.7355 7.6326 15.7076C7.02148 15.6796 6.604 15.5826 6.23886 15.4407C5.85556 15.2965 5.50858 15.0705 5.22171 14.7783C4.92966 14.4916 4.70367 14.1444 4.55948 13.7613C4.41757 13.3961 4.32037 12.9787 4.2926 12.3676C4.26437 11.7551 4.25781 11.5594 4.25781 10C4.25781 8.44055 4.26437 8.24493 4.29245 7.6326C4.32022 7.02133 4.41727 6.604 4.55917 6.23871C4.70337 5.85556 4.9295 5.50842 5.22171 5.22171C5.50842 4.9295 5.85556 4.70352 6.23871 4.55933C6.604 4.41742 7.02133 4.32037 7.6326 4.29245C8.24493 4.26453 8.44055 4.25781 10 4.25781C11.5594 4.25781 11.7551 4.26453 12.3674 4.2926C12.9787 4.32037 13.396 4.41742 13.7613 4.55917C14.1444 4.70337 14.4916 4.9295 14.7784 5.22171C15.0705 5.50858 15.2966 5.85556 15.4407 6.23871C15.5827 6.604 15.6798 7.02133 15.7077 7.6326C15.7356 8.24493 15.7422 8.44055 15.7422 10C15.7422 11.5594 15.7356 11.7551 15.7076 12.3674Z" fill="#8F9ABA"/>
+										</g>
+										<defs>
+										<clipPath id="clip0_385:1249">
+										<rect width="20" height="20" fill="white"/>
+										</clipPath>
+										</defs>
+									</svg>																			
+								</span>
+							</a>
+							<a href="#" class="social__link">
+								<span class="social__link-icon">
+									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_385:1242)">
+										<path d="M18.4211 0H1.57895C0.706919 0 0 0.706289 0 1.57754V18.4046C0 19.2759 0.706919 19.9822 1.57895 19.9822H18.4211C19.2931 19.9822 20 19.2759 20 18.4046V1.57754C20 0.706289 19.2931 0 18.4211 0Z" fill="#8F9ABA"/>
+										<g clip-path="url(#clip1_385:1242)">
+										<path d="M8.70859 11.5814L8.51009 14.3709C8.79409 14.3709 8.91709 14.249 9.06459 14.1027L10.3961 12.8313L13.1551 14.85C13.6611 15.1317 14.0176 14.9834 14.1541 14.3849L15.9651 5.90647L15.9656 5.90597C16.1261 5.15864 15.6951 4.8664 15.2021 5.04974L4.55709 9.12161C3.83059 9.40335 3.84159 9.80799 4.43359 9.99133L7.15509 10.8371L13.4766 6.8851C13.7741 6.68828 14.0446 6.79718 13.8221 6.994L8.70859 11.5814Z" fill="#1F2C51"/>
+										</g>
+										</g>
+										<defs>
+										<clipPath id="clip0_385:1242">
+										<rect width="20" height="19.9822" fill="white"/>
+										</clipPath>
+										<clipPath id="clip1_385:1242">
+										<rect width="12" height="11.9893" fill="white" transform="translate(4 3.99658)"/>
+										</clipPath>
+										</defs>
+									</svg>																												
+								</span>
+							</a>
+						</div>
+					</div>
+					<div class="footer__block">
+						<h3 class="footer__title">Kategorien</h3>
+						<ul class="footer__link-list">
+							<li class="footer__link"><a href="#">Wirtschaft</a></li>
+							<li class="footer__link"><a href="#">Informatik</a></li>
+							<li class="footer__link"><a href="#">Technik</a></li>
+							<li class="footer__link"><a href="#">Medizin</a></li>
+							<li class="footer__link"><a href="#">Design</a></li>
+						</ul>
+					</div>
+					<div class="footer__block">
+						<h3 class="footer__title">Universitäten</h3>
+						<ul class="footer__link-list">
+							<li class="footer__link"><a href="#">Rating</a></li>
+							<li class="footer__link"><a href="#">Beliebt</a></li>
+							<li class="footer__link"><a href="#">Top 15</a></li>
+						</ul>
+					</div>
+					<div class="footer__block">
+						<h3 class="footer__title">Kontakt</h3>
+						<ul class="footer__link-list">
+							<li class="footer__link"><a href="tel:123">Телефон: +7(985) 777-21-21</a></li>
+							<li class="footer__link"><a href="mailto:@gmail.ru">@mail: mail@mail.com</a></li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</footer>
+	</div>
+	
+	<!-- Подключение скриптов -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="../js/app.js" defer></script>
+	<script src="../js/swiper-bundle.min.js"></script>
+
+</body>
+</html>

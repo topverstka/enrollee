@@ -1,0 +1,177 @@
+.student {
+    margin: 0 0 90px 0;
+}
+
+.student__header {
+
+    & .estim {
+        width: fit-content;
+    }
+}
+
+.student__haeder-gpa {
+    align-items: center;
+    flex-direction: row;
+    margin: 0 0 0 24px;
+    
+    & .faculty-info__title {
+        font-size: 16px;
+        font-weight: 400;
+        text-transform: none;
+    }
+
+    & .faculty-info__text {
+        margin: 0 0 0 7px;
+    }
+}
+
+.student__body {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 0 0;
+}
+
+.student-info {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+
+    @media (max-width: $wwa + px) {
+        flex-direction: column;
+    }
+}
+
+.student-info__content {
+    margin: 0 0 0 34px;
+
+    @media (max-width: $wwa + px) {
+        margin: 24px 0 0 0;
+    }
+}
+
+.student-info__list {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0 0 0;
+    position: absolute;
+    bottom: 40px;
+
+    @media (max-width: $wwa + px) {
+        position: initial;
+    }
+
+    & .student-profile-section__block {
+        
+        &:not(:last-child) {
+            margin: 0 0 20px 0;
+        }
+    }
+}
+
+.student-info__text {
+    display: flex;
+    margin: 29px 0 0 0;
+}
+
+.student-info__text-icon {
+        display: block;
+        min-width: 37px;
+        width: 37px;
+        height: 20px;
+        margin: 0 18px 0 0;
+
+}
+
+.student-info__text-text {
+    max-width: 450px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 400;
+
+    & button {
+        display: inline;
+        font-size: inherit;
+        font-weight: 500;
+        color: $accent;
+        text-decoration: underline;
+        margin: 0 0 0 6px;
+    }
+}
+
+// карточки на главном экране
+.student-modal {
+    margin: 0 0 0 24px;
+}
+
+.student-modal__block {
+    max-width: 330px;
+    width: 100%;
+    border-radius: 15px;
+    padding: 20px 20px 30px 40px;
+}
+
+.student-modal__call {
+    background: #fff;
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.student-modal__body {
+
+}
+
+.student-modal__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.student-modal__title-text {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.estim-like {
+
+}
+
+.like-full {
+
+}
+
+.student-modal__call-content {
+    font-size: 22px;
+    font-weight: 400;
+    margin: 30px 0 0 0;
+}
+
+.student-modal__cal-btn {
+    margin: 20px 0 0 0;
+}
+
+// Чем студент может помочь
+.student-modal__help {
+    background: #F0F7F9;
+    padding-right: 14px;
+    margin: 30px 0 0 0;
+}
+
+.student-modal__tag-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px 0 0 0;
+}
+
+.student-modal__tag {
+    padding: 5px 12px;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 6px 6px 0;
+    transition: $tr;
+
+    &:hover {
+        transform: translate(2px,4px);
+        box-shadow: none;
+    }
+}

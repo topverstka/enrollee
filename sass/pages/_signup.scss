@@ -33,6 +33,10 @@
 // Главный экран регистрации
 .signup__content {
     position: relative;
+
+    @media (max-width: $wwa3 + px) {
+        padding: 30px 16px 30px;
+    }
 }
 
 .signup__form {
@@ -44,12 +48,37 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    & .form__block {
+        width: 100%;
+
+        & label {
+            font-size: 14px;
+            font-weight: 500;
+            margin: 0 0 6px 0;
+        }
+    }
+
+
+}
+
+.signup__container {
+    max-width: 438px;
+    width: 100%;
 }
 
 .signup__body_step-student-2 {
     max-width: 440px;
     width: 100%;
     margin: 30px auto 0;
+}
+
+.signup-who {
+
+    & .signup__checkbox-list {
+        grid-template-columns: repeat(2, 140px);
+        justify-content: center;
+    }
 }
 
 .signup-who__title {
@@ -368,4 +397,138 @@
 
 .signup-info__btn-next {
     margin: 0 auto;
+}
+
+// Третий шаг
+.signup__body_step-student-3 {
+    margin: 10px auto 0;
+
+    & .form__block {
+        margin: 30px 0 0 0;
+
+        & textarea {
+            min-height: 130px;
+        }
+    }
+}
+
+.signup__rate {
+    margin: 30px 0 0 0;
+
+    @media (max-width: 500px) {
+        width: 100%;
+
+        & .signup-info__title {
+            text-align: left;
+        }
+    }
+    
+}
+
+.signup__rate_faculty {
+
+    & .signup__rate-list {
+        margin: 14px 0 0 0;
+    }
+}
+
+.signup__rate-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 30px;
+    align-items: flex-end;
+    margin: 20px 0 0 0;
+
+    @media (max-width: $wwa3 + px) {
+        grid-template-columns: repeat(2, 1fr);
+
+        & .student-edit-rating__item {
+            align-items: center;
+        }
+
+        & .student-edit-rating__subtitle {
+            text-align: center;
+        }
+    }
+
+
+    & .student-edit-rating__item {
+        margin: 0;
+    }
+}
+
+// Загрузка документа 
+.signup__upload-doc {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin: 20px 0 0 0;
+}
+
+.signup__upload-doc-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #212C52;
+    text-transform: none;
+
+    @media (max-width: 440px) {
+        max-width: 176px;
+    }
+}
+
+.signup__upload-doc-button {
+    font-size: 16px;
+    font-weight: 400;
+    color: $accent;
+    text-decoration: underline;
+    text-transform: uppercase;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+// Добавление тегов
+.signup-help {
+
+    & .form__field {
+        margin: 20px 0 0 0;
+    }
+}
+
+.signup-help__title {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: none;
+}
+
+.signup-help__tag-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 16px 0 0 0;
+}
+
+.signup-help__tag {
+    font-size: 12px;
+    font-weight: 400;
+    background: #F0F7F9;
+    border-radius: 6px;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 5px 12px;
+    margin: 0 8px 6px 0;
+    transition: $tr;
+
+    &:hover {
+        transform: translate(2px, 4px);
+        box-shadow: none;
+    }
+}
+
+.form__field {
+
+}
+
+.form__field_select {
+
 }

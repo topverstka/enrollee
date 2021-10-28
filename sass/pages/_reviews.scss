@@ -1,0 +1,13 @@
+.reviews__body {
+    margin: 50px 0 0 0;
+}
+
+.reviews__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+
+    @media (max-width: $wwa2 + px) {
+        grid-template-columns: 1fr;
+    }
+}

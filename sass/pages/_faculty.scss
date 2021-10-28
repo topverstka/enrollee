@@ -1,14 +1,23 @@
+.faculty {
+    padding: 0 0 40px 0;
+}
+
 .faculty__header {
     width: fit-content;
 
     & .estim__rating-text,
-    & .estim__rating-quantity {
+    & .estim__rating-quantity,
+    & .estim__city-text {
         font-size: 16px;
     }
 }
 
 .faculty__header-lang {
     margin: 0 0 0 24px;
+
+    @media (max-width: 400px) {
+        display: none !important;
+    }
 }
 
 // Основная информация
@@ -17,16 +26,34 @@
     grid-template-columns: 1fr 1fr;
     column-gap: 24px;
     margin: 20px 0 0 0;
+
+    @media (max-width: $wwa2 + px) {
+        grid-template-columns: 1fr;
+    }
 }
 
 .faculty-main__content {
     max-width: 500px;
     width: 100%;
+    margin: 0 26px 0 0;
+
+    @media (max-width: $wwa2 + px) {
+        max-width: none;
+        margin: 0 0 24px 0;
+    }
+
+    @media (max-width: $wwa3 + px) {
+        margin: 0;
+    }
 }
 
 .faculty-main__title {
     font-size: 28px;
     font-weight: 700;
+
+    @media (max-width: $wwa3 + px) {
+        font-size: 20px;
+    }
 }
 
 .faculty-main__text {
@@ -34,6 +61,10 @@
     font-weight: 400;
     margin: 20px 0 0 0;
     line-height: 1.4;
+
+    @media (max-width: $wwa3 + px) {
+        font-size: 18px;
+    }
 }
 
 .faculty-main__text-more {
@@ -45,8 +76,21 @@
 }
 
 .faculty-main__img-block {
+    height: fit-content;
     position: relative;
-    margin: 0 0 0 26px;
+
+    @media (max-width: 400px) {
+        display: none;
+    }
+}
+
+.faculty-main__img {
+
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
 }
 
 .faculty-main__semester {
@@ -81,18 +125,43 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 26px;
-    padding: 40px 0;
+    padding: 40px 0 0 0;
+
+    @media (max-width: $wwa3 + px) {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 30px 0 0 0;
+    }
 }
 
 .faculty-info__main {
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 40px;
+
+    @media (max-width: 500px) {
+        row-gap: 20px;
+    }
 }
 
 .faculty-info__block {
     display: flex;
     flex-direction: column;
+}
+
+.faculty-info__block-univer {
+
+    @media (max-width: 400px) {
+        display: none;
+    }
+}
+
+.faculty-info__block-lang {
+    display: none;
+
+    @media (max-width: 400px) {
+        display: flex;
+    }
 }
 
 .faculty-info__title {
@@ -132,6 +201,17 @@
     padding: 0 0 0 20px;
     position: relative;
 
+    @media (max-width: $wwa3 + px) {
+        padding: 0;
+        margin: 40px 0 0 0;
+    }
+
+    @media (max-width: 500px) {
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+        margin: 0 0 20px 0;
+    }
+
     &::before {
         content: '';
         position: absolute;
@@ -140,6 +220,14 @@
         width: 2px;
         height: 117%;
         background: #B7BAE3;
+
+        @media (max-width: $wwa2 + px) {
+            height: 100%;
+        }
+
+        @media (max-width: $wwa3 + px) {
+            display: none;
+        }
     }
 }
 
@@ -190,10 +278,87 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     margin: 40px 0 0 0;
+
+    & .btn {
+        margin: 6px 20px;
+    }
 }
 
 .faculty-review__btn-write {
     color: $accent;
-    margin: 0 0 0 40px;
+    // margin: 0 0 0 40px;
+}
+
+// Мобильная версия
+.faculty-mobile__main {
+    display: none;
+
+    @media (max-width: 400px) {
+        display: flex;
+        align-items: center;
+        margin: 0 0 15px 0;
+    }
+}
+
+.faculty-mobile__img {
+    min-width: 93px;
+    width: 93px;
+    height: 54px;
+
+    & img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.faculty-mobile__univer {
+    max-width: 190px;
+    width: 100%;
+    margin: 0 0 0 10px;
+
+    & .faculty-info__text {
+        font-weight: 500;
+    }
+}
+
+.faculty-mobile__official-website {
+    display: none;
+
+    @media (max-width: $wwa3 + px) {
+        display: flex;
+        width: fit-content;
+        margin: 20px auto 0 auto;
+    }
+}
+
+.faculty-mobile__semester {
+    display: none;
+
+    @media (max-width: 400px) {
+        width: 72px;
+        height: 72px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: $accent;
+        border-radius: 5px;
+        margin: 20px 0 0 0;
+    }
+}
+
+.faculty-mobile__semester-text {
+    font-size: 12px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.faculty-mobile__semester-num {
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    margin: 6px 0 0 0;
 }
