@@ -1,0 +1,214 @@
+.provide-call__content {
+    padding-right: 15px;
+    padding-left: 15px;
+    position: relative;
+
+    @media (max-width: $wwa3 + px) {
+        padding-bottom: 0;
+    }
+}
+
+.provide-call__title {
+
+    @media (max-width: $wwa3 + px) {
+        font-weight: 700;
+    }
+}
+
+.provide-call__form {
+    max-width: 438px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+    margin: 80px 0 0 0;
+
+    @media (max-width: $wwa3 + px) {
+        max-width: none;
+        margin: 40px 0 0 0;
+
+        & .provide-call__textarea textarea {
+            max-width: none;
+        }
+    }
+
+    & label {
+        font-size: 14px;
+        font-weight: 500;
+        margin: 0 0 4px 0;
+    }
+}
+
+.provide-call__select {
+
+    & select {
+        color: $main;
+    }
+}
+
+.provide-call__input {
+    position: relative;
+}
+
+.provide-call__input-hint {
+    position: absolute;
+    bottom: -3px;
+    right: 0;
+    transform: translate(0, 100%);
+    font-size: 10px;
+    font-weight: 400;
+    color: #C0C0C0;
+}
+
+// Страница с предложением времени
+.suggest-time__block {
+    max-width: 438px;
+    width: 100%;
+    margin: 40px 0 0 0;
+
+    @media (max-width: $wwa3 + px) {
+        margin: 30px 0 0 0;
+    }
+}
+
+.suggest-time__form {
+
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+
+    & label {
+        font-size: 14px;
+        font-weight: 500;
+        margin: 0 0 4px 0;
+    }
+}
+
+.suggest-time__row {
+    display: grid;
+    grid-template-columns: .55fr .45fr;
+    column-gap: 22px;
+    align-items: flex-end;
+
+    @media (max-width: $wwa3 + px) {
+        column-gap: 10px;
+    }
+}
+
+// Выбор типа оплаты
+.suggest-time__choose-payment-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 22px;
+
+    @media (max-width: 500px) {
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+    }
+}
+
+.suggest-time__choose-payment-title {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 0 6px 0;
+    text-transform: none;
+}
+
+.suggest-time__choose-payment {
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 13px;
+    border: 1px solid $outline;
+    border-radius: 3px;
+    position: relative;
+}
+
+.suggest-time__choose-payment-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+
+    &:checked {
+
+        & ~ .suggest-time__choose-payment-box {
+            border-color: $main;
+
+            & svg {
+                opacity: 1;
+            }
+        }
+
+        & ~ .suggest-time__choose-content {
+
+            & .suggest-time__choose-content-text {
+                color: $main;
+            }
+
+            & .suggest-time__choose-content-icon {
+
+                & svg path {
+                    fill: $main;
+                }
+            }
+        }
+    }
+}
+
+.suggest-time__choose-payment-box {
+    min-width: 26px;
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $outline;
+    border-radius: 5px;
+    margin: 0 20px 0 0;
+
+    & svg {
+        opacity: 0;
+        width: 90%;
+        height: 90%;
+        object-fit: contain;
+        transition: $tr;
+    }
+}
+
+.suggest-time__choose-payment-box-icon {
+
+}
+
+.suggest-time__choose-content {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $wwa3 + px) {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+.suggest-time__choose-content-text {
+    font-size: 18px;
+    font-weight: 400;
+    color: $outline;
+    margin: 0 10px 0 0;
+    transition: $tr;
+}
+
+.suggest-time__choose-content-icon {
+
+    & svg {
+        
+        & path {
+            transition: $tr;
+            fill: $outline;
+        }
+    }
+}
