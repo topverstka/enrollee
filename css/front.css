@@ -7721,6 +7721,12 @@ h2 {
           border-radius: 2px;
 }
 
+@media (max-width: 670px) {
+  .signup__progress {
+    top: 10px;
+  }
+}
+
 .signup__progress._step-1 .signup__progress-line {
   width: 33.333%;
 }
@@ -7740,6 +7746,12 @@ h2 {
   background: #63CEA1;
   -webkit-border-radius: 2px;
           border-radius: 2px;
+}
+
+@media (max-width: 670px) {
+  .signup__wrap {
+    padding-top: 0;
+  }
 }
 
 .signup__content {

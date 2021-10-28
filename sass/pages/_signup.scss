@@ -9,6 +9,10 @@
     background: #D6D6D6;
     border-radius: 2px;
 
+    @media (max-width: $wwa3 + px) {
+        top: 10px;
+    }
+
     &._step-1 .signup__progress-line {
         width: 33.333%;
     }
@@ -31,6 +35,13 @@
 }
 
 // Главный экран регистрации
+.signup__wrap {
+
+    @media (max-width: $wwa3 + px) {
+        padding-top: 0;
+    }
+}
+
 .signup__content {
     position: relative;
 
