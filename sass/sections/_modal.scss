@@ -20,6 +20,10 @@
     display: flex;
     justify-content: center;
     padding: 60px 0;
+
+    @media (max-width: $wwa3 + px) {
+        padding: 0;
+    }
 }
 
 .modal__content {

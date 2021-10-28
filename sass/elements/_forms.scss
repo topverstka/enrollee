@@ -210,53 +210,34 @@
     } 
 }
 
-// input, textarea{
-//     border: none;
-// }
+// Выбор рейтинга (чекбоксы со звездочками)
+.checkbox-star__list {
+    display: flex;
+    flex-direction: row-reverse;
+}
 
-// input, textarea, button{
-//     outline: none;
-//     border: none;
-//     &:focus:required:invalid{
-//         border-color: red
-//     } 
-//     &:required:valid{
-//         border-color: green;
-//     }
-// }
-// .input__tags {
-//     margin-top: 18px;
-// }
+.checkbox-star {
+    position: relative;
 
-// .input-tags__link {
-//     font-size: 12px;
-//     padding: 8px 15px;
-//     background: #27B0C766;
-//     border-radius: 20px;
-//     color: #fff;
-// }
-// .input-tags__link:hover {
-//     background: #27b0c7;
-// }
-// .input__row {
-//     height: 52px;
-//     display: flex;
-//     border-radius: 5px;
-//     overflow: hidden;
-//     margin-bottom: 10px;
-//     input {
-//         height: 100%;
-//         width: 100%;
-//         padding-left: 20px;
-//     }
-// }
+    & .checkbox-star__label {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}
 
+.checkbox-star__input {
+    position: relative;
+    // top: 0;
+    // left: 0;
+    // width: 100%;
+    // height: 100%;
+}
 
-// @media (min-width: 1024px) {
-//     .input__col select {
-//         height: 38px;
-//         font-family: 'MavenProRegular';
-//         padding: 0 20px;
-//     }
-    
-// }
+.checkbox-star__label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

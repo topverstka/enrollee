@@ -1,0 +1,72 @@
+.new-card__body {
+    width: 100%;
+}
+
+.new-card__content {
+    padding: 60px 12px;
+}
+
+.new-card__form {
+    max-width: 466px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+    margin: 30px auto 0;
+
+    @media (max-width: 450px) {
+        row-gap: 20px;
+    }
+}
+
+.new-card__pay-system-block {
+    position: relative;
+
+    @media (max-width: 450px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.new-card__pay-system-list {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translate(0,-50%);
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 450px) {
+        position: initial;
+        top: auto;
+        right: auto;
+        transform: translate(0,0);
+        margin: 14px 0 0 0;
+    }
+
+    & .new-card__pay-system {
+        
+        &:not(:last-child) {
+            margin: 0 4px 0 0;
+        }
+    }
+}
+
+.new-card__form-block-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+
+    @media (max-width: 450px) {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 20px;
+    }
+}
+
+.new-card__form-submit {
+
+    @media (max-width: $wwa3 + px) {
+        margin: 20px auto 0 auto;
+    }
+}
