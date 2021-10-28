@@ -1,11 +1,39 @@
 .student {
     margin: 0 0 90px 0;
+
+    @media (max-width: $wwa3 + px) {
+        margin: 0;
+        
+        & .container {
+            padding: 0;
+        }
+    }
 }
 
 .student__header {
 
     & .estim {
         width: fit-content;
+    }
+
+    & .estim-like {
+        display: none;
+    }
+
+    @media (max-width: $wwa3 + px) {
+        padding: 0 16px;
+        
+        & .student__haeder-gpa {
+            display: none;
+        }
+
+        & .faculty__header-lang {
+            display: none;
+        }
+
+        & .estim-like {
+            display: block;
+        }
     }
 }
 
@@ -29,6 +57,10 @@
     display: flex;
     justify-content: space-between;
     margin: 20px 0 0 0;
+
+    @media (max-width: $wwa2 + px) {
+        flex-direction: column;
+    }
 }
 
 .student-info {
@@ -38,6 +70,10 @@
 
     @media (max-width: $wwa + px) {
         flex-direction: column;
+    }
+
+    @media (max-width: $wwa3 + px) {
+        padding: 0 16px;
     }
 }
 
@@ -68,18 +104,43 @@
     }
 }
 
+.student-info__list-lang {
+    display: none;
+
+    @media (max-width: $wwa3 + px) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 .student-info__text {
     display: flex;
     margin: 29px 0 0 0;
+
+    @media (max-width: $wwa + px) {
+        flex-direction: column;
+        margin: 12px 0 0 0;
+    }
 }
 
 .student-info__text-icon {
-        display: block;
-        min-width: 37px;
-        width: 37px;
-        height: 20px;
-        margin: 0 18px 0 0;
+    display: block;
+    min-width: 37px;
+    width: 37px;
+    height: 20px;
+    margin: 0 18px 0 0;
 
+    @media (max-width: $wwa3 + px) {
+        min-width: 21px;
+        width: 21px;
+        height: 12px;
+    }
+
+    & svg {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
 }
 
 .student-info__text-text {
@@ -87,6 +148,14 @@
     width: 100%;
     font-size: 18px;
     font-weight: 400;
+
+    @media (max-width: $wwa + px) {
+        margin: 16px 0 0 0;
+    }
+
+    @media (max-width: $wwa2 + px) {
+        max-width: none;
+    }
 
     & button {
         display: inline;
@@ -101,6 +170,10 @@
 // карточки на главном экране
 .student-modal {
     margin: 0 0 0 24px;
+
+    @media (max-width: $wwa2 + px) {
+        margin: 24px 0 0 0;
+    }
 }
 
 .student-modal__block {
@@ -108,6 +181,16 @@
     width: 100%;
     border-radius: 15px;
     padding: 20px 20px 30px 40px;
+
+    @media (max-width: $wwa3 + px) {
+        max-width: none;
+        padding: 20px;
+        border-radius: 0;
+        
+        & .estim-like {
+            display: none;
+        }
+    }
 }
 
 .student-modal__call {
@@ -117,12 +200,20 @@
 
 .student-modal__body {
 
+    @media (max-width: $wwa3 + px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .student-modal__title {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media (max-width: $wwa3 + px) {
+    }
 }
 
 .student-modal__title-text {
@@ -153,6 +244,12 @@
     background: #F0F7F9;
     padding-right: 14px;
     margin: 30px 0 0 0;
+
+    @media (max-width: $wwa3 + px) {
+        position: relative;
+        z-index: -1;
+        margin: 0;
+    }
 }
 
 .student-modal__tag-list {
@@ -163,6 +260,7 @@
 }
 
 .student-modal__tag {
+    font-size: 12px;
     padding: 5px 12px;
     background: #fff;
     border-radius: 6px;
@@ -173,5 +271,15 @@
     &:hover {
         transform: translate(2px,4px);
         box-shadow: none;
+    }
+
+    @media (max-width: $wwa3 + px) {
+    }
+}
+
+// Секция abroad
+.student__abroad {
+    @media (max-width: $wwa3 + px) {
+        background: #fff;
     }
 }

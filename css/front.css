@@ -8295,10 +8295,38 @@ h2 {
   margin: 0 0 90px 0;
 }
 
+@media (max-width: 670px) {
+  .student {
+    margin: 0;
+  }
+  .student .container {
+    padding: 0;
+  }
+}
+
 .student__header .estim {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+}
+
+.student__header .estim-like {
+  display: none;
+}
+
+@media (max-width: 670px) {
+  .student__header {
+    padding: 0 16px;
+  }
+  .student__header .student__haeder-gpa {
+    display: none;
+  }
+  .student__header .faculty__header-lang {
+    display: none;
+  }
+  .student__header .estim-like {
+    display: block;
+  }
 }
 
 .student__haeder-gpa {
@@ -8336,6 +8364,16 @@ h2 {
   margin: 20px 0 0 0;
 }
 
+@media (max-width: 900px) {
+  .student__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .student-info {
   display: -webkit-box;
   display: -webkit-flex;
@@ -8355,6 +8393,12 @@ h2 {
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+
+@media (max-width: 670px) {
+  .student-info {
+    padding: 0 16px;
   }
 }
 
@@ -8393,12 +8437,41 @@ h2 {
   margin: 0 0 20px 0;
 }
 
+.student-info__list-lang {
+  display: none;
+}
+
+@media (max-width: 670px) {
+  .student-info__list-lang {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .student-info__text {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   margin: 29px 0 0 0;
+}
+
+@media (max-width: 1200px) {
+  .student-info__text {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 12px 0 0 0;
+  }
 }
 
 .student-info__text-icon {
@@ -8409,11 +8482,38 @@ h2 {
   margin: 0 18px 0 0;
 }
 
+@media (max-width: 670px) {
+  .student-info__text-icon {
+    min-width: 21px;
+    width: 21px;
+    height: 12px;
+  }
+}
+
+.student-info__text-icon svg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .student-info__text-text {
   max-width: 450px;
   width: 100%;
   font-size: 18px;
   font-weight: 400;
+}
+
+@media (max-width: 1200px) {
+  .student-info__text-text {
+    margin: 16px 0 0 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .student-info__text-text {
+    max-width: none;
+  }
 }
 
 .student-info__text-text button {
@@ -8429,6 +8529,12 @@ h2 {
   margin: 0 0 0 24px;
 }
 
+@media (max-width: 900px) {
+  .student-modal {
+    margin: 24px 0 0 0;
+  }
+}
+
 .student-modal__block {
   max-width: 330px;
   width: 100%;
@@ -8437,10 +8543,40 @@ h2 {
   padding: 20px 20px 30px 40px;
 }
 
+@media (max-width: 670px) {
+  .student-modal__block {
+    max-width: none;
+    padding: 20px;
+    -webkit-border-radius: 0;
+            border-radius: 0;
+  }
+  .student-modal__block .estim-like {
+    display: none;
+  }
+}
+
 .student-modal__call {
   background: #fff;
   -webkit-box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.25);
           box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 670px) {
+  .student-modal__body {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .student-modal__title {
@@ -8479,6 +8615,14 @@ h2 {
   margin: 30px 0 0 0;
 }
 
+@media (max-width: 670px) {
+  .student-modal__help {
+    position: relative;
+    z-index: -1;
+    margin: 0;
+  }
+}
+
 .student-modal__tag-list {
   display: -webkit-box;
   display: -webkit-flex;
@@ -8495,6 +8639,7 @@ h2 {
 }
 
 .student-modal__tag {
+  font-size: 12px;
   padding: 5px 12px;
   background: #fff;
   -webkit-border-radius: 6px;
@@ -8513,6 +8658,12 @@ h2 {
           transform: translate(2px, 4px);
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+@media (max-width: 670px) {
+  .student__abroad {
+    background: #fff;
+  }
 }
 
 .footer {
