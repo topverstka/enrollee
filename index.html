@@ -1,56 +1,238 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <title>Каталог ссылок</title>
+    <meta name="viewport" content="width=device-width">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ссылки на страницы</title>
     <style>
-        li {
-            margin: 4px 0;
+        * {
+            box-sizing: border-box;
+            font-family: serif;
         }
 
-        li span::after {
-            content: ' - '
+        .container {
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        tr {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            border: 1px solid #cecece;
+            margin: 0 0 -1px 0;
+        }
+
+        td {
+            display: block;
+            height: 100%;
+            padding: 6px 12px;
+        }
+
+        td:nth-child(1) {
+            width: 300px;
+            position: relative;
+
+        }
+
+        td:nth-child(1)::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 1px;
+            height: 100%;
+            background: #cecece;
+        }
+        
+        td:nth-child(2) {
+            width: 100%;
+            white-space: nowrap;
         }
     </style>
 </head>
 <body>
-    <h1>Ссылки на страницы Абитуриенты</h1>
-    <ul>
-        <li>
-            <span>index.html</span>
-        </li>
-        <li>
-            <span>faq-sended.html</span>
-        </li>
-        <li>
-            <span>faq-submit.html</span>
-        </li>
-        <li>
-            <span>faq.html</span>
-        </li>
-        <li>
-            <span>kategorien.html</span>
-        </li>
-        <li>
-            <span>no-requests.html</span>
-        </li>
-        <li>
-            <span>payment.html</span>
-        </li>
-        <li>
-            <span>requests.html</span>
-        </li>
-        <li>
-            <span>students-big-cards.html</span>
-        </li>
-        <li>
-            <span>students.html</span>
-        </li>
-    </ul>
+    <div class="container">
+        <h1>Ссылки на страницы Абитуриенты</h1>
+        <!-- <h2>Страницы сделанные 28.10</h2>
+        <table>
+        </table> -->
+
+        <h2>Страницы для общего доступа</h2>
+        <table>
+            <tr>
+                <td>Главная страница</td>
+                <td>index.html</td>
+            </tr>
+            <tr>
+                <td>Категории</td>
+                <td>categories.html</td>
+            </tr>
+            <tr>
+                <td>Факультет</td>
+                <td>faculty.html</td>
+            </tr>
+            <tr>
+                <td>Страница студента</td>
+                <td>student.html</td>
+            </tr>
+            <tr>
+                <td>Страница студентов</td>
+                <td>students.html</td>
+            </tr>
+            <tr>
+                <td>Страница студентов (большие карточки)</td>
+                <td>students-big-cards.html</td>
+            </tr>
+            <tr>
+                <td>Страница университетов</td>
+                <td>universities.html</td>
+            </tr>
+            <tr>
+                <td>Страница университета</td>
+                <td>university.html</td>
+            </tr>
+        </table>
+
+        <h2>Личный кабинет</h2>
+        <table>
+            <tr>
+                <td>Страница помощи</td>
+                <td>help.html</td>
+            </tr>
+            <tr>
+                <td>Помощь отправлена</td>
+                <td>help-sended.html</td>
+            </tr>
+            <tr>
+                <td>Редактирование профиля абитуриента</td>
+                <td>abiturient-profile-edit.html</td>
+            </tr>
+            <tr>
+                <td>Профиль абитуриента</td>
+                <td>abiturient-profile.html</td>
+            </tr>
+            <tr>
+                <td>Профиль студента</td>
+                <td>student-profile.html</td>
+            </tr>
+            <tr>
+                <td>Редактирование профиля студента</td>
+                <td>student-profile-edit.html</td>
+            </tr>
+            <tr>
+                <td>FAQ</td>
+                <td>faq.html</td>
+            </tr>
+            <tr>
+                <td>Запросы</td>
+                <td>requests.html</td>
+            </tr>
+            <tr>
+                <td>Нет запросов</td>
+                <td>no-requests.html</td>
+            </tr>
+            <tr>
+                <td>Информация о платежах</td>
+                <td>payment.html</td>
+            </tr>
+            <tr>
+                <td>Информация о звонке (1 страница)</td>
+                <td>provide-call-step-1.html</td>
+            </tr>
+            <tr>
+                <td>Информация о звонке (2 страница)</td>
+                <td>provide-call-step-2.html</td>
+            </tr>
+            <tr>
+                <td>Оценка звонка</td>
+                <td>rate-call.html</td>
+            </tr>
+            <tr>
+                <td>Отзывы</td>
+                <td>reviews.html</td>
+            </tr>
+        </table>
+
+        <h2>Регистрация и авторизация</h2>
+        <table>
+            <tr>
+                <td>Вход</td>
+                <td>login.html</td>
+            </tr>
+            <tr>
+                <td>Регистрация (1 страница)</td>
+                <td>signup-step-1.html</td>
+            </tr>
+            <tr>
+                <td>Регистрация (2 страница)</td>
+                <td>signup-step-2.html</td>
+            </tr>
+            <tr>
+                <td>Регистрация (3 страница)</td>
+                <td>signup-step-3.html</td>
+            </tr>
+
+        </table>
+
+        <h2>Модальные окна</h2>
+        <table>
+            <tr>
+                <td>Страница не найдена</td>
+                <td>404.html</td>
+            </tr>
+            <tr>
+                <td>Восстановление пароля</td>
+                <td>forgot-pass.html</td>
+            </tr>
+            <tr>
+                <td>Восстановление пароля (ссылка отправлена)</td>
+                <td>forgot-pass-sended.html</td>
+            </tr>
+            <tr>
+                <td>Модальные окна</td>
+                <td>modals.html</td>
+            </tr>
+            <tr>
+                <td>Добавление новой карты</td>
+                <td>new-card.html</td>
+            </tr>
+            <tr>
+                <td>Новый пароль</td>
+                <td>new-pass.html</td>
+            </tr>
+            <tr>
+                <td>Пароль изменен</td>
+                <td>pass-change.html</td>
+            </tr>
+
+        </table>
+    </div>
 
     <script>
+        const trElems = document.querySelectorAll('table tr')
+
+        for (let i = 0; i < trElems.length; i++) {
+            const tr = trElems[i];
+            const trTitle = tr.querySelectorAll('td')[0]
+            const trLink = tr.querySelectorAll('td')[1]
+            const url = 'https://topverstka.github.io/enrollee/catalog/' + trLink.innerText
+
+            trTitle.setAttribute('title', trTitle.innerText)
+            trLink.innerHTML = `<a href="${url}">${url}<br></a>`
+        }
+        
+    </script>
+
+    <!-- <script>
         const liElems = document.querySelectorAll('ul li')
         for (let i = 0; i < liElems.length; i++) {
             const li = liElems[i];
@@ -61,6 +243,6 @@
             link.innerText = url + text
             li.append(link)
         }
-    </script>
+    </script> -->
 </body>
 </html>
