@@ -74,10 +74,15 @@
 
 .header_auth {
 
+    & .user__block {
+        display: block;
+        position: relative;
+        margin: 0 0 0 auto;
+    }
+
     & .user {
         display: flex;
         align-items: center;
-        margin: 0 0 0 auto;
 
         @media (max-width: $wwa3 + px) {
           display: none;
@@ -257,8 +262,21 @@
     }
 }
 
-.user {
+.user__block {
     display: none;
+}
+
+.user {
+
+    &:hover {
+
+        & + .user__menu {
+            bottom: 0;
+            visibility: visible;
+            opacity: 1;
+            pointer-events: all;
+        }
+    }
 }
 
 .user__name {
@@ -282,6 +300,74 @@
         width: 100%;
         height: 100%;
         object-fit: contain;
+    }
+}
+
+.user__menu {
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    width: 228px;
+    transform: translate(0, calc(100% + 22px));
+    background: #fff;
+    box-shadow: 2px 4px 12px rgba(132, 132, 132, 0.25);
+    padding: 30px 44px 22px;
+    visibility: hidden;
+    opacity: 0;
+    transition: $tr;
+    pointer-events: none;
+
+    &:hover {
+        bottom: 0;
+        visibility: visible;
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 30px;
+        transform: translate(0, -100%);
+    }
+}
+
+.user__list {
+
+}
+
+.user__list-item {
+
+}
+
+.user__list-link {
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 10px 0;
+
+    &[data-user-application] {
+        display: flex;
+
+        
+        &::after {
+            content: attr(data-user-application);
+            width: 18px;
+            height: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #FA3600;
+            border-radius: 20px;
+            font-size: 10px;
+            font-weight: 700;
+            color: #fff;
+            margin: 0 0 0 13px;
+        }
     }
 }
 

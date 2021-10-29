@@ -278,3 +278,43 @@
         }
     }
 }
+
+// Звездный рейтинг (выбор чекбоксов)
+// .star-rating-change {
+
+//     & input {
+//         position: relative;
+//     }
+
+//     & label {
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//     }
+// }
+
+.star-rating-change {
+    position: relative;
+
+    & .student-edit-rating__star {
+        cursor: pointer;
+    }
+
+    & .rating-card__star_full {
+
+        & svg path {
+            fill: $accent;
+            stroke: $accent;
+        }
+    }
+
+    & .star-rating-change__input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+// rating-card__star_full

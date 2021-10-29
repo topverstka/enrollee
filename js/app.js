@@ -125,10 +125,12 @@ document.addEventListener("DOMContentLoaded", () => {
             },
             900: {
                 slidesPerView: 3,
+                centeredSlides: false,
             },
             1200: {
                 slidesPerView: 4,
                 spaceBetween: 26,
+                centeredSlides: false,
             },
         },
 
@@ -153,10 +155,12 @@ document.addEventListener("DOMContentLoaded", () => {
             },
             900: {
                 slidesPerView: 3,
+                centeredSlides: false,
             },
             1200: {
                 slidesPerView: 4,
                 spaceBetween: 26,
+                centeredSlides: false,
             },
         },
 
@@ -492,6 +496,69 @@ document.addEventListener("DOMContentLoaded", () => {
                     card.classList.add('_show')
                 }
             })
+        }
+    }
+
+    // Взаимосвязь между инпутом с ползунком и соседним инпутом с числами
+    changeRangeInput()
+    function changeRangeInput() {
+        const rangeElems = document.querySelectorAll('input[type="range"]')
+
+        for (let i = 0; i < rangeElems.length; i++) {
+            const range = rangeElems[i];
+            const numInput = range.nextElementSibling
+            
+            range.addEventListener('input', () => {
+                numInput.value = range.value
+            })
+            
+            numInput.addEventListener('input', () => {
+                range.value = numInput.value
+            })
+        }
+    }
+
+    // Звездный рейтинг
+    // В инпуте с классом star-rating-change__input содержится значение рейтинга
+    starRating()
+    function starRating() {
+        const starContainerElems = document.querySelectorAll('.star-rating-change')
+
+        for (let i = 0; i < starContainerElems.length; i++) {
+            const starContainer = starContainerElems[i];
+            const starElems = starContainer.querySelectorAll('.student-edit-rating__star')
+            const input = starContainer.querySelector('.star-rating-change__input')
+
+            starRatingInput(starElems, input)
+            
+            for (let i = 0; i < starElems.length; i++) {
+                const star = starElems[i];
+                
+                star.addEventListener('click', () => {
+                    removeAll(starElems, 'rating-card__star_full')
+                    
+                    for (let y = 0; y < i+1; y++) {
+                        const starSibling = starElems[y];
+                        starSibling.classList.add('rating-card__star_full')
+                    }
+
+                    input.value = i+1
+                })
+            }
+        }
+
+        // Выставление начального звездного рейтинга по значению инпута
+        function starRatingInput(starElems, input) {
+            const value = parseInt(input.value)
+    
+            for (let i = 0; i < starElems.length; i++) {
+                const star = starElems[i];
+    
+                for (let y = 0; y < value; y++) {
+                    const starSibling = starElems[y];
+                    starSibling.classList.add('rating-card__star_full')
+                }
+            }
         }
     }
 })
