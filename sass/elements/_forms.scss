@@ -49,6 +49,7 @@
         font-size: 18px;
         font-weight: 400;
         // color: $outline;
+        background-color: #fff;
         border: 1px solid $outline;
         border-radius: 5px;
         padding: 6px 20px;
@@ -64,8 +65,8 @@
     }
 
     & select {
-        color: $outline;
         background: url(../img/icons/select-dropdown.svg) no-repeat right 13px center;
+        background-color: #fff;
         padding-right: 32px;
 
         // Убираем дефолтную стрелку

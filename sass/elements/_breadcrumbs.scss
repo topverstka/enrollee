@@ -1,5 +1,9 @@
 .bread {
     padding: 30px 0;
+
+    @media (max-width: $wwa3 + px) {
+        padding: 20px 0;
+    }
 }
 
 .bread__body {

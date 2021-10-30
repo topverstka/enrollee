@@ -75,13 +75,24 @@
                         <a href="#" class="btn btn_border auth__signup">Registrieren</a>
                         <a href="#" class="btn auth__login"> Log In</a>
                     </div>
-                    <a href="#" class="user">
-                        <span class="user__name">max f.</span>
-                        <div class="user__img-block">
-                            <div class="user__img"><img src="../img/avatar.png" alt=""></div>
-                            <div class="user__notif"><span>2</span></div>
-                        </div>
-                    </a>
+                    <div class="user__block">
+                        <a href="#" class="user">
+                            <span class="user__name">max f.</span>
+                            <div class="user__img-block">
+                                <div class="user__img"><img src="../img/avatar.png" alt=""></div>
+                                <div class="user__notif"><span>2</span></div>
+                            </div>
+                        </a>
+                        <nav class="user__menu">
+                            <ul class="user__list">
+                                <li class="user__list-item"><a href="#" class="user__list-link">Мой профиль</a></li>
+                                <li class="user__list-item"><a href="#" class="user__list-link" data-user-application="2">Мои заявки</a></li>
+                                <li class="user__list-item"><a href="#" class="user__list-link">FAQ</a></li>
+                                <li class="user__list-item"><a href="#" class="user__list-link">Отзывы</a></li>
+                                <li class="user__list-item"><a href="#" class="user__list-link">Выйти</a></li>
+                            </ul>
+                        </nav>
+                    </div>
                     <button class="burger"><span></span></button>
                 </div>
             </div>
@@ -104,8 +115,8 @@
                                         <label for="signup-who-abit" class="signup__checkbox-label">Абитуриент</label>
                                     </div>
                                     <div class="signup__checkbox">
-                                        <input class="signup__checkbox-input" id="signup-who-abit" type="radio" name="signup-who" value="Студент">
-                                        <label for="signup-who-abit" class="signup__checkbox-label">Студент</label>
+                                        <input class="signup__checkbox-input" id="signup-who-student" type="radio" name="signup-who" value="Студент">
+                                        <label for="signup-who-student" class="signup__checkbox-label">Студент</label>
                                     </div>
                                 </div>
                             </div>
@@ -123,19 +134,19 @@
                                 <div class="form__block">
                                     <label for="problems" class="form__label">Email*</label>
                                     <div class="form__field" data-error="Неверный ввод">
-                                        <input type="email" placeholder="Введите ваш email">
+                                        <input type="email" placeholder="Введите ваш email" required>
                                     </div>
                                 </div>
                                 <div class="form__block">
                                     <label for="problems" class="form__label">Full Name*</label>
                                     <div class="form__field" data-error="Неверный ввод">
-                                        <input type="text" placeholder="Введите имя">
+                                        <input type="text" placeholder="Введите имя" required>
                                     </div>
                                 </div>
                                 <div class="form__block">
                                     <label for="problems" class="form__label">Password*</label>
                                     <div class="form__field" data-error="Неверный ввод">
-                                        <input id="new-pass" type="password" placeholder="Введите пароль">
+                                        <input id="new-pass" type="password" placeholder="Введите пароль" required>
                                     </div>
                                     <div class="signup-who__pass-line" id="pass-quality">
                                         <div class="signup-who__pass-line-part"></div>
@@ -145,7 +156,7 @@
                                 </div>
                                 <button class="btn btn_full btn_center signup__form-sended" type="submit">Registrieren</button>
                             </div>
-                            <p class="signup__policy">Нажимая кнопку зарегистрироваться, вы соглашаетесь<br>с <a href="#">Политикой конфиденциальности</a> и <a href="#">Пользовательским соглашением</a></p>
+                            <p class="signup__policy">Нажимая кнопку зарегистрироваться, вы соглашаетесь с <a href="#">Политикой конфиденциальности</a> и <a href="#">Пользовательским соглашением</a></p>
                         </div>
                     </form>
                     <div class="signup__progress _step-1">

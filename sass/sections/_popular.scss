@@ -178,6 +178,10 @@
     right: 0px;
     transform: translate(0, -50%);
 
+    @media (max-width: $wwa + px) {
+        right: -14px;
+    }
+
     &:active {
         transform: translate(2px, calc(-50% + 4px));
         box-shadow: none;
@@ -189,6 +193,10 @@
     top: 50%;
     left: -10px;
     transform: translate(0, -50%);
+
+    @media (max-width: $wwa + px) {
+        left: -14px;
+    }
 
     &:active {
         transform: translate(2px, calc(-50% + 4px));

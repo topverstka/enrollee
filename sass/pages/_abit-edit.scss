@@ -16,11 +16,20 @@
     @media (max-width: $wwa2 + px) {
       margin: 15px 0 0 0;
     }
+
+    @media (max-width: 400px) {
+        width: 100%;
+    }
 }
 
 .abit-edit-main__img {
     width: 260px;
     height: 260px;
+
+    @media (max-width: 400px) {
+        width: 100%;
+        height: auto;
+    }
 
     & img {
         width: 100%;
@@ -37,9 +46,9 @@
     text-transform: uppercase;
     text-decoration: underline;
 
-    @media (max-width: $wwa2 + px) {
-      display: none;
-    }
+    // @media (max-width: $wwa2 + px) {
+    //   display: none;
+    // }
 }
 
 .abit-edit__input {
@@ -75,7 +84,7 @@
 
     @media (max-width: $wwa2 + px) {
       position: absolute;
-      top: 190px;
+      top: 15px;
       right: 0;
     }
 

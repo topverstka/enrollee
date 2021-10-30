@@ -170,6 +170,7 @@
     border: 1px solid $outline;
     border-radius: 5px;
     margin: 0 20px 0 0;
+    pointer-events: none;
 
     & svg {
         opacity: 0;
@@ -178,10 +179,6 @@
         object-fit: contain;
         transition: $tr;
     }
-}
-
-.suggest-time__choose-payment-box-icon {
-
 }
 
 .suggest-time__choose-content {

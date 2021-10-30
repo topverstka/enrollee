@@ -20,6 +20,10 @@
         display: none;
     }
 
+    & .estim__city-text {
+        font-size: 16px;
+    }
+
     @media (max-width: $wwa3 + px) {
         padding: 0 16px;
         
@@ -86,11 +90,13 @@
 }
 
 .student-info__list {
+    max-width: 260px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     margin: 30px 0 0 0;
     position: absolute;
-    bottom: 20px;
+    top: 260px;
 
     @media (max-width: $wwa + px) {
         position: initial;
@@ -281,5 +287,14 @@
 .student__abroad {
     @media (max-width: $wwa3 + px) {
         background: #fff;
+    }
+}
+
+// Секция rating
+.student__rating-btn {
+    display: none;
+
+    @media (max-width: $wwa3 + px) {
+        display: flex;
     }
 }

@@ -419,7 +419,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const checkboxChecked = document.querySelector('.signup__checkbox-input[checked]').value
                 formData.append('who', checkboxChecked)
                 
-                let response = await fetch('../handler.php', {
+                let response = await fetch('#', {
                     method: 'POST',
                     body: formData
                 });
@@ -428,7 +428,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     console.log(await response.text())
                 }
                 else {
-                    console.log(await response.text())
+                    console.error('Error', await response.text())
                 }
             }
         })

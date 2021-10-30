@@ -4,6 +4,10 @@
 
 .new-card__content {
     padding: 60px 12px;
+
+    @media (max-width: $wwa3 + px) {
+        padding: 60px 12px 40px;
+    }
 }
 
 .new-card__form {
