@@ -243,6 +243,10 @@
     gap: 24px;
     margin: 40px 0 0 0;
 
+    @media (max-width: $wwa + px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
     @media (max-width: $wwa2 + px) {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -255,6 +259,17 @@
 
     & .student-card {
         max-width: none;
+
+        &:nth-child(4) {
+            
+            @media (max-width: $wwa + px) {
+                display: none;
+            }
+            
+            @media (max-width: $wwa2 + px) {
+                display: block;
+            }
+        }
     }
 }
 

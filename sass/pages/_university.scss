@@ -180,7 +180,9 @@
     }
 
     @media (max-width: 480px) {
-        grid-template-columns: repeat(1, 1fr);
+        // grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: minmax(min-content, 240px);
+        justify-content: center;
     }
 
     & .student-card {

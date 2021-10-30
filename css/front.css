@@ -7264,8 +7264,13 @@ h2 {
 
 @media (max-width: 480px) {
   .univer-students__body {
-    -ms-grid-columns: (1fr)[1];
-        grid-template-columns: repeat(1, 1fr);
+    -ms-grid-columns: minmax(min-content, 240px);
+        grid-template-columns: minmax(-webkit-min-content, 240px);
+        grid-template-columns: minmax(min-content, 240px);
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -7678,6 +7683,13 @@ h2 {
   margin: 40px 0 0 0;
 }
 
+@media (max-width: 1200px) {
+  .faculty-students__body {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media (max-width: 900px) {
   .faculty-students__body {
     -ms-grid-columns: (1fr)[2];
@@ -7699,6 +7711,18 @@ h2 {
 
 .faculty-students__body .student-card {
   max-width: none;
+}
+
+@media (max-width: 1200px) {
+  .faculty-students__body .student-card:nth-child(4) {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .faculty-students__body .student-card:nth-child(4) {
+    display: block;
+  }
 }
 
 .faculty-review {
