@@ -211,9 +211,9 @@ document.addEventListener("DOMContentLoaded", () => {
         centeredSlides: false,
         loop: true,
         speed: 5000,
-        // autoplay: {
-        //     delay: 0,
-        // },
+        autoplay: {
+            delay: 0,
+        },
 
         breakpoints: {
             360: {

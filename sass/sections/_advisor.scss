@@ -1,4 +1,11 @@
 // Основная информация
+.advisor {
+
+    @media (max-width: $wwa3 + px) {
+        padding-bottom: 40px;
+    }
+}
+
 .advisor-title {
 
     @media (max-width: $wwa2 + px) {
@@ -101,7 +108,7 @@
 .advisor-message {
     display: none;
 
-    &:not(:last-child) {
+    &:nth-child(2n + 1) {
         margin: 0 0 36px 0;
     }
 

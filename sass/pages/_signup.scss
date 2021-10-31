@@ -13,15 +13,23 @@
         top: 10px;
     }
 
-    &._step-1 .signup__progress-line {
+    &._step-1-2 .signup__progress-line {
+        width: 50%;
+    }
+
+    &._step-2-2 .signup__progress-line {
+        width: 100%;
+    }
+
+    &._step-1-3 .signup__progress-line {
         width: 33.333%;
     }
 
-    &._step-2 .signup__progress-line {
+    &._step-2-3 .signup__progress-line {
         width: 66.666%;
     }
 
-    &._step-3 .signup__progress-line {
+    &._step-3-3 .signup__progress-line {
         width: 100%;
     }
 }
