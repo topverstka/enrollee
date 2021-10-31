@@ -4257,27 +4257,27 @@ h2 {
   margin: 6px 0 0 0;
 }
 
-.rating-card__star {
+.rating-card__list-star span {
   display: inline-block;
   width: 20px;
   height: 20px;
 }
 
-.rating-card__star svg {
+.rating-card__list-star span svg {
   width: 100%;
   height: 100%;
 }
 
-.rating-card__star:not(:last-child) {
+.rating-card__list-star span:not(:last-child) {
   margin: 0 2px 0 0;
 }
 
-.rating-card__star.rating-card__star_full svg path {
+.rating-card__list-star span.rating-card__star_full svg path {
   fill: var(--accent);
   stroke: var(--accent);
 }
 
-.rating-card__star.rating-card__star_outline svg path {
+.rating-card__list-star span.rating-card__star_outline svg path {
   fill: none;
   stroke: var(--accent);
 }

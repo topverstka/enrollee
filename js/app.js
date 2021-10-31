@@ -531,7 +531,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         for (let i = 0; i < starContainerElems.length; i++) {
             const starContainer = starContainerElems[i];
-            const starElems = starContainer.querySelectorAll('.student-edit-rating__star')
+            const starElems = starContainer.querySelectorAll('span')
             const input = starContainer.querySelector('.star-rating-change__input')
 
             starRatingInput(starElems, input)
