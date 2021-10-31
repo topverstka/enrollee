@@ -114,7 +114,12 @@
 }
 
 .payment__add {
-    margin: 40px 0 0 0;   
+    margin: 40px 0 0 0;
+
+    @media (max-width: $wwa3 + px) {
+        display: flex;
+        margin: 30px auto 0 auto;
+    }
 }
 
 // Стоимость звонка
