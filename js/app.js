@@ -83,11 +83,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const popularSlider = new Swiper('.popular__slider', {
 
-        slidesPerView: 1.5,
+        slidesPerView: 1.4,
         spaceBetween: 10,
         loop: true,
+        centeredSlides: true,
 
         breakpoints: {
+            345: {
+                slidesPerView: 1.5,
+                centeredSlides: true,
+            },
             450: {
                 slidesPerView: 2,
                 centeredSlides: true,
