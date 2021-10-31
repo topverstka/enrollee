@@ -57,7 +57,10 @@
 .accordion_faq {
     background: #F0F7F9;
     border-radius: 6px;
-    margin: 0 0 20px 0;
+    
+    &:not(:last-child) {
+        margin: 0 0 20px 0;
+    }
 
     & .accordion__header {
         padding: 20px;

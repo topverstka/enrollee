@@ -4944,6 +4944,9 @@ h2 {
   background: #F0F7F9;
   -webkit-border-radius: 6px;
           border-radius: 6px;
+}
+
+.accordion_faq:not(:last-child) {
   margin: 0 0 20px 0;
 }
 
