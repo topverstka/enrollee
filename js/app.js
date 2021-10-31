@@ -26,7 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
             if (pageYOffset > 200) {
                 header.classList.add('_fixed')
                 body.style.paddingTop = headerHeight + 'px'
-                console.log(headerHeight)
                 if (headerMain == true) {
                     header.classList.remove('header_page-main')
                 }
