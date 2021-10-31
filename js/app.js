@@ -206,21 +206,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const studentsSlider = new Swiper('.students-section-slider', {
 
-        slidesPerView: 1.5,
-        spaceBetween: 32,
+        slidesPerView: 1.2,
+        spaceBetween: 12, 
+        centeredSlides: false,
         loop: true,
         speed: 5000,
-        autoplay: {
-            delay: 0,
-        },
+        // autoplay: {
+        //     delay: 0,
+        // },
 
         breakpoints: {
+            360: {
+                slidesPerView: 1.5,
+                spaceBetween: 16, 
+            },
             450: {
                 slidesPerView: 2,
-                centeredSlides: true,
             },
             670: {
                 slidesPerView: 3,
+                centeredSlides: true,
             },
             900: {
                 slidesPerView: 3,
@@ -523,6 +528,9 @@ document.addEventListener("DOMContentLoaded", () => {
             btn.addEventListener('click', () => {
                 const btnData = btn.dataset.advisorChange
                 const cardElems = document.querySelectorAll(`[data-advisor-message="${btnData}"]`) 
+                
+                removeAll(btnElems, '_active')
+                btn.classList.add('_active')
 
                 removeAll(allCard, '_show')                
                 for (let i = 0; i < cardElems.length; i++) {

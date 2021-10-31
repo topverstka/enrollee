@@ -1,5 +1,9 @@
 .students {
     margin: 40px 0 80px 0;
+
+    @media (max-width: $wwa3 + px) {
+        margin: 40px 0;
+    }
 }
 
 .students-settings {

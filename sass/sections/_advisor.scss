@@ -62,6 +62,11 @@
         color: $accent;
         text-decoration: none;
     }
+
+    &._active {
+        color: $accent;
+        text-decoration: none;
+    }
     
     @media (max-width: 450px) {
       font-size: 18px;
@@ -246,6 +251,7 @@
 
 .advisor-message__avatar {
     min-width: 80px;
+    width: 80px;
     height: 80px;
     background: $second;
     border-radius: 100%;

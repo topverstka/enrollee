@@ -3206,7 +3206,7 @@ h2 {
 
 @media (max-width: 670px) {
   .popular {
-    padding: 30px 0;
+    padding: 30px 0 60px 0;
   }
   .popular .container {
     padding: 0;
@@ -3268,10 +3268,8 @@ h2 {
   transition: 0.3s;
 }
 
-.popular__slide:hover {
-  -webkit-transform: scale(1.05);
-      -ms-transform: scale(1.05);
-          transform: scale(1.05);
+.popular__slide:hover .popular__slide-img::before {
+  opacity: 1;
 }
 
 @media (max-width: 670px) {
@@ -3297,26 +3295,25 @@ h2 {
   z-index: 1;
 }
 
-@media (max-width: 670px) {
-  .popular__slide-img {
-    position: relative;
-  }
-  .popular__slide-img::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    border: 5px solid var(--main);
-    -webkit-border-radius: 5px;
-            border-radius: 5px;
-    opacity: 0;
-    -webkit-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s;
-  }
+.popular__slide-img {
+  position: relative;
+}
+
+.popular__slide-img::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  border: 5px solid var(--main);
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .popular__slider-arrow {
@@ -3500,6 +3497,11 @@ h2 {
 }
 
 .advisor-content__block-change:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.advisor-content__block-change._active {
   color: var(--accent);
   text-decoration: none;
 }
@@ -3735,6 +3737,7 @@ h2 {
 
 .advisor-message__avatar {
   min-width: 80px;
+  width: 80px;
   height: 80px;
   background: var(--second);
   -webkit-border-radius: 100%;
@@ -4443,6 +4446,7 @@ h2 {
   .modal__content {
     -webkit-box-shadow: none;
             box-shadow: none;
+    padding: 40px 24px;
   }
 }
 
@@ -5015,6 +5019,12 @@ h2 {
 
 .students {
   margin: 40px 0 80px 0;
+}
+
+@media (max-width: 670px) {
+  .students {
+    margin: 40px 0;
+  }
 }
 
 @media (max-width: 670px) {
@@ -8646,6 +8656,12 @@ h2 {
   margin: 50px 0 0 0;
 }
 
+@media (max-width: 670px) {
+  .reviews__body {
+    margin: 30px 0 0 0;
+  }
+}
+
 .reviews__list {
   display: -ms-grid;
   display: grid;
@@ -9215,7 +9231,7 @@ h2 {
 
 @media (max-width: 670px) {
   .cancel-call__buttons {
-    margin-top: 20px;
+    margin-top: 30px;
   }
 }
 
