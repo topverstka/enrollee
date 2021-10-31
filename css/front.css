@@ -2706,12 +2706,9 @@ h2 {
 
 .header._fixed {
   position: fixed;
-  top: -100px;
+  top: 0;
   left: 0;
   width: 100%;
-  -webkit-transform: translate(0, -100%);
-      -ms-transform: translate(0, -100%);
-          transform: translate(0, -100%);
   background: #fff;
   z-index: 4;
   -webkit-transition: .3s ease-in-out;
@@ -2723,13 +2720,6 @@ h2 {
 .header._fixed .logo__link_light img {
   -webkit-filter: none;
           filter: none;
-}
-
-.header._show {
-  top: 0;
-  -webkit-transform: translate(0, 0);
-      -ms-transform: translate(0, 0);
-          transform: translate(0, 0);
 }
 
 .header_page-main {

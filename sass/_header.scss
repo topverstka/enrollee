@@ -11,10 +11,10 @@
 
     &._fixed {
         position: fixed;
-        top: -100px;
+        top: 0;
         left: 0;
         width: 100%;
-        transform: translate(0, -100%);
+        // transform: translate(0, -100%);
         background: #fff;
         z-index: 4;
         transition: .3s ease-in-out;
@@ -26,11 +26,6 @@
                 filter: none    ;
             }
         }
-    }
-
-    &._show {
-        top: 0;
-        transform: translate(0,0);
     }
 }
 

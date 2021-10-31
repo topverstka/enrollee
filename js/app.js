@@ -11,6 +11,36 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    headerFixed()
+    function headerFixed() {
+        const header = document.querySelector('.header')
+        const headerHeight = header.clientHeight
+        let headerMain = false
+
+        window.addEventListener('scroll', () => {
+
+            if (header.classList.contains('header_page-main')) {
+                headerMain = true
+            }
+
+            if (pageYOffset > 200) {
+                header.classList.add('_fixed')
+                body.style.paddingTop = headerHeight + 'px'
+                console.log(headerHeight)
+                if (headerMain == true) {
+                    header.classList.remove('header_page-main')
+                }
+            }
+            else {
+                header.classList.remove('_fixed')
+                body.style.paddingTop = 0
+                if (headerMain == true) {
+                    header.classList.add('header_page-main')
+                }
+            }
+        })
+    }
+
     // При скролле создается дубликат шапки, который фиксируется и плавно показывается при скролле
     // showDuplicateHeader()
     function showDuplicateHeader() {
