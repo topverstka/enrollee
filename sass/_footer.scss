@@ -16,6 +16,10 @@
 
     @media (max-width: 500px) {
         grid-template-columns: repeat(1, 1fr);
+
+        & .footer__block:nth-child(1) {
+            order: 1;
+        }
     }
 }
 
@@ -24,6 +28,11 @@
 
     @media (max-width: 500px) {
         text-align: center;
+
+        & .logo {
+            justify-content: center;
+            margin: 0 0 24px 0;
+        }
     }
 }
 
