@@ -5661,6 +5661,10 @@ h2 {
   width: 150px;
 }
 
+.page__student-profile {
+  padding: 0 0 50px 0;
+}
+
 .student-profile-main {
   display: -webkit-box;
   display: -webkit-flex;
