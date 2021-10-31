@@ -900,6 +900,7 @@ h2 {
   font-size: 22px;
   font-weight: 500;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .student-briefly__info-block {
@@ -915,6 +916,7 @@ h2 {
 }
 
 .student-briefly__info-block-icon {
+  min-width: 14px;
   width: 14px;
   height: 14px;
 }
@@ -928,6 +930,7 @@ h2 {
 
 .student-briefly__info-block-text {
   font-size: 12px;
+  text-align: center;
   margin: 0 0 0 5px;
 }
 
@@ -935,6 +938,7 @@ h2 {
   font-size: 15px;
   font-weight: 500;
   margin: 10px 0 0 0;
+  text-align: center;
 }
 
 .student-about {
@@ -1225,6 +1229,14 @@ h2 {
   background: #FD6467;
 }
 
+.student-message_delayed .student-message-condition {
+  background: #615F82;
+}
+
+.student-message_send .student-message-condition {
+  background: #27B0C7;
+}
+
 .student-message__block {
   margin: 0 0 20px 0;
 }
@@ -1353,6 +1365,14 @@ h2 {
   margin-right: 20px;
 }
 
+.student-message__suggest_error {
+  color: #FD6467;
+}
+
+.student-message__suggest_error svg path {
+  fill: #FD6467;
+}
+
 .student-message__suggest-icon {
   display: block;
   width: 14px;
@@ -1466,6 +1486,30 @@ h2 {
   .student-message-footer__support {
     margin: 0 0 20px 0;
   }
+}
+
+.student-message-footer__support_icon {
+  position: relative;
+}
+
+.student-message-footer__support_icon:hover::after {
+  background: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_2:5704)'%3E%3Cpath d='M8.57141 2.14307H1.28571C0.575633 2.14307 0 2.7187 0 3.42878V10.7145C0 11.4246 0.575633 12.0002 1.28571 12.0002H8.57141C9.28149 12.0002 9.85713 11.4246 9.85713 10.7145V3.42878C9.85713 2.7187 9.28149 2.14307 8.57141 2.14307ZM8.99999 10.7145C8.99999 10.9512 8.80812 11.1431 8.57141 11.1431H1.28571C1.04901 11.1431 0.857134 10.9512 0.857134 10.7145V3.42878C0.857134 3.19208 1.04901 3.0002 1.28571 3.0002H8.57141C8.80812 3.0002 8.99999 3.19208 8.99999 3.42878V10.7145Z' fill='%2327B0C7'/%3E%3Cpath d='M10.7138 0H2.99957C2.28948 0 1.71385 0.575633 1.71385 1.28571C1.71385 1.52241 1.90573 1.71429 2.14243 1.71429C2.37913 1.71429 2.57099 1.52241 2.57099 1.28571C2.57099 1.04901 2.76286 0.857134 2.99957 0.857134H10.7138C10.9505 0.857134 11.1424 1.04901 11.1424 1.28571V8.99999C11.1424 9.23669 10.9505 9.42857 10.7138 9.42857C10.4771 9.42857 10.2853 9.62045 10.2853 9.85715C10.2853 10.0939 10.4771 10.2857 10.7138 10.2857C11.4239 10.2857 11.9996 9.7101 11.9996 9.00002V1.28571C11.9996 0.575633 11.4239 0 10.7138 0Z' fill='%2327B0C7'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_2:5704'%3E%3Crect width='12' height='12' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E") no-repeat 100%;
+}
+
+.student-message-footer__support_icon::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -6px;
+  width: 12px;
+  height: 14px;
+  -webkit-transform: translate(100%, -50%);
+      -ms-transform: translate(100%, -50%);
+          transform: translate(100%, -50%);
+  background: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_2:5704)'%3E%3Cpath d='M8.57141 2.14307H1.28571C0.575633 2.14307 0 2.7187 0 3.42878V10.7145C0 11.4246 0.575633 12.0002 1.28571 12.0002H8.57141C9.28149 12.0002 9.85713 11.4246 9.85713 10.7145V3.42878C9.85713 2.7187 9.28149 2.14307 8.57141 2.14307ZM8.99999 10.7145C8.99999 10.9512 8.80812 11.1431 8.57141 11.1431H1.28571C1.04901 11.1431 0.857134 10.9512 0.857134 10.7145V3.42878C0.857134 3.19208 1.04901 3.0002 1.28571 3.0002H8.57141C8.80812 3.0002 8.99999 3.19208 8.99999 3.42878V10.7145Z' fill='%23152142'/%3E%3Cpath d='M10.7138 0H2.99957C2.28948 0 1.71385 0.575633 1.71385 1.28571C1.71385 1.52241 1.90573 1.71429 2.14243 1.71429C2.37913 1.71429 2.57099 1.52241 2.57099 1.28571C2.57099 1.04901 2.76286 0.857134 2.99957 0.857134H10.7138C10.9505 0.857134 11.1424 1.04901 11.1424 1.28571V8.99999C11.1424 9.23669 10.9505 9.42857 10.7138 9.42857C10.4771 9.42857 10.2853 9.62045 10.2853 9.85715C10.2853 10.0939 10.4771 10.2857 10.7138 10.2857C11.4239 10.2857 11.9996 9.7101 11.9996 9.00002V1.28571C11.9996 0.575633 11.4239 0 10.7138 0Z' fill='%23152142'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_2:5704'%3E%3Crect width='12' height='12' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E") no-repeat 100%;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .student-message-footer__button-list {
@@ -1746,7 +1790,7 @@ h2 {
 
 @media (max-width: 670px) {
   .bread {
-    padding: 20px 0;
+    padding: 15px 0 20px 0;
   }
 }
 
@@ -2860,6 +2904,16 @@ h2 {
 
 .logo_header {
   margin: 0 auto 0 0;
+}
+
+.logo_header svg {
+  width: 163px;
+}
+
+@media (max-width: 670px) {
+  .logo_header svg {
+    width: 104px;
+  }
 }
 
 .logo__link_light svg,
@@ -5977,10 +6031,8 @@ h2 {
   margin: 30px 0 0 0;
 }
 
-@media (max-width: 670px) {
-  .student-rating {
-    margin: 30px 0 0 0;
-  }
+.student-rating {
+  margin: 30px 0 0 0;
 }
 
 .student-edit-main {
@@ -6391,6 +6443,10 @@ h2 {
   opacity: 0;
 }
 
+.payment .section-title__descr {
+  max-width: 430px;
+}
+
 .payment__body {
   display: -webkit-box;
   display: -webkit-flex;
@@ -6540,6 +6596,10 @@ h2 {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-border-radius: 15px;
           border-radius: 15px;
   -webkit-box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.25);
@@ -6552,10 +6612,6 @@ h2 {
   .coast-call {
     max-width: none;
     margin: 0 0 32px 0;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
 }
 
@@ -6568,8 +6624,8 @@ h2 {
 .coast-call__text {
   font-size: 22px;
   font-weight: 400;
-  text-align: center;
   margin: 30px 0 0 0;
+  text-align: center;
 }
 
 .coast-call__change {
@@ -6580,7 +6636,7 @@ h2 {
 }
 
 .categories {
-  margin: 40px 0 32px 0;
+  margin: 40px 0;
 }
 
 .categories__body {
@@ -6949,6 +7005,7 @@ h2 {
 .univers-card__tilte-text {
   font-size: 18px;
   font-weight: 500;
+  text-transform: uppercase;
 }
 
 .univers-card__title-label {
@@ -6961,6 +7018,7 @@ h2 {
   font-size: 16px;
   font-weight: 500;
   margin: 0 0 6px 0;
+  text-transform: none;
 }
 
 .univers-card__course-list {
@@ -8039,7 +8097,7 @@ h2 {
 
 @media (max-width: 670px) {
   .signup__progress {
-    top: 10px;
+    top: 8px;
   }
 }
 
@@ -8555,6 +8613,7 @@ h2 {
   -webkit-column-gap: 30px;
      -moz-column-gap: 30px;
           column-gap: 30px;
+  row-gap: 10px;
   -webkit-box-align: end;
   -webkit-align-items: flex-end;
       -ms-flex-align: end;
@@ -8596,6 +8655,15 @@ h2 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 20px 0 0 0;
+}
+
+@media (max-width: 670px) {
+  .signup__upload-doc {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .signup__upload-doc-title {
@@ -9256,6 +9324,12 @@ h2 {
 
 .rate-call .modal__wrap {
   padding: 60px 0 0 0;
+}
+
+@media (max-width: 670px) {
+  .rate-call .modal__wrap {
+    padding: 0;
+  }
 }
 
 .rate-call__content {

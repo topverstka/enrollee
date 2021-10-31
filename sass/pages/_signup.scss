@@ -10,7 +10,7 @@
     border-radius: 2px;
     
     @media (max-width: $wwa3 + px) {
-        top: 10px;
+        top: 8px;
     }
 
     &._step-1-2 .signup__progress-line {
@@ -470,6 +470,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 30px;
+    row-gap: 10px;
     align-items: flex-end;
     margin: 20px 0 0 0;
 
@@ -497,6 +498,10 @@
     align-items: flex-end;
     justify-content: space-between;
     margin: 20px 0 0 0;
+
+    @media (max-width: $wwa3 + px) {
+        align-items: center;
+    }
 }
 
 .signup__upload-doc-title {

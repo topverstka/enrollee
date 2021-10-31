@@ -137,6 +137,7 @@
     font-size: 22px;
     font-weight: 500;
     text-transform: uppercase;
+    text-align: center;
 }
 
 .student-briefly__info-block {
@@ -146,6 +147,7 @@
 }
 
 .student-briefly__info-block-icon {
+    min-width: 14px;
     width: 14px;
     height: 14px;
 
@@ -158,6 +160,7 @@
 
 .student-briefly__info-block-text {
     font-size: 12px;
+    text-align: center;
     margin: 0 0 0 5px;
 }
 
@@ -165,6 +168,7 @@
     font-size: 15px;
     font-weight: 500;
     margin: 10px 0 0 0;
+    text-align: center;
 }
 
 
@@ -402,6 +406,16 @@
     background: #FD6467;
 }
 
+// Задержка
+.student-message_delayed .student-message-condition {
+    background: #615F82;
+}
+
+// Задержка
+.student-message_send .student-message-condition {
+    background: #27B0C7;
+}
+
 
 // Сообщение студенту
 .student-message__block {
@@ -512,6 +526,14 @@
     }
 }
 
+.student-message__suggest_error {
+    color:#FD6467;
+
+    & svg path {
+        fill:#FD6467;
+    }
+}
+
 .student-message__suggest-icon {
     display: block;
     width: 14px;
@@ -592,6 +614,29 @@
 
     @media (max-width: 540px) {
         margin: 0 0 20px 0;
+    }
+}
+
+.student-message-footer__support_icon {
+    position: relative;
+
+    &:hover {
+
+        &::after {
+            background: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_2:5704)'%3E%3Cpath d='M8.57141 2.14307H1.28571C0.575633 2.14307 0 2.7187 0 3.42878V10.7145C0 11.4246 0.575633 12.0002 1.28571 12.0002H8.57141C9.28149 12.0002 9.85713 11.4246 9.85713 10.7145V3.42878C9.85713 2.7187 9.28149 2.14307 8.57141 2.14307ZM8.99999 10.7145C8.99999 10.9512 8.80812 11.1431 8.57141 11.1431H1.28571C1.04901 11.1431 0.857134 10.9512 0.857134 10.7145V3.42878C0.857134 3.19208 1.04901 3.0002 1.28571 3.0002H8.57141C8.80812 3.0002 8.99999 3.19208 8.99999 3.42878V10.7145Z' fill='%2327B0C7'/%3E%3Cpath d='M10.7138 0H2.99957C2.28948 0 1.71385 0.575633 1.71385 1.28571C1.71385 1.52241 1.90573 1.71429 2.14243 1.71429C2.37913 1.71429 2.57099 1.52241 2.57099 1.28571C2.57099 1.04901 2.76286 0.857134 2.99957 0.857134H10.7138C10.9505 0.857134 11.1424 1.04901 11.1424 1.28571V8.99999C11.1424 9.23669 10.9505 9.42857 10.7138 9.42857C10.4771 9.42857 10.2853 9.62045 10.2853 9.85715C10.2853 10.0939 10.4771 10.2857 10.7138 10.2857C11.4239 10.2857 11.9996 9.7101 11.9996 9.00002V1.28571C11.9996 0.575633 11.4239 0 10.7138 0Z' fill='%2327B0C7'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_2:5704'%3E%3Crect width='12' height='12' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E") no-repeat 100%;
+        }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: -6px;
+        width: 12px;
+        height: 14px;
+        transform: translate(100%, -50%);
+        background: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_2:5704)'%3E%3Cpath d='M8.57141 2.14307H1.28571C0.575633 2.14307 0 2.7187 0 3.42878V10.7145C0 11.4246 0.575633 12.0002 1.28571 12.0002H8.57141C9.28149 12.0002 9.85713 11.4246 9.85713 10.7145V3.42878C9.85713 2.7187 9.28149 2.14307 8.57141 2.14307ZM8.99999 10.7145C8.99999 10.9512 8.80812 11.1431 8.57141 11.1431H1.28571C1.04901 11.1431 0.857134 10.9512 0.857134 10.7145V3.42878C0.857134 3.19208 1.04901 3.0002 1.28571 3.0002H8.57141C8.80812 3.0002 8.99999 3.19208 8.99999 3.42878V10.7145Z' fill='%23152142'/%3E%3Cpath d='M10.7138 0H2.99957C2.28948 0 1.71385 0.575633 1.71385 1.28571C1.71385 1.52241 1.90573 1.71429 2.14243 1.71429C2.37913 1.71429 2.57099 1.52241 2.57099 1.28571C2.57099 1.04901 2.76286 0.857134 2.99957 0.857134H10.7138C10.9505 0.857134 11.1424 1.04901 11.1424 1.28571V8.99999C11.1424 9.23669 10.9505 9.42857 10.7138 9.42857C10.4771 9.42857 10.2853 9.62045 10.2853 9.85715C10.2853 10.0939 10.4771 10.2857 10.7138 10.2857C11.4239 10.2857 11.9996 9.7101 11.9996 9.00002V1.28571C11.9996 0.575633 11.4239 0 10.7138 0Z' fill='%23152142'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_2:5704'%3E%3Crect width='12' height='12' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E") no-repeat 100%;
+        transition: $tr;
     }
 }
 

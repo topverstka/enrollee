@@ -136,6 +136,14 @@
 
 .logo_header {
     margin: 0 auto 0 0;
+
+    & svg {
+        width: 163px;
+
+        @media (max-width: $wwa3 + px) {
+            width: 104px;
+        }
+    }
 }
 
 .logo__link_light {

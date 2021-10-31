@@ -910,9 +910,7 @@
                                     </div>
                                 </div>
                             </div>
-
-
-                            <div class="student-card student-card_big" style="display: none;">
+                            <div class="student-card student-card_big student-card_condition">
                                 <div class="student-briefly">
                                     <div class="student-briefly__header">
                                         <div class="estim">
@@ -963,87 +961,164 @@
                                             <span class="student-briefly__info-block-text">4 semester</span>
                                         </div>
                                     </div>
-                                </div> 
-                                <div class="student-about">
-                                    <div class="student-call__block">
-                                        <span class="student-call__label">Call vereinbaren</span>
-                                        <span class="student-call__price"><span>2</span>$ per min</span>
-                                        <a href="tel:123" class="student-call__link">
-                                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <g clip-path="url(#clip0_2:3147)">
-                                                <path d="M36.6836 26.387C34.2653 26.387 31.8967 26.0094 29.6517 25.2687C28.5561 24.8911 27.3119 25.182 26.5918 25.9166L22.1411 29.2778C17.0343 26.5521 13.766 23.2858 11.0775 18.2161L14.3478 13.8707C15.1711 13.0474 15.4662 11.8424 15.1134 10.7138C14.3664 8.45441 13.9868 6.08362 13.9868 3.6695C13.9868 1.96307 12.5982 0.574463 10.8918 0.574463H3.66998C1.96356 0.574463 0.574951 1.96307 0.574951 3.6695C0.574951 23.5788 16.7744 39.7782 36.6836 39.7782C38.3901 39.7782 39.7787 38.3896 39.7787 36.6831V29.4821C39.7787 27.7756 38.3901 26.387 36.6836 26.387Z" fill="white"/>
+                                </div>
+                                <div class="student-message student-message_delayed">
+                                    <div class="student-message-condition">
+                                        <span class="student-message-condition__text">delayed</span>
+                                        <span class="student-message-condition__icon">
+                                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_2:6059)">
+                                                <path d="M19.2323 29.1463C18.9684 29.2121 18.6994 29.2705 18.4323 29.3197C17.7343 29.4495 17.2728 30.1209 17.4019 30.8195C17.4657 31.1633 17.6609 31.4496 17.9259 31.6365C18.1991 31.8287 18.5467 31.9155 18.901 31.8496C19.219 31.7906 19.5395 31.7212 19.854 31.6427C20.5433 31.4712 20.9632 30.7728 20.7913 30.0839C20.6197 29.3943 19.922 28.9747 19.2323 29.1463Z" fill="white"/>
+                                                <path d="M28.7452 11.9036C28.8353 12.1751 29.0073 12.3968 29.2246 12.55C29.5468 12.777 29.9684 12.8533 30.3708 12.7203C31.0453 12.4963 31.4108 11.7689 31.1876 11.0948C31.0859 10.7874 30.9731 10.4791 30.853 10.1789C30.5891 9.51924 29.8408 9.19807 29.1808 9.46194C28.5215 9.72567 28.2002 10.4741 28.4642 11.134C28.5652 11.3863 28.6598 11.6453 28.7452 11.9036Z" fill="white"/>
+                                                <path d="M23.4123 27.3098C23.1854 27.4596 22.9512 27.6046 22.7152 27.7405C22.0996 28.0956 21.8888 28.8824 22.2438 29.4977C22.3401 29.6651 22.4685 29.8019 22.6163 29.9065C23.0131 30.1857 23.5521 30.2275 24.0008 29.969C24.2813 29.8072 24.5602 29.6351 24.8305 29.4564C25.423 29.0649 25.5861 28.2668 25.1945 27.674C24.8029 27.0809 24.0051 26.918 23.4123 27.3098Z" fill="white"/>
+                                                <path d="M31.9879 15.4964C31.9599 14.7864 31.3619 14.2338 30.6517 14.2615C29.9423 14.2895 29.3893 14.8877 29.4171 15.5975C29.4278 15.8689 29.4306 16.1443 29.4243 16.4154C29.4143 16.8606 29.6321 17.2575 29.9705 17.4961C30.1722 17.6381 30.4168 17.724 30.6821 17.73C31.3922 17.7458 31.9806 17.1826 31.9963 16.4723C32.0034 16.1483 32.0007 15.8202 31.9879 15.4964Z" fill="white"/>
+                                                <path d="M28.5357 23.9255C27.9664 23.4983 27.1609 23.6143 26.7345 24.1826C26.5712 24.4003 26.3992 24.6152 26.2231 24.8222C25.7629 25.3629 25.8279 26.175 26.3686 26.6355C26.3994 26.6617 26.4306 26.6857 26.4629 26.7082C27.0004 27.0872 27.7474 27.0001 28.182 26.4901C28.3923 26.2432 28.5973 25.9864 28.7925 25.7264C29.2189 25.1581 29.1035 24.3521 28.5357 23.9255Z" fill="white"/>
+                                                <path d="M30.4262 19.2753C29.7483 19.0628 29.0264 19.4401 28.8139 20.118C28.7326 20.377 28.6425 20.6372 28.5453 20.8921C28.3317 21.4531 28.5363 22.0704 29.0054 22.4012C29.0915 22.4617 29.1863 22.5129 29.2893 22.5519C29.953 22.8052 30.6962 22.4722 30.9492 21.8081C31.0647 21.5051 31.1719 21.1955 31.2688 20.8876C31.481 20.2096 31.104 19.4879 30.4262 19.2753Z" fill="white"/>
+                                                <path d="M13.6199 29.3313C12.4697 29.1248 11.3664 28.7732 10.3202 28.2827C10.3079 28.2762 10.2968 28.2689 10.2838 28.263C10.0373 28.1469 9.79113 28.0226 9.55258 27.8927C9.55175 27.8918 9.55024 27.8912 9.54893 27.8906C9.11124 27.6496 8.68407 27.3829 8.26907 27.0907C2.21769 22.828 0.762691 14.4367 5.02573 8.3854C5.95272 7.07004 7.0745 5.97267 8.32513 5.10292C8.34054 5.09219 8.35595 5.08153 8.37122 5.07073C12.7782 2.03417 18.7623 1.82953 23.4418 4.94987L22.4368 6.40205C22.1574 6.80624 22.3293 7.10079 22.8184 7.05677L27.1842 6.66592C27.6739 6.62189 27.9668 6.19823 27.8351 5.72524L26.6627 1.50127C26.5315 1.02774 26.1955 0.971058 25.9158 1.37519L24.9084 2.8308C21.4742 0.525521 17.3553 -0.353516 13.267 0.355409C12.8553 0.426673 12.4493 0.513895 12.0489 0.615426C12.0458 0.615976 12.0433 0.61632 12.0408 0.616871C12.0254 0.620654 12.0097 0.625675 11.9946 0.629871C8.46924 1.53519 5.3934 3.59132 3.1986 6.52497C3.18009 6.54691 3.16104 6.56837 3.14357 6.59224C3.07058 6.69054 2.99815 6.79111 2.92723 6.89168C2.81125 7.05649 2.69693 7.22543 2.58756 7.39438C2.57387 7.41474 2.56341 7.43544 2.55144 7.45601C0.740266 10.2626 -0.133336 13.5073 0.0164829 16.8106C0.0168269 16.8215 0.0162078 16.8325 0.0164829 16.8436C0.0309971 17.1663 0.0565861 17.4934 0.0913239 17.8155C0.0931811 17.8363 0.0977899 17.8559 0.101298 17.8767C0.137205 18.2006 0.182261 18.5252 0.238736 18.8497C0.8127 22.161 2.37473 25.1407 4.71536 27.4592C4.7208 27.4646 4.72644 27.4705 4.73194 27.4762C4.73387 27.4783 4.736 27.4794 4.73786 27.4814C5.36671 28.1017 6.05074 28.6753 6.78725 29.1941C8.71468 30.5522 10.8609 31.45 13.1659 31.8636C13.8652 31.9893 14.5333 31.5237 14.6588 30.8247C14.7842 30.1252 14.319 29.4566 13.6199 29.3313Z" fill="white"/>
+                                                <path d="M15.2107 5.72314C14.6354 5.72314 14.1694 6.18952 14.1694 6.76397V17.1335L23.6532 22.0361C23.8058 22.1151 23.9693 22.1523 24.1301 22.1523C24.5068 22.1523 24.8706 21.9472 25.0556 21.5893C25.3194 21.0785 25.1197 20.4509 24.6089 20.1871L16.2507 15.866V6.76397C16.2507 6.18952 15.7853 5.72314 15.2107 5.72314Z" fill="white"/>
                                                 </g>
                                                 <defs>
-                                                <clipPath id="clip0_2:3147">
-                                                <rect width="39.2037" height="39.2037" fill="white" transform="translate(0.574951 0.574463)"/>
+                                                <clipPath id="clip0_2:6059">
+                                                <rect width="32" height="32" fill="white"/>
                                                 </clipPath>
                                                 </defs>
-                                            </svg>                                                
-                                        </a>
+                                            </svg>                                                                                                                                            
+                                        </span>
                                     </div>
-                                    <div class="student-about__content">
-                                        <h3 class="student-about__title">about</h3>
-                                        <p class="student-about__text">Sie möchten sich für den Masterstudiengang 3D Animation for Film & Games an der TH Köln bewerben? Alle Informationen rund um die Bewerbung haben wir hier für Sie zusammengestellt.</p>
-                                    </div>
-                                    <div class="student-about__content">
-                                        <h3 class="student-about__title">Semester abroad</h3>
-                                        <div class="student-abroad">
-                                            <div class="student-abroad__item">
-                                                <h4 class="student-abroad__title">Universität</h4>
-                                                <div class="student-abroad__info">
-                                                    <span class="student-abroad__info-icon">
-                                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <g clip-path="url(#clip0_2:3123)">
-                                                            <path d="M7.35096 8.06063C7.13229 8.14376 6.89076 8.14405 6.6719 8.06143L2.54907 6.49075V10.0512C2.54908 10.1158 2.56872 10.1789 2.6054 10.232C2.64208 10.2852 2.69407 10.326 2.75446 10.349L6.8972 11.9264C6.97017 11.9542 7.05081 11.9542 7.12378 11.9264L11.2665 10.349C11.3269 10.326 11.3789 10.2852 11.4156 10.232C11.4523 10.1789 11.4719 10.1158 11.4719 10.0512V6.49072L7.35096 8.06063Z" fill="#8F9ABA"/>
-                                                            <path d="M13.8162 4.32015L7.1241 1.77077C7.05092 1.74308 6.97014 1.74308 6.89696 1.77077L0.204832 4.32015C0.144453 4.34313 0.0924842 4.38392 0.0558159 4.43711C0.0191476 4.4903 -0.000488281 4.55338 -0.000488281 4.61798C-0.000488281 4.68259 0.0191476 4.74566 0.0558159 4.79885C0.0924842 4.85204 0.144453 4.89283 0.204832 4.91581L6.89696 7.46519C6.97012 7.49298 7.05094 7.49298 7.1241 7.46519L13.8162 4.91581C13.8766 4.89283 13.9286 4.85204 13.9652 4.79885C14.0019 4.74566 14.0215 4.68259 14.0215 4.61798C14.0215 4.55338 14.0019 4.4903 13.9652 4.43711C13.9286 4.38392 13.8766 4.34313 13.8162 4.32015Z" fill="#8F9ABA"/>
-                                                            <path d="M1.59284 11.3106C1.50833 11.3106 1.42727 11.277 1.36751 11.2172C1.30774 11.1575 1.27417 11.0764 1.27417 10.9919V5.10407C1.27417 5.01956 1.30774 4.9385 1.36751 4.87874C1.42727 4.81897 1.50833 4.7854 1.59284 4.7854C1.67736 4.7854 1.75841 4.81897 1.81818 4.87874C1.87794 4.9385 1.91151 5.01956 1.91151 5.10407V10.9919C1.91151 11.0764 1.87794 11.1575 1.81818 11.2172C1.75841 11.277 1.67736 11.3106 1.59284 11.3106Z" fill="#8F9ABA"/>
-                                                            <path d="M1.59274 10.6729C1.33927 10.6731 1.09626 10.7739 0.917037 10.9532C0.737809 11.1324 0.636997 11.3754 0.636719 11.6289V12.9036C0.636719 12.9881 0.670293 13.0691 0.730056 13.1289C0.789819 13.1887 0.870874 13.2222 0.955391 13.2222H2.23008C2.3146 13.2222 2.39565 13.1887 2.45542 13.1289C2.51518 13.0691 2.54875 12.9881 2.54875 12.9036V11.6289C2.54848 11.3754 2.44766 11.1324 2.26844 10.9532C2.08921 10.7739 1.8462 10.6731 1.59274 10.6729V10.6729Z" fill="#8F9ABA"/>
-                                                            </g>
-                                                            <defs>
-                                                            <clipPath id="clip0_2:3123">
-                                                            <rect width="14" height="14" fill="white"/>
-                                                            </clipPath>
-                                                            </defs>
-                                                        </svg>                                                        
-                                                    </span>
-                                                    <span class="student-abroad__info-text">MSU</span>
-                                                </div>
-                                            </div>
-                                            <div class="student-abroad__item">
-                                                <h4 class="student-abroad__title">Faculty</h4>
-                                                <div class="student-abroad__info">
-                                                    <!-- <span class="student-abroad__item-icon"></span> -->
-                                                    <span class="student-abroad__info-text">Design</span>
-                                                </div>
-                                            </div>
-                                            <div class="student-abroad__item">
-                                                <h4 class="student-abroad__title">Studiendauer</h4>
-                                                <div class="student-abroad__info">
-                                                    <span class="student-abroad__info-icon">
+                                    <div class="student-message__body">
+                                        <div class="student-message__block">
+                                            <h3 class="student-message__title">Message</h3>
+                                            <p class="student-message__text">Sie möchten sich für den Masterstudiengang 3D Animation for Film & Games an der TH Köln bewerben? Alle Informationen rund um die Bewerbung haben wir hier für Sie zusammengestellt.</p>
+                                        </div>
+                                        <div class="student-message__block">
+                                            <h3 class="student-message__title">Suggested time</h3>
+                                            <div class="student-message__suggest-list">
+                                                <div class="student-message__suggest student-message__suggest_error">
+                                                    <span class="student-message__suggest-icon">
                                                         <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <g clip-path="url(#clip0_2:3118)">
                                                             <path d="M7 0.719727C3.14005 0.719727 0 3.85977 0 7.71973C0 11.5797 3.14005 14.7197 7 14.7197C10.86 14.7197 14 11.5797 14 7.71973C14 3.85977 10.86 0.719727 7 0.719727ZM10.3291 11.3404C10.2153 11.4542 10.066 11.5114 9.9167 11.5114C9.76738 11.5114 9.61795 11.4542 9.5043 11.3404L6.5876 8.42383C6.47791 8.31477 6.4167 8.16652 6.4167 8.01143V4.21973C6.4167 3.89716 6.67796 3.63643 7 3.63643C7.32204 3.63643 7.5833 3.89716 7.5833 4.21973V7.76993L10.3291 10.5156C10.5571 10.7438 10.5571 11.1124 10.3291 11.3404V11.3404Z" fill="#8F9ABA"/>
-                                                            </g>
-                                                            <defs>
-                                                            <clipPath id="clip0_2:3118">
-                                                            <rect width="14" height="14" fill="white" transform="translate(0 0.719727)"/>
-                                                            </clipPath>
-                                                            </defs>
-                                                        </svg>                                                                                                              
+                                                        </svg>                                                            
                                                     </span>
-                                                    <span class="student-abroad__info-text"><span>2</span> semester</span>
+                                                    <span class="student-message__suggest-text">THU Aug 5 2021</span>
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="student-message__block">
+                                            <h3 class="student-message__title">Length and duration</h3>
+                                            <div class="student-message__payment">
+                                                <span class="student-message__payment-text">75$ for 15min</span>
+                                                <span class="student-message__payment-condition student-message__payment-condition_success">Successfull payment</span>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="student-about__content student-about__content-help">
-                                        <h3 class="student-about__title">how can i help</h3>
-                                        <div class="student-about__list">
-                                            <a href="#" class="student-about__list-item">Generelle Infos übers Studium</a>
-                                            <a href="#" class="student-about__list-item">BaFög Antrag</a>
-                                            <a href="#" class="student-about__list-item">Bei der Anmeldung und Unterlage</a>
-                                            <a href="#" class="student-about__list-item">Generelle Infos übers Studium</a>
-                                            <a href="#" class="student-about__list-item">Bei der Anmeldung und Unterlage</a>
+                                    <div class="student-message-footer">
+                                        <div class="student-message-footer__button-list">
+                                            <button class="btn btn_border student-message-footer__btn student-message-footer__btn_refuse">Отменить</button>
+                                            <button class="btn btn_full student-message-footer__btn student-message-footer__btn_confirm">Изменить</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="student-card student-card_big student-card_condition">
+                                <div class="student-briefly">
+                                    <div class="student-briefly__header">
+                                        <div class="estim">
+                                            <div class="estim__city">
+                                                <span class="estim__city-icon">
+                                                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M9.5 0C5.4894 0 2.22656 3.26284 2.22656 7.27344C2.22656 8.5572 2.56574 9.81933 3.2074 10.9233C3.35699 11.1807 3.5242 11.4315 3.70448 11.6689L9.18398 19H9.81599L15.2955 11.6689C15.4758 11.4315 15.643 11.1808 15.7926 10.9234C16.4343 9.81933 16.7734 8.5572 16.7734 7.27344C16.7734 3.26284 13.5106 0 9.5 0ZM9.5 9.68555C8.16996 9.68555 7.08789 8.60347 7.08789 7.27344C7.08789 5.9434 8.16996 4.86133 9.5 4.86133C10.83 4.86133 11.9121 5.9434 11.9121 7.27344C11.9121 8.60347 10.83 9.68555 9.5 9.68555Z" fill="#8F9ABA"/>
+                                                    </svg>                                    
+                                                </span>
+                                                <span class="estim__city-text">Köln</span>
+                                            </div>
+                                            <div class="estim__rating">
+                                                <span class="estim__rating-text">3.5</span>
+                                                <span class="estim__rating-icon">
+                                                    <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M10.1998 0.923937C10.4958 0.21215 11.5042 0.212151 11.8002 0.923938L13.9708 6.14254C14.0956 6.44261 14.3778 6.64764 14.7017 6.67361L20.3356 7.12528C21.1041 7.18688 21.4156 8.14586 20.8302 8.64737L16.5377 12.3243C16.2909 12.5357 16.1831 12.8675 16.2585 13.1836L17.5699 18.6814C17.7488 19.4312 16.9331 20.0239 16.2752 19.6221L11.4518 16.6759C11.1744 16.5065 10.8256 16.5065 10.5482 16.6759L5.72482 19.6221C5.06694 20.0239 4.25119 19.4312 4.43006 18.6814L5.74147 13.1836C5.81688 12.8675 5.70909 12.5357 5.46227 12.3243L1.16982 8.64737C0.58435 8.14586 0.895941 7.18688 1.66437 7.12528L7.2983 6.67361C7.62225 6.64764 7.90444 6.44261 8.02925 6.14254L10.1998 0.923937Z" fill="#27B0C7"/>
+                                                    </svg>                                                                          
+                                                </span>
+                                                <span class="estim__rating-quantity">(<span>15</span>)</span>
+                                            </div>
+                                            <button class="estim-like">
+                                                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path class="like-full" d="M7.26331 2.94492C5.68571 2.94492 4.23647 3.57452 3.18216 4.7179C2.11218 5.87852 1.52284 7.48289 1.52284 9.23564C1.52284 11.085 2.21017 12.739 3.75127 14.5984C5.24049 16.3954 7.45544 18.2831 10.02 20.4687L10.0216 20.47L10.0263 20.474C10.9231 21.2383 11.9397 22.1047 12.9978 23.0299C14.0622 22.1029 15.0804 21.2351 15.979 20.4696L15.986 20.4637C18.5481 18.28 20.7608 16.3942 22.2489 14.5984C23.7898 12.739 24.4772 11.085 24.4772 9.23564C24.4772 7.48289 23.8878 5.87852 22.8178 4.7179C21.7637 3.57452 20.3143 2.94492 18.7369 2.94492C17.5812 2.94492 16.5202 3.31229 15.5833 4.03671C14.7484 4.68259 14.1668 5.49905 13.8258 6.07034C13.6504 6.36412 13.3418 6.53947 13 6.53947C12.6582 6.53947 12.3496 6.36412 12.1742 6.07034C11.8334 5.49905 11.2518 4.68259 10.4167 4.03671C9.47983 3.31229 8.41878 2.94492 7.26331 2.94492Z" fill="none"/>
+                                                    <path d="M13 24.5535C12.6299 24.5535 12.273 24.4194 11.9949 24.1758C10.9445 23.2574 9.9319 22.3943 9.03847 21.633L9.03391 21.629C6.41451 19.3969 4.15256 17.4691 2.57874 15.5702C0.819443 13.4473 0 11.4345 0 9.23564C0 7.09926 0.732559 5.12831 2.06259 3.68561C3.40849 2.22585 5.25526 1.42188 7.26331 1.42188C8.76413 1.42188 10.1386 1.89636 11.3484 2.83205C11.959 3.30435 12.5124 3.88239 13 4.55663C13.4878 3.88239 14.041 3.30435 14.6518 2.83205C15.8616 1.89636 17.2361 1.42188 18.7369 1.42188C20.7447 1.42188 22.5917 2.22585 23.9376 3.68561C25.2676 5.12831 26 7.09926 26 9.23564C26 11.4345 25.1808 13.4473 23.4215 15.57C21.8476 17.4691 19.5859 19.3967 16.9669 21.6286C16.0719 22.3912 15.0576 23.2556 14.0049 24.1762C13.727 24.4194 13.3699 24.5535 13 24.5535V24.5535ZM7.26331 2.94492C5.68571 2.94492 4.23647 3.57452 3.18216 4.7179C2.11218 5.87852 1.52284 7.48289 1.52284 9.23564C1.52284 11.085 2.21017 12.739 3.75127 14.5984C5.24078 16.3958 7.45631 18.2838 10.0216 20.47L10.0263 20.474C10.9231 21.2383 11.9397 22.1047 12.9978 23.0299C14.0622 22.1029 15.0804 21.2351 15.979 20.4696C18.5441 18.2834 20.7594 16.3958 22.2489 14.5984C23.7898 12.739 24.4772 11.085 24.4772 9.23564C24.4772 7.48289 23.8878 5.87852 22.8178 4.7179C21.7637 3.57452 20.3143 2.94492 18.7369 2.94492C17.5812 2.94492 16.5202 3.31229 15.5833 4.03671C14.7484 4.68259 14.1668 5.49905 13.8258 6.07034C13.6504 6.36412 13.3418 6.53947 13 6.53947C12.6582 6.53947 12.3496 6.36412 12.1742 6.07034C11.8334 5.49905 11.2518 4.68259 10.4167 4.03671C9.47983 3.31229 8.41878 2.94492 7.26331 2.94492V2.94492Z" fill="#27B0C7"/>
+                                                </svg>                               
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="student-briefly__avatar">
+                                        <div class="student-briefly__avatar-img"><img src="../img/avatar.png" alt="Аватар"></div>
+                                        <a href="tel:123" class="student-briefly__call">
+                                            <div class="student-briefly__call-icon">
+                                                <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M20.4164 14.7738C19.0913 14.7738 17.7934 14.5669 16.5633 14.1609C15.963 13.954 15.2812 14.1135 14.8867 14.516L12.4479 16.3577C9.6497 14.8642 7.85882 13.0745 6.38566 10.2966L8.17765 7.9155C8.62876 7.46439 8.79046 6.8041 8.59712 6.18568C8.18783 4.94766 7.97981 3.6486 7.97981 2.32579C7.97981 1.39076 7.21893 0.629883 6.2839 0.629883H2.32677C1.39174 0.629883 0.630859 1.39076 0.630859 2.32579C0.630859 13.235 9.50724 22.1114 20.4164 22.1114C21.3515 22.1114 22.1123 21.3505 22.1123 20.4155V16.4697C22.1123 15.5346 21.3515 14.7738 20.4164 14.7738Z" fill="white"/>
+                                                </svg>										
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="student-briefly__info">
+                                        <h3 class="student-briefly__info-title">Michael</h3>
+                                        <div class="student-briefly__info-block">
+                                            <div class="student-briefly__info-block-icon"><img src="../img/icons/university.svg" alt=""></div>
+                                            <p class="student-briefly__info-block-text">Fachhochschule Aachen</p>
+                                        </div>
+                                        <h4 class="student-briefly__info-subtitle">Informatik</h4>
+                                        <div class="student-briefly__info-block">
+                                            <span class="student-briefly__info-block-icon"><img src="../img/icons/time.svg" alt=""></span>
+                                            <span class="student-briefly__info-block-text">4 semester</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="student-message student-message_send">
+                                    <div class="student-message-condition">
+                                        <span class="student-message-condition__text">send</span>
+                                        <span class="student-message-condition__icon">
+                                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M27.3131 4.68687C24.2896 1.6633 20.2761 0 16 0C11.7239 0 7.71044 1.6633 4.68687 4.68687C1.6633 7.71044 0 11.7239 0 16C0 20.2761 1.6633 24.2896 4.68687 27.3131C7.71044 30.3367 11.7239 32 16 32C20.2761 32 24.2896 30.3367 27.3131 27.3131C30.3367 24.2896 32 20.2761 32 16C32 11.7239 30.3367 7.71044 27.3131 4.68687ZM26.0269 26.0269C23.3468 28.7071 19.7845 30.1818 16 30.1818C12.2155 30.1818 8.6532 28.7071 5.97306 26.0269C0.444444 20.4983 0.444444 11.5017 5.97306 5.97306C8.6532 3.29293 12.2155 1.81818 16 1.81818C19.7845 1.81818 23.3468 3.29293 26.0269 5.97306C31.5556 11.5017 31.5556 20.4983 26.0269 26.0269Z" fill="white"/>
+                                                <g clip-path="url(#clip0_0:1)">
+                                                <path d="M23.049 10.3076C22.7058 10.1007 22.3028 10.0156 21.9053 10.0661L7.09672 11.9507C6.12092 12.0745 5.43022 12.9658 5.55394 13.9416C5.617 14.4388 5.88661 14.8864 6.29663 15.1746L11.4419 18.7934L12.6716 24.9631C12.8667 25.9295 13.8083 26.5548 14.7746 26.3597C14.9932 26.3156 15.2015 26.231 15.3889 26.1102C15.6149 25.963 15.8048 25.7666 15.9443 25.5359L23.6548 12.7524C24.1626 11.91 23.8914 10.8154 23.049 10.3076ZM14.9269 24.9211C14.7576 25.2019 14.3927 25.2922 14.1119 25.1229C13.9689 25.0367 13.8688 24.8941 13.8363 24.7303L12.6384 18.7226L22.5682 12.2556L14.9269 24.9211ZM11.9905 17.7277L6.98018 14.203C6.77711 14.0647 6.68348 13.8132 6.74667 13.5758C6.80076 13.3351 7.00226 13.1557 7.24757 13.1298L21.9203 11.2607L11.9905 17.7277Z" fill="white"/>
+                                                </g>
+                                                <defs>
+                                                <clipPath id="clip0_0:1">
+                                                <rect width="17" height="17" fill="white" transform="translate(4.73862 13.0161) rotate(-33.0751)"/>
+                                                </clipPath>
+                                                </defs>
+                                            </svg>                                                                                                                                                                                        
+                                        </span>
+                                    </div>
+                                    <div class="student-message__body">
+                                        <div class="student-message__block">
+                                            <h3 class="student-message__title">Message</h3>
+                                            <p class="student-message__text">Sie möchten sich für den Masterstudiengang 3D Animation for Film & Games an der TH Köln bewerben? Alle Informationen rund um die Bewerbung haben wir hier für Sie zusammengestellt.</p>
+                                        </div>
+                                        <div class="student-message__block">
+                                            <h3 class="student-message__title">Suggested time</h3>
+                                            <div class="student-message__suggest-list">
+                                                <div class="student-message__suggest">
+                                                    <span class="student-message__suggest-icon">
+                                                        <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M7 0.719727C3.14005 0.719727 0 3.85977 0 7.71973C0 11.5797 3.14005 14.7197 7 14.7197C10.86 14.7197 14 11.5797 14 7.71973C14 3.85977 10.86 0.719727 7 0.719727ZM10.3291 11.3404C10.2153 11.4542 10.066 11.5114 9.9167 11.5114C9.76738 11.5114 9.61795 11.4542 9.5043 11.3404L6.5876 8.42383C6.47791 8.31477 6.4167 8.16652 6.4167 8.01143V4.21973C6.4167 3.89716 6.67796 3.63643 7 3.63643C7.32204 3.63643 7.5833 3.89716 7.5833 4.21973V7.76993L10.3291 10.5156C10.5571 10.7438 10.5571 11.1124 10.3291 11.3404V11.3404Z" fill="#8F9ABA"/>
+                                                        </svg>                                                            
+                                                    </span>
+                                                    <span class="student-message__suggest-text">THU Aug 5 2021</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="student-message__block">
+                                            <h3 class="student-message__title">Length and duration</h3>
+                                            <div class="student-message__payment">
+                                                <span class="student-message__payment-text">75$ for 15min</span>
+                                                <span class="student-message__payment-condition student-message__payment-condition_success">Successfull payment</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="student-message-footer">
+                                        <a href="#" class="student-message-footer__support student-message-footer__support_icon">zoom link</a>
+                                        <div class="student-message-footer__button-list">
+                                            <button class="btn btn_border student-message-footer__btn student-message-footer__btn_refuse">Отменить</button>
+                                            <button class="btn btn_full student-message-footer__btn student-message-footer__btn_confirm">Изменить</button>
                                         </div>
                                     </div>
                                 </div>
