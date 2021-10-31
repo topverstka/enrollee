@@ -7687,6 +7687,12 @@ h2 {
   padding: 60px 0;
 }
 
+@media (max-width: 670px) {
+  .faculty-students {
+    padding: 40px 0;
+  }
+}
+
 .faculty-students__body {
   display: -ms-grid;
   display: grid;
