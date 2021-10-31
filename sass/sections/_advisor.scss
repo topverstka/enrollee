@@ -193,6 +193,7 @@
             position: absolute;
             top: 34px;
             left: -9px;
+            z-index: -1;
 
             @media (max-width: 450px) {
                 width: 28px;
@@ -242,6 +243,7 @@
             position: absolute;
             top: 34px;
             right: -9px;
+            z-index: -1;
 
             @media (max-width: 450px) {
                 width: 28px;

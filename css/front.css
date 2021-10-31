@@ -2765,6 +2765,9 @@ h2 {
 .header._fixed .logo__link_light img {
   -webkit-filter: none;
           filter: none;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .header_page-main {
@@ -2970,89 +2973,93 @@ h2 {
   }
 }
 
-.menu-user .menu__body {
-  min-height: 0;
-  padding: 30px 0 44px 0;
+@media (max-width: 670px) {
+  .menu-user .menu__body {
+    min-height: 0;
+    padding: 30px 0 44px 0;
+  }
 }
 
 .menu-user .menu-user__body {
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  min-height: 80%;
-  background: #fff;
+  display: none;
 }
 
-.menu-user .menu-user__body .menu__user-block {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0 0 30px 0;
-}
-
-.menu-user .menu-user__body .menu__user-avatar {
-  min-width: 106px;
-  width: 106px;
-  height: 106px;
-  -webkit-border-radius: 100%;
-          border-radius: 100%;
-  overflow: hidden;
-}
-
-.menu-user .menu-user__body .menu__user-avatar img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.menu-user .menu-user__body .menu__user-name {
-  font-size: 16px;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin: 10px 0 0 0;
-}
-
-.menu-user .menu-user__body .menu__list a[data-user-application]::after {
-  content: attr(data-user-application);
-  position: absolute;
-  top: 50%;
-  right: -8px;
-  width: 18px;
-  height: 18px;
-  -webkit-transform: translate(100%, -webkit-calc(-50% - 2px));
-      -ms-transform: translate(100%, calc(-50% - 2px));
-          transform: translate(100%, calc(-50% - 2px));
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background: #FA3600;
-  -webkit-border-radius: 20px;
-          border-radius: 20px;
-  font-size: 10px;
-  font-weight: 700;
-  color: #fff;
-  margin: 0 0 0 13px;
+@media (max-width: 670px) {
+  .menu-user .menu-user__body {
+    display: -webkit-box !important;
+    display: -webkit-flex !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    min-height: 80%;
+    background: #fff;
+    padding: 60px 0 44px 0;
+  }
+  .menu-user .menu-user__body .menu__user-block {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 0 30px 0;
+  }
+  .menu-user .menu-user__body .menu__user-avatar {
+    min-width: 106px;
+    width: 106px;
+    height: 106px;
+    -webkit-border-radius: 100%;
+            border-radius: 100%;
+    overflow: hidden;
+  }
+  .menu-user .menu-user__body .menu__user-avatar img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .menu-user .menu-user__body .menu__user-name {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 10px 0 0 0;
+  }
+  .menu-user .menu-user__body .menu__list a[data-user-application]::after {
+    content: attr(data-user-application);
+    position: absolute;
+    top: 50%;
+    right: -8px;
+    width: 18px;
+    height: 18px;
+    -webkit-transform: translate(100%, -webkit-calc(-50% - 2px));
+        -ms-transform: translate(100%, calc(-50% - 2px));
+            transform: translate(100%, calc(-50% - 2px));
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background: #FA3600;
+    -webkit-border-radius: 20px;
+            border-radius: 20px;
+    font-size: 10px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 0 13px;
+  }
 }
 
 .menu-user__body {
@@ -3084,6 +3091,21 @@ h2 {
   }
 }
 
+.menu__auth {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .menu__auth {
+    display: block;
+    margin: 32px 0 0 0;
+  }
+  .menu__auth .btn_border {
+    color: var(--accent);
+    margin: 0 12px 0 0;
+  }
+}
+
 .menu__item:not(:last-child) {
   margin: 0 24px 0 0;
 }
@@ -3096,6 +3118,15 @@ h2 {
   -o-transition: 0.3s;
   transition: 0.3s;
   position: relative;
+}
+
+@media (max-width: 1200px) {
+  .menu__item a {
+    color: var(--main) !important;
+  }
+  .menu__item a::before {
+    background: var(--main) !important;
+  }
 }
 
 .menu__item a::before {
@@ -3333,12 +3364,14 @@ h2 {
   }
   .burger._active span::before {
     top: 0;
+    background: var(--main);
     -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
             transform: rotate(45deg);
   }
   .burger._active span::after {
     bottom: 0;
+    background: var(--main);
     -webkit-transform: rotate(-45deg);
         -ms-transform: rotate(-45deg);
             transform: rotate(-45deg);
@@ -3803,6 +3836,7 @@ h2 {
   position: absolute;
   top: 34px;
   left: -9px;
+  z-index: -1;
 }
 
 @media (max-width: 450px) {
@@ -3873,6 +3907,7 @@ h2 {
   position: absolute;
   top: 34px;
   right: -9px;
+  z-index: -1;
 }
 
 @media (max-width: 450px) {
@@ -7936,7 +7971,13 @@ h2 {
 
 @media (max-width: 670px) {
   .faculty-review {
-    margin: 80px 0 40px 0;
+    margin: 50px 0 40px 0;
+  }
+  .faculty-review .section-title {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 

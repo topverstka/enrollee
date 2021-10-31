@@ -40,37 +40,11 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     }
 
-    // При скролле создается дубликат шапки, который фиксируется и плавно показывается при скролле
-    // showDuplicateHeader()
-    function showDuplicateHeader() {
-        // Создание дубликата
-        const header = document.querySelector('.header')
-        const wrapper = document.querySelector('.wrapper')
-        let headerDuplicate = document.createElement('div')
-
-        headerDuplicate.innerHTML = header.innerHTML
-        headerDuplicate.classList.add('header', '_fixed')
-
-        wrapper.prepend(headerDuplicate)
-
-        // Показ шапки при скролле
-        headerDuplicate = document.querySelector('.header._fixed')
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 200) {
-                if (!headerDuplicate.classList.contains('_show')) {
-                    headerDuplicate.classList.add('_show')
-                }
-            }
-            else {
-                headerDuplicate.classList.remove('_show')
-            }
-        })
-    }
-
     menuToggle()
     function menuToggle() {
         const burgerElems = document.querySelectorAll('.burger')
         const menu = document.querySelector('.menu')
+        const logoLight = document.querySelector('.logo__link_light')
         
         for (let i = 0; i < burgerElems.length; i++) {
             const burger = burgerElems[i];
@@ -79,6 +53,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 burger.classList.toggle('_active')
                 menu.classList.toggle('_show')
                 body.classList.toggle('_lock')
+
+                if (logoLight) {
+                    logoLight.classList.toggle('logo__link_light')
+                }
             })
         }
     }
