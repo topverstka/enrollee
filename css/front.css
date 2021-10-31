@@ -3767,6 +3767,8 @@ h2 {
 }
 
 .advisor-message__content {
+  max-width: 440px;
+  width: 100%;
   position: relative;
   -webkit-border-radius: 16px;
           border-radius: 16px;
@@ -4690,6 +4692,7 @@ h2 {
   overflow: visible;
   -webkit-filter: drop-shadow(rgba(0, 0, 0, 0.25) 2px 5px 15px);
           filter: drop-shadow(rgba(0, 0, 0, 0.25) 2px 5px 15px);
+  pointer-events: none;
 }
 
 @media (max-width: 1200px) {
@@ -4751,6 +4754,7 @@ h2 {
       -ms-transform: scale(1.1);
           transform: scale(1.1);
   z-index: 1;
+  pointer-events: all;
 }
 
 .main-slide.swiper-slide-active .student-tooltip {
@@ -5652,6 +5656,7 @@ h2 {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
 }
 
 @media (max-width: 900px) {
@@ -5772,11 +5777,20 @@ h2 {
 
 @media (max-width: 900px) {
   .student-profile-main__edit-mobile {
+    position: absolute;
+    top: 0;
+    right: 0;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
     display: block;
     margin: 0 0 16px auto;
+  }
+}
+
+@media (max-width: 400px) {
+  .student-profile-main__edit-mobile {
+    position: initial;
   }
 }
 
@@ -7202,6 +7216,12 @@ h2 {
 
 .univer-course {
   margin: 80px 0;
+}
+
+@media (max-width: 670px) {
+  .univer-course {
+    margin: 40px 0;
+  }
 }
 
 .univer-course__body {
@@ -8749,6 +8769,25 @@ h2 {
   .student-info {
     padding: 0 16px;
   }
+}
+
+.student-info__img {
+  width: 260px;
+  height: 260px;
+}
+
+@media (max-width: 400px) {
+  .student-info__img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.student-info__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .student-info__content {

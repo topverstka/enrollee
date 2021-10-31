@@ -81,6 +81,22 @@
     }
 }
 
+.student-info__img {
+    width: 260px;
+    height: 260px;
+
+    @media (max-width: 400px) {
+        width: 100%;
+        height: auto;
+    }
+
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
 .student-info__content {
     margin: 0 0 0 34px;
 

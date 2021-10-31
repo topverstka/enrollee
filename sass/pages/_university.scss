@@ -139,6 +139,10 @@
 // Карточки курсов
 .univer-course {
     margin: 80px 0;
+
+    @media (max-width: $wwa3 + px) {
+        margin: 40px 0;
+    }
 }
 
 .univer-course__body {

@@ -8,7 +8,7 @@
 
 .student-profile-main {
     display: flex;
-    // justify-content: space-between;
+    position: relative;
 
     @media (max-width: $wwa2 + px) {
       flex-direction: column;
@@ -101,9 +101,16 @@
     display: none;
 
     @media (max-width: $wwa2 + px) {
+        position: absolute;
+        top: 0;
+        right: 0;
         width: fit-content;
         display: block;
         margin: 0 0 16px auto;
+    }
+
+    @media (max-width: 400px) {
+        position: initial;
     }
 }
 

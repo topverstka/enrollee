@@ -59,9 +59,9 @@ document.addEventListener("DOMContentLoaded", () => {
         slidesPerView: 1,
         spaceBetween: 10,
         loop: true,
-        // autoplay: {
-        //     delay: 5000,
-        // },
+        autoplay: {
+            delay: 5000,
+        },
 
         breakpoints: {
             1200: {
