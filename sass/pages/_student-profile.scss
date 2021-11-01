@@ -183,6 +183,10 @@
 
 .student-profile-section__content-text {
     font-size: 16px;
+
+    @media (max-width: $wwa3 + px) {
+        font-size: 12px;
+    }
 }
 
 // Документы

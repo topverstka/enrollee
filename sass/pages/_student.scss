@@ -181,7 +181,7 @@
 
     & button {
         display: inline;
-        font-size: inherit;
+        font-size: 16px;
         font-weight: 500;
         color: $accent;
         text-decoration: underline;
@@ -234,7 +234,8 @@
     align-items: center;
     justify-content: space-between;
 
-    @media (max-width: $wwa3 + px) {
+    & .estim-like {
+        margin: 0 0 0 16px;
     }
 }
 
