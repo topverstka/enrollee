@@ -169,7 +169,7 @@
 }
 
 .student-edit-rating {
-    margin: 30px 0 60px 0;
+    margin: 0 0 60px 0;
 
     @media (max-width: $wwa3 + px) {
         margin: 0 0 40px 0;
@@ -181,6 +181,7 @@
 }
 
 .student-edit-rating__body {
+    margin: 30px 0 0 0;
 }
 
 .student-edit-rating__block {
@@ -319,6 +320,7 @@
         margin: 0 2px;
         
         & svg path {
+            fill: #fff;
             transition: $tr;
         }
 

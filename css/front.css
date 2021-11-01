@@ -6515,7 +6515,7 @@ a.student-message-footer__support {
 }
 
 .student-edit-rating {
-  margin: 30px 0 60px 0;
+  margin: 0 0 60px 0;
 }
 
 @media (max-width: 670px) {
@@ -6529,6 +6529,10 @@ a.student-message-footer__support {
   -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+}
+
+.student-edit-rating__body {
+  margin: 30px 0 0 0;
 }
 
 .student-edit-rating__block {
@@ -6705,6 +6709,7 @@ a.student-message-footer__support {
 }
 
 .star-rating-change .student-edit-rating__star svg path {
+  fill: #fff;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
