@@ -92,8 +92,12 @@
 
 .univers__slide-more {
     background: #fff;
-    color: $accent;
+    color: $accent !important;
     margin: 40px 0 0 0;
+
+    &:hover {
+        color: #fff !important;
+    }
 
     @media screen and (max-width: 500px) {
     //   margin: 24px 0 0 0;
