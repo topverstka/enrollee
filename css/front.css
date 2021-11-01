@@ -2971,9 +2971,13 @@ h2 {
             justify-content: center;
     padding: 48px 0;
   }
+  .menu .menu-user__box-header {
+    display: block;
+  }
 }
 
 .menu-user .menu-user__box-header {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
