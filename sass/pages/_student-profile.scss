@@ -24,6 +24,10 @@
     width: 260px;
     height: 260px;
 
+    @media (max-width: $wwa2 + px) {
+        margin: 0 auto;
+    }
+
     @media (max-width: 400px) {
         width: 100%;
         height: auto;
@@ -113,7 +117,7 @@
         margin: 0 0 16px auto;
     }
 
-    @media (max-width: 400px) {
+    @media (max-width: $wwa2 + px) {
         position: initial;
     }
 }
@@ -130,6 +134,13 @@
     }
 }
 
+.student-profile-abroad {
+
+    @media (max-width: $wwa3 + px) {
+        background: #fff;
+    }
+}
+
 .student-profile-info {
     padding-top: 0;
 }
@@ -139,7 +150,7 @@
     grid-template-columns: repeat(3, 1fr);
     column-gap: 24px;
     row-gap: 40px;
-    // margin: 30px 0 0 0;
+    margin: 30px 0 0 0;
 
     @media (max-width: $wwa3 + px) {
         grid-template-columns: repeat(2, 1fr);
@@ -219,6 +230,7 @@
     @media (max-width: 490px) {
         grid-template-columns: repeat(2, 1fr);
         justify-items: center;
+        gap: 10px;
     }
 }
 
@@ -226,6 +238,11 @@
     width: 127px;
     height: 180px;
     background: #E5E5E5;
+
+    @media (max-width: 490px) {
+        width: 100%;
+        height: auto;
+    }
 
     & img {
         width: 100%;

@@ -549,7 +549,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const starElems = starContainer.querySelectorAll('span')
             const input = starContainer.querySelector('.star-rating-change__input')
 
-            starRatingInput(starElems, input)
+            // starRatingInput(starElems, input)
             
             for (let i = 0; i < starElems.length; i++) {
                 const star = starElems[i];
@@ -557,7 +557,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 star.addEventListener('click', () => {
                     removeAll(starElems, 'rating-card__star_full')
                     
-                    for (let y = 0; y < i+1; y++) {
+                    for (let y = starElems.length - 1; y >= i; y--) {
                         const starSibling = starElems[y];
                         starSibling.classList.add('rating-card__star_full')
                     }
@@ -568,17 +568,19 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         // Выставление начального звездного рейтинга по значению инпута
-        function starRatingInput(starElems, input) {
-            const value = parseInt(input.value)
+        // function starRatingInput(starElems, input) {
+        //     let value = parseInt(input.value)
     
-            for (let i = 0; i < starElems.length; i++) {
-                const star = starElems[i];
+        //     for (let i = 0; i < starElems.length; i++) {
+        //         const star = starElems[i];
     
-                for (let y = 0; y < value; y++) {
-                    const starSibling = starElems[y];
-                    starSibling.classList.add('rating-card__star_full')
-                }
-            }
-        }
+        //         console.log(value)
+        //         // for (let y = 0; y < value; y++) {
+        //         for (let y = starElems.length - 1; y >= value; y--) {
+        //             const starSibling = starElems[y];
+        //             starSibling.classList.add('rating-card__star_full')
+        //         }
+        //     }
+        // }
     }
 })

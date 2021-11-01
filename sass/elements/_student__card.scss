@@ -406,6 +406,13 @@
     background: #FD6467;
 }
 
+.student-message_canceled {
+
+    & .student-message-footer__support {
+        color: #FD6467;
+    }
+}
+
 // Задержка
 .student-message_delayed .student-message-condition {
     background: #615F82;
@@ -609,12 +616,26 @@
     font-size: 15px;
     font-weight: 500;
     text-transform: uppercase;
-    text-decoration: underline;
+    padding: 13px 0;
     margin: 0 12px 0 0;
 
+    & a {
+        text-decoration: underline;
+        color: inherit;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    
     @media (max-width: 540px) {
+        padding: 0;
         margin: 0 0 20px 0;
     }
+}
+
+a.student-message-footer__support {
+    text-decoration: underline;
 }
 
 .student-message-footer__support_icon {

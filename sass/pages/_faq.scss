@@ -18,6 +18,10 @@
 .accordion_faq_section {
     width: 100%;
 
+    &:not(:first-child) {
+        border-top: 2px solid #B7BAE3;
+    }
+
     & .accordion__header {
         padding: 20px 0;
 
@@ -57,10 +61,7 @@
 .accordion_faq {
     background: #F0F7F9;
     border-radius: 6px;
-    
-    &:not(:last-child) {
-        margin: 0 0 20px 0;
-    }
+    margin: 0 0 20px 0;
 
     & .accordion__header {
         padding: 20px;
