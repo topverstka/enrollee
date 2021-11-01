@@ -97,6 +97,10 @@
     @media (max-width: $wwa3 + px) {
         align-items: center;
     }
+
+    & .student-edit-rating__subtitle {
+        text-align: center;
+    }
 }
 
 .rate-call__textarea {

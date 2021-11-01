@@ -207,7 +207,7 @@
     
     & .menu__body {
 
-        @media (max-width: $wwa3 + px) {
+        @media (max-width: $wwa2 + px) {
             min-height: 0;
             padding: 30px 0 44px 0;
         }
@@ -216,7 +216,7 @@
     & .menu-user__body {
         display: none;
 
-        @media (max-width: $wwa3 + px) {
+        @media (max-width: $wwa2 + px) {
             display: flex !important;
             min-height: 0%;
             background: #fff;
@@ -435,6 +435,10 @@
     opacity: 0;
     transition: $tr;
     pointer-events: none;
+
+    @media (max-width: $wwa2 + px) {
+        display: none;
+    }
 
     &:hover {
         bottom: 0;

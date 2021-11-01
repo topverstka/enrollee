@@ -157,7 +157,11 @@
 }
 
 .student-edit-rating {
+    margin: 30px 0 60px 0;
 
+    @media (max-width: $wwa3 + px) {
+        margin: 40px 0;
+    }
 
     & .section-title {
         justify-content: flex-start;
@@ -165,7 +169,6 @@
 }
 
 .student-edit-rating__body {
-    margin: 30px 0 60px 0;
 }
 
 .student-edit-rating__block {

@@ -167,6 +167,10 @@
 // раздел с карточками студентов
 .univer-students {
     padding: 60px 0;
+
+    @media (max-width: $wwa3 + px) {
+        padding: 40px 0;
+    }
 }
 
 .univer-students__body {
