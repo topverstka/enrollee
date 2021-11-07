@@ -205,7 +205,7 @@
     max-width: 330px;
     width: 100%;
     border-radius: 15px;
-    padding: 20px 20px 30px 40px;
+    padding: 20px 40px 30px 40px;
 
     @media (max-width: $wwa3 + px) {
         max-width: none;
@@ -224,6 +224,7 @@
 }
 
 .student-modal__body {
+    text-align: center;
 
     @media (max-width: $wwa3 + px) {
         display: flex;
