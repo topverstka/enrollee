@@ -11,6 +11,15 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    // Изменение скролла у body
+    function bodyLock(con) {
+        if (con == true) {
+            body.classList.add('_lock');
+        } else if (con == false) {
+            body.classList.remove('_lock');
+        }
+    }
+
     headerFixed()
     function headerFixed() {
         const header = document.querySelector('.header')
@@ -232,9 +241,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const sidebarContainer = document.querySelector('.aside__body')
         const sidebar = document.querySelector('.aside__list')
         const footerHeight = document.querySelector('.footer').scrollHeight
-        console.log(sidebar.offsetTop)
-        console.log(sidebar.clientTop)
-        console.log(sidebar.getBoundingClientRect())
+        // console.log(sidebar.offsetTop)
+        // console.log(sidebar.clientTop)
+        // console.log(sidebar.getBoundingClientRect())
 
         window.addEventListener('scroll', () => {
             if (sidebarContainer.getBoundingClientRect().top < 32) {
@@ -243,10 +252,10 @@ document.addEventListener("DOMContentLoaded", () => {
             else {
                 sidebar.classList.remove('_fixed')
             }
-            console.log(sidebar.getBoundingClientRect().top + pageYOffset)
-            console.log(sidebar.scrollHeight)
-            console.log(sidebar.scrollHeight + sidebar.getBoundingClientRect().top + pageYOffset)
-            console.log(document.documentElement.scrollHeight)
+            // console.log(sidebar.getBoundingClientRect().top + pageYOffset)
+            // console.log(sidebar.scrollHeight)
+            // console.log(sidebar.scrollHeight + sidebar.getBoundingClientRect().top + pageYOffset)
+            // console.log(document.documentElement.scrollHeight)
         })
     }
 
@@ -583,4 +592,234 @@ document.addEventListener("DOMContentLoaded", () => {
         //     }
         // }
     }
+
+    // Добавление своих тегов при регистрации
+    if (document.querySelector('.signup-help__add')) { addTags() }
+    function addTags() {
+        // Показываем поле для написания тегов
+        // const btn = document.querySelector('.signup-help__add')
+        
+        // btn.addEventListener('click', () => {
+            //     btn.classList.add('_hidden')
+            //     textareaBlock.classList.add('_show')
+            // })
+            
+        // Добавляем новые теги
+        const btnAdd = document.querySelector('.signup-help__add-textarea-btn')
+        const textareaBlock = document.querySelector('.signup-help__add-textarea')
+        const textarea = textareaBlock.querySelector('textarea')
+        const tagsBlock = document.querySelector('.signup-help__tag-list')
+
+        btnAdd.addEventListener('click', addTag)
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') {
+                addTag(e)
+            }
+        })
+
+        function addTag(e) {
+            e.preventDefault()
+            if (!textarea.value == '') {
+                const tag = document.createElement('div')
+                tag.classList.add('signup-help__tag')
+                tag.innerHTML = `
+                    <input class="signup-help__tag-input" type="checkbox" checked>
+                    <span class="signup-help__tag-text">${textarea.value}</span>
+                `
+                tagsBlock.append(tag)
+            }
+            else {
+                valueNotEmpty()
+            }
+        }
+
+        // Поле не должно быть пустым
+        function valueNotEmpty() {
+            if (!document.querySelector('.signup-help__add-textarea-error')) {
+                const textareaBlock = document.querySelector('.signup-help__add-textarea')
+                const error = document.createElement('span')
+                error.classList.add('signup-help__add-textarea-error')
+                error.innerText = 'Поле не должно быть пустым'
+    
+                const addedError = textareaBlock.insertBefore(error, document.querySelector('.signup-help__add-textarea-btn').nextSibling)
+
+                setTimeout(() => {
+                    addedError.remove()
+                }, 2000)
+            }
+        }
+    }
+
+    // Мультиселект
+    multiselect()
+    function multiselect() {
+        const multiselectElems = document.querySelectorAll('.multiselect')
+        for (let i = 0; i < multiselectElems.length; i++) {
+            const select = multiselectElems[i];
+            const selectHeader = select.querySelector('.multiselect__header')
+            const selectBody = select.querySelector('.multiselect__body')
+            const selected = select.querySelector('.multiselect__selected')
+            const selectItemElems = selectBody.querySelectorAll('.multiselect__item')
+
+            select.addEventListener('click', () => {
+                selectHeader.classList.toggle('_show')
+            })
+
+            for (let i = 0; i < selectItemElems.length; i++) {
+                const item = selectItemElems[i];
+                
+                item.addEventListener('click', () => {
+                    item.classList.toggle('_selected')
+                    multiselectSelectedText(selected)
+                })
+            }
+        }
+
+        // Формирование текста со списком с выбранными языками
+        function multiselectSelectedText(selected) {
+            const itemElems = document.querySelectorAll('.multiselect__item._selected')
+            
+            if (itemElems.length == 0) {
+                selected.innerText = ''
+            }
+            else {
+                let selectedLang = 'Выбрано: '
+
+                for (let i = 0; i < itemElems.length; i++) {
+                    const item = itemElems[i];
+                    const value = item.innerText
+                    
+                    if (i != 0) {
+                        selectedLang += ', '
+                    }
+                    selectedLang += value
+                }
+
+                selected.innerText = selectedLang
+            }
+
+        }
+    }
+
+    // Открытие модального окна, если в url указан его id
+    openModalHash()
+    function openModalHash() {
+        if (window.location.hash) {
+            const hash = window.location.hash.substring(1)
+            const modal = document.querySelector(`.modal-more#${hash}`)
+
+            if (modal) {
+                modal.classList.add('_show');
+                bodyLock(true)
+                closeWhenClickingOnBg(`#${hash} .modal__content`, modal);
+            }
+        }
+    }
+
+    // Закрытие модальных окон при клике по крестику
+    closeModalWhenClickingOnCross()
+    function closeModalWhenClickingOnCross() {
+        const modalElems = document.querySelectorAll('.modal-more')
+        for (let i = 0; i < modalElems.length; i++) {
+            const modal = modalElems[i];
+            const closeThisModal = modal.querySelector('.modal__close')
+
+            closeThisModal.addEventListener('click', () => {
+                modal.classList.remove('_show')
+                bodyLock(false)
+                resetHash()
+            })
+        }
+    }
+
+    // Закрытие модальных окон при нажатии по клавише ESC
+    closeModalWhenClickingOnESC()
+    function closeModalWhenClickingOnESC() {
+        const modalElems = document.querySelectorAll('.modal-more')
+        for (let i = 0; i < modalElems.length; i++) {
+            const modal = modalElems[i];
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    modal.classList.remove('_show')
+                    bodyLock(false)
+                    resetHash()
+                }
+            })
+        }
+    }
+
+    // Сброс id модального окна в url
+    function resetHash() {
+        const windowTop = window.pageYOffset
+        window.location.hash = ''
+        window.scrollTo(0, windowTop)
+    }
+
+    // Открытие модальных окон
+    openModal()
+    function openModal() {
+        const btnsOpenModal = document.querySelectorAll('[data-modal-open]');
+
+        for (let i = 0; i < btnsOpenModal.length; i++) {
+            const btn = btnsOpenModal[i];
+
+            btn.addEventListener('click', (e) => {
+                const dataBtn = btn.dataset.modalOpen;
+                const modalThatOpens = document.querySelector(`#${dataBtn}`)
+
+                btn.classList.add('modal-show');
+                modalThatOpens.classList.add('_show');
+                bodyLock(true)
+                closeWhenClickingOnBg(`#${dataBtn} .modal__content`, modalThatOpens);
+                window.location.hash = dataBtn
+            });
+        }
+    }
+
+    // Закрытие модального окна при клике по заднему фону
+    function closeWhenClickingOnBg(itemArray, itemParent, classShow = '_show') {
+        document.addEventListener('click', (e) => {
+            let itemElems = document.querySelectorAll(itemArray)
+
+            for (let i = 0; i < itemElems.length; i++) {
+                const item = itemElems[i];
+
+                const target = e.target,
+                    itsItem = target == item || item.contains(target),
+                    itemIsShow = item.classList.contains(classShow);
+
+                if (itemParent) {
+                    const itsItemParent = target == itemParent || itemParent.contains(target),
+                        itemParentIsShow = itemParent.classList.contains(classShow);
+
+                    if (!itsItem && itsItemParent && itemParentIsShow) {
+                        itemParent.classList.remove(classShow);
+
+                        if (body.classList.contains('_lock')) {
+                            bodyLock(false)
+                        }
+
+                        if (window.location.hash === '#' + itemParent.getAttribute('id')) {
+                            resetHash()
+                        }
+                    }
+                } else {
+                    if (!itsItem && itemIsShow) {
+                        item.classList.remove(classShow);
+                        if (body.classList.contains('_lock')) {
+                            bodyLock(false)
+                        }
+
+                        if (window.location.hash === '#' + itemParent.getAttribute('id')) {
+                            resetHash()
+                        }
+                    }
+                }
+
+            }
+        })
+    }
+
 })

@@ -211,3 +211,95 @@
         }
     } 
 }
+
+// Множественный выбор
+.multiselect {
+    position: relative;
+}
+
+.multiselect__header {
+    position: relative;
+    background-color: #fff;
+    border: 1px solid $outline;
+    border-radius: 5px;
+    padding: 6px 20px;
+    cursor: pointer;
+
+    &._show {
+        border-radius: 5px 5px 0 0;
+
+        & + .multiselect__body {
+            display: block;
+        }
+    }
+}
+
+.multiselect__header-text {
+    font-size: 20px;
+    color: $main;
+}
+
+.multiselect__header-icon {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    width: 15px;
+    height: 15px;
+    transform: translate(0, -50%);
+    display: flex;
+}
+
+.multiselect__body {
+    position: absolute;
+    top: 38px;
+    left: 0;
+    width: 100%;
+    max-height: 150px;
+    display: none;
+    padding: 6px 0;
+    background: #fff;
+    border: 1px solid $outline;
+    border-radius: 0 0 5px 5px;
+    overflow-y: auto;
+}
+
+.multiselect__list {
+
+}
+
+.multiselect__item {
+    background: #fff;
+    padding: 4px 20px;
+    cursor: pointer;
+
+    &:hover {
+        background: rgba(0,0,0,.05);
+    }
+
+    &._selected {
+        background: rgba(39, 176, 199, .08);
+        color: $accent;
+    }
+}
+
+// Выбранные языки
+.multiselect__selected {
+    // display: flex;
+    // align-items: center;
+    font-size: 12px;
+    color: #C0C0C0;
+    margin: 6px 0 0 0;
+}
+
+// .multiselect__selected-title {
+
+// }
+
+// .multiselect__selected-list {
+//     display: flex;
+//     align-items: center;
+// }
+
+// .multiselect__selected-item {
+
+// }

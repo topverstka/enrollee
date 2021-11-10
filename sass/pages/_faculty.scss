@@ -3,12 +3,32 @@
 }
 
 .faculty__header {
-    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    // width: fit-content;
+
+    & .estim {
+        margin: 0 24px 0 0;
+    }
 
     & .estim__rating-text,
     & .estim__rating-quantity,
     & .estim__city-text {
         font-size: 16px;
+    }
+}
+
+.link-website {
+    color: $accent;
+    text-transform: uppercase;
+    text-decoration: underline;
+    margin: 6px 0;
+    transition: $tr;
+
+    &:hover {
+        color: $accent-hover
     }
 }
 

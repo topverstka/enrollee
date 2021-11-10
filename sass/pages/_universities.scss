@@ -210,7 +210,7 @@
     column-gap: 24px;
     row-gap: 20px;
 
-    @media screen and (max-width: $wwa2 + px) {
+    @media screen and (max-width: $wwa + px) {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -312,6 +312,11 @@
 
 .univers-card__course-more {
     background: $accent;
+    transition: $tr;
+
+    &:hover {
+        background: $accent-hover;
+    }
 
     & span {
         line-height: inherit;
@@ -351,6 +356,11 @@
     align-items: center;
     justify-content: center;
     background: $accent;
+    transition: $tr;
+
+    &:hover {
+        background: $accent-hover;
+    }
 }
 
 .univers-card__students-more-quantity {

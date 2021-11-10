@@ -60,6 +60,16 @@
     }
 }
 
+.rating-card__type {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (max-width: $wwa3 + px) {
+        align-items: flex-start;
+    }
+}
+
 .rating-card__type-title {
     font-size: 12px;
     font-weight: 500;
@@ -180,6 +190,29 @@
 
 .rating-card__estim-btn {
 
+    & svg path {
+        transition: $tr;
+    }
+}
+
+.rating-card__estim-btn_like {
+
+    &:hover {
+
+        & svg path {
+            fill: $accent;
+        }
+    }
+}
+
+.rating-card__estim-btn_dislike {
+
+    &:hover {
+
+        & svg path {
+            fill: #FD6467;
+        }
+    }
 }
 
 .rating-card__estim-icon {

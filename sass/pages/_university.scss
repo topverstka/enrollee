@@ -10,6 +10,14 @@
 }
 
 .univer__main__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+    & .estim {
+        margin: 0 24px 0 0;
+    }
 
     & .estim__rating-text,
     & .estim__rating-quantity {
@@ -143,6 +151,10 @@
     @media (max-width: $wwa3 + px) {
         margin: 40px 0;
     }
+}
+
+.univer-course__header {
+    margin: 40px 0 0 0;
 }
 
 .univer-course__body {

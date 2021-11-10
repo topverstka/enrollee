@@ -212,7 +212,7 @@
         & .student-card {
         }
 
-        @media (max-width: 620px) {
+        @media (max-width: $wwa + px) {
             opacity: 0;
         }
     }

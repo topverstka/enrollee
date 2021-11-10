@@ -549,25 +549,108 @@
 }
 
 .signup-help__tag {
+    position: relative;
+    margin: 0 8px 6px 0;
+    cursor: pointer;
+
+    &:hover {
+
+        & .signup-help__tag-text {
+            transform: translate(2px, 4px);
+            box-shadow: none;
+        }
+    }
+}
+
+.signup-help__tag-input {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+
+    &:checked {
+
+        & + .signup-help__tag-text {
+            transform: translate(2px, 4px);
+            box-shadow: none;
+            background: $accent;
+            color: #fff;
+        }
+    }
+}
+
+.signup-help__tag-text {
+    display: block;
     font-size: 12px;
     font-weight: 400;
     background: #F0F7F9;
     border-radius: 6px;
     box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
     padding: 5px 12px;
-    margin: 0 8px 6px 0;
+    transition: $tr;
+}
+
+.signup-help__add {
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    background: $accent;
+    border-radius: 6px;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 5px 12px;
     transition: $tr;
 
     &:hover {
         transform: translate(2px, 4px);
         box-shadow: none;
     }
+
+    &._hidden {
+        display: none;
+    }
+
 }
 
-.form__field {
+.signup-help__add-icon {
 
 }
 
-.form__field_select {
+.signup-help__add-text {
+    color: #fff;
+}
 
+.signup-help__add-textarea {
+    position: relative;
+    // display: none;
+
+    &._show {
+        display: block;
+    }
+}
+
+.signup-help__add-textarea-error {
+    display: inline-block;
+    width: 100%;
+    font-size: 12px;
+    color: #FA3600;
+    text-align: right;
+}
+
+.signup-help__add-textarea-btn {
+    width: 100%;
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    color: #fff;
+    background: $accent;
+    border-radius: 5px;
+    padding: 5px 12px;
+    transition: $tr;
+
+    &:hover {
+        background: $accent-hover;
+    }
 }
