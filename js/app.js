@@ -97,6 +97,24 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    // Маска для ввода номера карты и даты
+    if (document.querySelector('.new-card')) {
+        maskForCard()
+    }
+    function maskForCard() {
+        let cleaveNumCard = new Cleave('.new-card__num', {
+            creditCard: true,
+            onCreditCardTypeChanged: function (type) {
+                // update UI ...
+            }
+        });  
+        
+        var cleaveDate = new Cleave('.new-card__date', {
+            date: true,
+            datePattern: ['m', 'y']
+        });
+    }
+
     const popularSlider = new Swiper('.popular__slider', {
 
         slidesPerView: 1.4,
