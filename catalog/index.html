@@ -672,22 +672,30 @@
 						<div class="works-slider works-slider_2 swiper-container">
 							<div class="swiper-wrapper">
 								<a href="#" class="works-card swiper-slide">
-									<div class="works-card__img"><img src="../img/works/student_item_1.svg" alt=""></div>
+									<div class="works-card__img" id="lottie_5">
+										<!-- <img src="../img/works/student_item_1.svg" alt=""> -->
+									</div>
 									<h3 class="works-card__title">Registrieren</h3>
 									<p class="works-card__text">Registriere dich mit einem Klick bei Ammatti</p>
 								</a>
 								<a href="#" class="works-card swiper-slide">
-									<div class="works-card__img"><img src="../img/works/student_item_2.svg" alt=""></div>
+									<div class="works-card__img" id="lottie_6">
+										<!-- <img src="../img/works/student_item_2.svg" alt=""> -->
+									</div>
 									<h3 class="works-card__title">Profildaten</h3>
 									<p class="works-card__text">Füll die notwendigen Profildaten aus und <br>lade deine Studienbescheinigung hoch</p>
 								</a>
 								<a href="#" class="works-card swiper-slide">
-									<div class="works-card__img"><img src="../img/works/student_item_3.svg" alt=""></div>
+									<div class="works-card__img" id="lottie_7">
+										<!-- <img src="../img/works/student_item_3.svg" alt=""> -->
+									</div>
 									<h3 class="works-card__title">Verifizierung</h3>
 									<p class="works-card__text">Wir prüfen die Daten und verifizieren dich innerhalb von 24 Studen</p>
 								</a>
 								<a href="#" class="works-card swiper-slide">
-									<div class="works-card__img"><img src="../img/works/student_item_4.svg" alt=""></div>
+									<div class="works-card__img" id="lottie_8">
+										<!-- <img src="../img/works/student_item_4.svg" alt=""> -->
+									</div>
 									<h3 class="works-card__title">Verdiene Geld</h3>
 									<p class="works-card__text">Helfe Menschen ihre Berufung zu finde, indem du über dein Studium erzählst</p>
 								</a>
@@ -1240,39 +1248,84 @@
 		AOS.init();
 	
 		var animation = bodymovin.loadAnimation({
-			container: document.getElementById('lottie_1'), // Required
-			path: '../img/main/1step.json', // Required
-			renderer: 'svg/canvas/html', // Required
-			loop: true, // Optional
-			autoplay: true, // Optional
-			name: "Hello World", // Name for future reference. Optional.
+			container: document.getElementById('lottie_1'),
+			path: '../img/main/1step.json',
+			renderer: 'svg/canvas/html',
+			loop: true,
+			autoplay: true,
+			name: "Hello World",
 		})
 
 		var animation2 = bodymovin.loadAnimation({
-			container: document.getElementById('lottie_2'), // Required
-			path: '../img/main/2step.json', // Required
-			renderer: 'svg/canvas/html', // Required
-			loop: true, // Optional
-			autoplay: true, // Optional
-			name: "Hello World", // Name for future reference. Optional.
+			container: document.getElementById('lottie_2'),
+			path: '../img/main/2step.json',
+			renderer: 'svg/canvas/html',
+			loop: true,
+			autoplay: true,
+			name: "Hello World",
 		})
 
 		var animation3 = bodymovin.loadAnimation({
-			container: document.getElementById('lottie_3'), // Required
-			path: '../img/main/3step.json', // Required
-			renderer: 'svg/canvas/html', // Required
-			loop: true, // Optional
-			autoplay: true, // Optional
-			name: "Hello World", // Name for future reference. Optional.
+			container: document.getElementById('lottie_3'),
+			path: '../img/main/3step.json',
+			renderer: 'svg/canvas/html',
+			loop: true,
+			autoplay: true,
+			name: "Hello World",
 		})
 
 		var animation4 = bodymovin.loadAnimation({
-			container: document.getElementById('lottie_4'), // Required
-			path: '../img/main/4step.json', // Required
-			renderer: 'svg/canvas/html', // Required
-			loop: true, // Optional
-			autoplay: true, // Optional
-			name: "Hello World", // Name for future reference. Optional.
+			container: document.getElementById('lottie_4'),
+			path: '../img/main/4step.json',
+			renderer: 'svg/canvas/html',
+			loop: true,
+			autoplay: true,
+			name: "Hello World",
+		})
+
+		// Вторая вкладка
+		const tabBtnElems = document.querySelectorAll('.tabs-btn')
+		let animCon = true
+
+		tabBtnElems[1].addEventListener('click', () => {
+			if (animCon == true) {
+				animCon = false
+				var animation5 = bodymovin.loadAnimation({
+					container: document.getElementById('lottie_5'),
+					path: '../img/main/square_1.json',
+					renderer: 'svg/canvas/html',
+					loop: true,
+					autoplay: true,
+					name: "Hello World",
+				})
+		
+				var animation6 = bodymovin.loadAnimation({
+					container: document.getElementById('lottie_6'),
+					path: '../img/main/square_2.json',
+					renderer: 'svg/canvas/html',
+					loop: true,
+					autoplay: true,
+					name: "Hello World",
+				})
+		
+				var animation7 = bodymovin.loadAnimation({
+					container: document.getElementById('lottie_7'),
+					path: '../img/main/square_3.json',
+					renderer: 'svg/canvas/html',
+					loop: true,
+					autoplay: true,
+					name: "Hello World",
+				})
+		
+				var animation8 = bodymovin.loadAnimation({
+					container: document.getElementById('lottie_8'),
+					path: '../img/main/square_4.json',
+					renderer: 'svg/canvas/html',
+					loop: true,
+					autoplay: true,
+					name: "Hello World",
+				})
+			}
 		})
 	  </script>
 

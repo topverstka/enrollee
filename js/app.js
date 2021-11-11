@@ -98,6 +98,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     
         setInterval(() => {
+            slide()
+        }, 3000);
+
+        function slide() {
             const slideCurrent = track.querySelector('.slide_current')
             const slidePrev = slideCurrent.previousElementSibling
             const slideNext = slideCurrent.nextElementSibling
@@ -132,8 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }, timer)
             
             infinitySlider()
-            
-        }, 3000);
+        }
     
         function infinitySlider() {
             const slideElems = document.querySelectorAll('.main-slide')
@@ -146,6 +149,58 @@ document.addEventListener("DOMContentLoaded", () => {
                 slideElems[0].remove()
             }
         }
+        
+        // sliderSwipe()
+        // function sliderSwipe() {
+        //     document.querySelector('.clients-hero .slider-container').addEventListener('touchstart', handleTouchStart);
+        //     document.querySelector('.clients-hero .slider-container').addEventListener('touchmove', handleTouchMove);
+    
+        //     var xDown = null;
+        //     var yDown = null;
+    
+        //     const logBlock = document.querySelector('.log-block');
+    
+    
+        //     function handleTouchStart(evt) {
+        //         const firstTouch = evt.touches[0];
+        //         xDown = firstTouch.clientX;
+        //         yDown = firstTouch.clientY;
+        //     };
+    
+        //     function handleTouchMove(evt) {
+        //         if (!xDown || !yDown) {
+        //             return false;
+        //         }
+    
+        //         var xUp = evt.touches[0].clientX;
+        //         var yUp = evt.touches[0].clientY;
+    
+        //         var xDiff = xDown - xUp;
+        //         var yDiff = yDown - yUp;
+    
+        //         if (Math.abs(xDiff) > Math.abs(yDiff)) {
+        //             /* отлавливаем разницу в движении */
+        //             if (xDiff < 0) {
+        //                 slide()
+        //                 if (!btnPrev.classList.contains('finish')) {
+        //                     // btnPrev.click()
+
+        //                 }
+    
+    
+        //             } else {
+        //                 slide()
+        //                 if (!btnNext.classList.contains('finish')) {
+        //                     btnNext.click()
+        //                 }
+    
+        //             }
+        //         }
+        //         /* свайп был, обнуляем координаты */
+        //         xDown = null;
+        //         yDown = null;
+        //     };
+        // }
     }
 
     // const mainSlider = new Swiper('.main-slider', {

@@ -3907,6 +3907,7 @@ a.student-message-footer__support {
 .advisor-content__block-change {
   font-size: inherit;
   font-weight: 700;
+  color: var(--main);
   text-decoration: underline;
 }
 
