@@ -1923,6 +1923,10 @@ a.student-message-footer__support {
   height: 38px;
 }
 
+.form__block_input .form__field_input {
+  height: 38px;
+}
+
 .form__block_textarea .form__field {
   width: 100%;
 }
@@ -6370,10 +6374,6 @@ a.student-message-footer__support {
   text-decoration: underline;
 }
 
-.abit-edit__input .form__field {
-  height: 100%;
-}
-
 .abit-edit-main__name {
   max-width: 444px;
   width: 100%;
@@ -6484,6 +6484,10 @@ a.student-message-footer__support {
 .abit-edit-info__select select {
   font-size: 20px;
   color: var(--main);
+}
+
+.abit-edit__input label {
+  margin: 0 0 6px 0;
 }
 
 .abit-edit__birth {
@@ -7931,7 +7935,7 @@ a.student-message-footer__support {
 }
 
 .univers-card__course-item {
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 400;
   line-height: 1;
   color: #fff;

@@ -88,6 +88,13 @@
     }
 }
 
+.form__block_input {
+    
+    & .form__field_input {
+        height: 38px;
+    }
+}
+
 // Textarea
 .form__block_textarea {
     

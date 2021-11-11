@@ -55,12 +55,12 @@
     // }
 }
 
-.abit-edit__input {
+// .abit-edit__input {
     
-    & .form__field {
-        height: 100%;
-    }
-}
+//     & .form__field {
+//         height: 100%;
+//     }
+// }
 
 .abit-edit-main__name {
     max-width: 444px;
@@ -147,6 +147,13 @@
     & select {
         font-size: 20px;
         color: $main;
+    }
+}
+
+.abit-edit__input {
+
+    & label {
+        margin: 0 0 6px 0;
     }
 }
 
