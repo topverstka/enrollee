@@ -137,7 +137,6 @@ document.addEventListener("DOMContentLoaded", () => {
     
         function infinitySlider() {
             const slideElems = document.querySelectorAll('.main-slide')
-            console.log(slideElems)
             if (slideElems[2].classList.contains('slide_current')) {
                 const slideDubl = document.createElement('div')
                 slideDubl.classList.add('main-slide','slider-slide')

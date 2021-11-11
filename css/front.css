@@ -5188,6 +5188,12 @@ a.student-message-footer__support {
   }
 }
 
+@media (max-width: 670px) {
+  .main-slider {
+    height: 300px;
+  }
+}
+
 .main-slider-wrapper {
   position: relative;
   width: 400px;
@@ -5198,6 +5204,23 @@ a.student-message-footer__support {
 @media (max-width: 1200px) {
   .main-slider-wrapper {
     margin: 0 0 0 -64px;
+  }
+}
+
+@media (max-width: 670px) {
+  .main-slider-wrapper {
+    -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+
+@media (max-width: 420px) {
+  .main-slider-wrapper {
+    -webkit-transform: scale(0.6);
+        -ms-transform: scale(0.6);
+            transform: scale(0.6);
+    margin: 0 0 0 -140px;
   }
 }
 
@@ -5215,9 +5238,24 @@ a.student-message-footer__support {
   transition: 0.5s;
 }
 
+@media (max-width: 900px) {
+  .main-slide {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+        -ms-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+  }
+}
+
 .main-slide._active-prev {
   -webkit-animation: slidePrev 0.5s ease-in-out 0s forwards;
           animation: slidePrev 0.5s ease-in-out 0s forwards;
+}
+
+@media (max-width: 900px) {
+  .main-slide._active-prev {
+    -webkit-animation: none;
+            animation: none;
+  }
 }
 
 @-webkit-keyframes slidePrev {
@@ -5293,6 +5331,49 @@ a.student-message-footer__support {
 .main-slide.slide_current._active {
   -webkit-animation: slideCurrent 0.5s ease-in-out 0s forwards;
           animation: slideCurrent 0.5s ease-in-out 0s forwards;
+}
+
+@media (max-width: 900px) {
+  .main-slide.slide_current._active {
+    -webkit-animation: slideCurrentMobile 0.5s ease-in-out 0s forwards;
+            animation: slideCurrentMobile 0.5s ease-in-out 0s forwards;
+  }
+  @-webkit-keyframes slideCurrentMobile {
+    0% {
+      z-index: 2;
+      top: 50%;
+      left: 50%;
+      opacity: 1;
+      -webkit-transform: translate(-50%, -50%) scale(1);
+              transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+      z-index: 1;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%) scale(0.6);
+              transform: translate(-50%, -50%) scale(0.6);
+      opacity: 0;
+    }
+  }
+  @keyframes slideCurrentMobile {
+    0% {
+      z-index: 2;
+      top: 50%;
+      left: 50%;
+      opacity: 1;
+      -webkit-transform: translate(-50%, -50%) scale(1);
+              transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+      z-index: 1;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%) scale(0.6);
+              transform: translate(-50%, -50%) scale(0.6);
+      opacity: 0;
+    }
+  }
 }
 
 .main-slide.slide_current._active .student-tooltip {
@@ -5389,6 +5470,39 @@ a.student-message-footer__support {
           animation: slideTooltip .3s ease-in-out 0s forwards;
 }
 
+@media (max-width: 420px) {
+  .main-slide.slide_current .student-tooltip {
+    -webkit-animation: slideTooltipMobile .3s ease-in-out 0s forwards;
+            animation: slideTooltipMobile .3s ease-in-out 0s forwards;
+  }
+  @-webkit-keyframes slideTooltipMobile {
+    0% {
+      top: 50%;
+      -webkit-transform: translate(-20px, -50%) scale(1.6);
+              transform: translate(-20px, -50%) scale(1.6);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translate(0, -50%) scale(1.6);
+              transform: translate(0, -50%) scale(1.6);
+      opacity: 1;
+    }
+  }
+  @keyframes slideTooltipMobile {
+    0% {
+      top: 50%;
+      -webkit-transform: translate(-20px, -50%) scale(1.6);
+              transform: translate(-20px, -50%) scale(1.6);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translate(0, -50%) scale(1.6);
+              transform: translate(0, -50%) scale(1.6);
+      opacity: 1;
+    }
+  }
+}
+
 @-webkit-keyframes slideTooltip {
   0% {
     -webkit-transform: translate(-20px, 0);
@@ -5424,53 +5538,12 @@ a.student-message-footer__support {
 
 @media (max-width: 900px) {
   .main-slide.slide_next {
+    top: 50%;
+    left: 400px;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+        -ms-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
     opacity: 0;
-  }
-  .main-slide.slide_next._active {
-    -webkit-animation: slideNext 0.5s ease-in-out 0s forwards;
-            animation: slideNext 0.5s ease-in-out 0s forwards;
-  }
-  @-webkit-keyframes slideNext {
-    0% {
-      z-index: 1;
-      top: 290px;
-      left: 400px;
-    }
-    40% {
-      z-index: 2;
-      top: 320px;
-      left: 440px;
-      -webkit-transform: translate(-50%, -50%) scale(0.6);
-              transform: translate(-50%, -50%) scale(0.6);
-    }
-    100% {
-      z-index: 2;
-      top: 50%;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%) scale(1);
-              transform: translate(-50%, -50%) scale(1);
-    }
-  }
-  @keyframes slideNext {
-    0% {
-      z-index: 1;
-      top: 290px;
-      left: 400px;
-    }
-    40% {
-      z-index: 2;
-      top: 320px;
-      left: 440px;
-      -webkit-transform: translate(-50%, -50%) scale(0.6);
-              transform: translate(-50%, -50%) scale(0.6);
-    }
-    100% {
-      z-index: 2;
-      top: 50%;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%) scale(1);
-              transform: translate(-50%, -50%) scale(1);
-    }
   }
 }
 
@@ -5523,6 +5596,41 @@ a.student-message-footer__support {
   }
 }
 
+@media (max-width: 900px) {
+  .main-slide.slide_next._active {
+    -webkit-animation: slideNextMobile 0.5s ease-in-out 0s forwards;
+            animation: slideNextMobile 0.5s ease-in-out 0s forwards;
+  }
+  @-webkit-keyframes slideNextMobile {
+    0% {
+      z-index: 1;
+      left: 400px;
+    }
+    40% {
+      z-index: 2;
+    }
+    100% {
+      z-index: 2;
+      left: 50%;
+      opacity: 1;
+    }
+  }
+  @keyframes slideNextMobile {
+    0% {
+      z-index: 1;
+      left: 400px;
+    }
+    40% {
+      z-index: 2;
+    }
+    100% {
+      z-index: 2;
+      left: 50%;
+      opacity: 1;
+    }
+  }
+}
+
 .main-slide .student-card {
   max-width: none;
   width: 264px;
@@ -5543,6 +5651,16 @@ a.student-message-footer__support {
           border-radius: 5px;
   padding: 15px 17px 19px;
   opacity: 0;
+}
+
+@media (max-width: 420px) {
+  .main-slide .student-tooltip {
+    top: 50%;
+    right: -170px;
+    -webkit-transform: translate(0, -50%) scale(1.6);
+        -ms-transform: translate(0, -50%) scale(1.6);
+            transform: translate(0, -50%) scale(1.6);
+  }
 }
 
 .main-slide .student-tooltip__text {
