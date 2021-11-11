@@ -70,32 +70,111 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    const mainSlider = new Swiper('.main-slider', {
-
-        slidesPerView: 1,
-        spaceBetween: 10,
-        loop: true,
-        autoplay: {
-            delay: 5000,
-        },
-
-        breakpoints: {
-            1200: {
-
-            },
-            700: {
-
-            },
-            620: {
-                slidesPerView: 1,
-                spaceBetween: 10,
-            },
-            540: {
-                slidesPerView: 1,
-                spaceBetween: 0,
+    // Слайдер на главном экране
+    if (document.querySelector('.main-slider')) { mainSlider() }
+    function mainSlider() {
+        const track = document.querySelector('.main-slider-wrapper')
+        // const btnPrev = document.querySelector('.button-prev')
+        // const btnNext = document.querySelector('.button-next')
+    
+        startPositionOfElements()
+        function startPositionOfElements() {
+            const slideElems = track.querySelectorAll('.main-slide')
+    
+            for (let i = 0; i < slideElems.length; i++) {
+    
+                const slideCurrent = slideElems[0]
+                const slideNext = slideCurrent.nextElementSibling
+                const slidePrev = slideCurrent.previousElementSibling
+    
+                slideCurrent.classList.add('slide_current')
+                if (slideNext) {
+                    slideNext.classList.add('slide_next')
+                }
+                if (slidePrev) {
+                    slidePrev.classList.add('slide_prev')
+                }
             }
         }
-    });
+    
+        setInterval(() => {
+            const slideCurrent = track.querySelector('.slide_current')
+            const slidePrev = slideCurrent.previousElementSibling
+            const slideNext = slideCurrent.nextElementSibling
+            const timer = 500
+            
+            // Удаляем класс у предыдущего
+            if (slidePrev) {
+                slidePrev.classList.remove('slide_prev')
+            }
+            
+            // Текущий слайд делаем предыдущим
+            slideCurrent.classList.add('_active')
+            setTimeout(() => {
+                slideCurrent.classList.remove('_active')
+                slideCurrent.classList.remove('slide_current')
+                slideCurrent.classList.add('slide_prev')
+            }, timer)
+            
+            // Следующий слайд делаем текущим
+            slideNext.classList.add('_active')
+            setTimeout(() => {
+                slideNext.classList.remove('_active')
+                slideNext.classList.remove('slide_next')
+                slideNext.classList.add('slide_current')
+            }, timer)
+            
+            // Второй следующий слайд делаем первым следующим
+            slideNext.nextElementSibling.classList.add('_active-prev')
+            setTimeout(() => {
+                slideNext.nextElementSibling.classList.remove('_active-prev')
+                slideNext.nextElementSibling.classList.add('slide_next')
+            }, timer)
+            
+            infinitySlider()
+            
+        }, 3000);
+    
+        function infinitySlider() {
+            const slideElems = document.querySelectorAll('.main-slide')
+            console.log(slideElems)
+            if (slideElems[2].classList.contains('slide_current')) {
+                const slideDubl = document.createElement('div')
+                slideDubl.classList.add('main-slide','slider-slide')
+                slideDubl.innerHTML = slideElems[0].innerHTML
+                
+                track.append(slideDubl)
+                slideElems[0].remove()
+            }
+        }
+    }
+
+    // const mainSlider = new Swiper('.main-slider', {
+
+    //     slidesPerView: 1,
+    //     spaceBetween: 10,
+    //     loop: true,
+    //     autoplay: {
+    //         delay: 5000,
+    //     },
+
+    //     breakpoints: {
+    //         1200: {
+
+    //         },
+    //         700: {
+
+    //         },
+    //         620: {
+    //             slidesPerView: 1,
+    //             spaceBetween: 10,
+    //         },
+    //         540: {
+    //             slidesPerView: 1,
+    //             spaceBetween: 0,
+    //         }
+    //     }
+    // });
 
     // Маска для ввода номера карты и даты
     if (document.querySelector('.new-card')) {

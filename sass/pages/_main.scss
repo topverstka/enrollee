@@ -115,36 +115,218 @@
 }
 
 .main-slider {
-    width: 240px;
-    overflow: visible;
-    filter: drop-shadow(rgba(0, 0, 0, 0.25) 2px 5px 15px);
-    pointer-events: none;
+    width: 100%;
+    height: 400px;
 
     @media (max-width: $wwa + px) {
-      margin: 32px 0 0 0;
-      max-width: 240px;
-      width: 100%;
+        display: flex;
+        justify-content: center;
     }
-    
-    @media (max-width: 540px) {
-        max-width: none;
-        margin-top: -20px;
-    }
+}
 
-    @media (max-width: 420px) {
-      width: 140%;
+.main-slider-wrapper {
+    position: relative;
+    width: 400px;
+    height: 100%;
+    margin: 0 0 0 32px;
+
+    @media (max-width: $wwa + px) {
+        margin: 0 0 0 -64px;
     }
 }
 
 .main-slide {
-    opacity: 0;
-    transition: opacity .1s, transform .2s;
+    $timer: .5s;
 
-    .student-tooltip {
+    position: absolute;
+    z-index: 1;
+    top: 280px; 
+    left: 380px;
+    // min-width: 200px;
+    // height: 300px;
+    transform: translate(-50%, -50%) scale(.6);
+    opacity: 0;
+    transition: $timer;
+    // pointer-events: none;
+    
+    &._active-prev {
+        animation: slidePrev $timer ease-in-out 0s forwards;
+        
+        // & .student-tooltip {
+        //     opacity: 0;
+        // }
+    
+        @keyframes slidePrev {
+            0% {
+                z-index: 1;
+                top: 50%;
+                left: 50%;
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(1);
+            }
+            40% {
+                z-index: 1;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) scale(.7);
+                opacity: 0;
+            }
+            60% {
+                opacity: 0;
+            }
+            100% {
+                z-index: 1;
+                top: 290px;
+                left: 400px;
+                transform: translate(-50%, -50%) scale(.6);
+                opacity: 1;
+            }
+        }
+    }
+
+    &.slide_current {
+        z-index: 2;
+        top: 50%;
+        left: 50%;
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+        
+        
+        &._active {
+            animation: slideCurrent $timer ease-in-out 0s forwards;
+            
+            & .student-tooltip {
+                animation: slideTooltipHidden $timer ease-in-out 0s forwards;
+                // transition: 0;
+                // opacity: 0;
+                // transform: scale(0);
+            }
+
+            @keyframes slideTooltipHidden {
+                0% {
+                    opacity: 1;
+                }
+                40% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 0;
+                }
+            }
+
+            @keyframes slideCurrent {
+                0% {
+                    z-index: 2;
+                    top: 50%;
+                    left: 50%;
+                    opacity: 1;
+                    transform: translate(-50%, -50%) scale(1);
+                }
+                40% {
+                    z-index: 1;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%) scale(.7);
+                    opacity: 1;
+                }
+                60% {
+                    opacity: 1;
+                }
+                100% {
+                    z-index: 1;
+                    top: 290px;
+                    left: 400px;
+                    transform: translate(-50%, -50%) scale(.6);
+                    opacity: 0;
+                }
+            }
+        }
+
+        & .student-tooltip {
+            animation: slideTooltip .3s ease-in-out 0s forwards;
+
+            @keyframes slideTooltip {
+                0% {
+                    transform: translate(-20px,0);
+                    opacity: 0;
+                }
+                100% {
+                    transform: translate(0,0);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    
+    &.slide_next {
+        z-index: 1;
+        top: 290px;
+        left: 400px;
+        opacity: 1;
+
+        @media (max-width: $wwa2 + px) {
+            opacity: 0;
+            
+            &._active {
+                animation: slideNext $timer ease-in-out 0s forwards;
+            
+                @keyframes slideNext {
+                    0% {
+                        z-index: 1;
+                        top: 290px;
+                        left: 400px;
+                    }
+                    40% {
+                        z-index: 2;
+                        top: 320px;
+                        left: 440px;
+                        transform: translate(-50%, -50%) scale(.6);
+                    }
+                    100% {
+                        z-index: 2;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%) scale(1);
+                    }
+                }
+            }
+        }
+        
+        &._active {
+            animation: slideNext $timer ease-in-out 0s forwards;
+        
+            @keyframes slideNext {
+                0% {
+                    z-index: 1;
+                    top: 290px;
+                    left: 400px;
+                }
+                40% {
+                    z-index: 2;
+                    top: 320px;
+                    left: 440px;
+                    transform: translate(-50%, -50%) scale(.6);
+                }
+                100% {
+                    z-index: 2;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%) scale(1);
+                }
+            }
+        }
+    }
+
+    & .student-card {
+        max-width: none;
+        width: 264px;
+    }
+
+    & .student-tooltip {
         position: absolute;
         top: 20px;
         right: -140px;
-        max-width: 186px;
+        max-width: 173px;
         width: 100%;
         background: linear-gradient(102.51deg, #C5F7FF 4.8%, #FFFFFF 112.27%);
         box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.25);
@@ -157,66 +339,116 @@
 
     }
 
-    .student-tooltip__text {
-        font-size: 15px;
+    & .student-tooltip__text {
+        font-size: 13px;
         font-weight: 400;
         line-height: 1.2;
     }
-
-    &.swiper-slide-active {
-        opacity: 1;
-        transform: scale(1.1);
-        z-index: 1;
-        pointer-events: all;
-        // transition: opacity .5s;
-
-        & .student-tooltip {
-            transform: scale(.85);
-            opacity: 1;
-
-            @media (max-width: 540px) {
-              transform: scale(1.2);
-              top: 90px;
-              left: 240px;
-            }
-
-            @media (max-width: 330px) {
-              transform: scale(1.2);
-              top: 90px;
-              left: 220px;
-            }
-        }
-
-        @media (max-width: $wwa3 + px) {
-          transform: scale(1);
-        }
-
-        @media (max-width: 540px) {
-          transform: scale(.8);
-        }
-
-        @media (max-width: 420px) {
-          transform: scale(.7);
-        }
-    }
-
-    &.swiper-slide-next {
-        opacity: 1;
-        z-index: -1;
-        position: relative;
-        top: 100px;
-        left: -60px;
-        z-index: -1;
-        transform: scale(.6);
-
-        & .student-card {
-        }
-
-        @media (max-width: $wwa + px) {
-            opacity: 0;
-        }
-    }
 }
+
+// .main-slider {
+//     width: 240px;
+//     overflow: visible;
+//     filter: drop-shadow(rgba(0, 0, 0, 0.25) 2px 5px 15px);
+//     pointer-events: none;
+
+//     @media (max-width: $wwa + px) {
+//       margin: 32px 0 0 0;
+//       max-width: 240px;
+//       width: 100%;
+//     }
+    
+//     @media (max-width: 540px) {
+//         max-width: none;
+//         margin-top: -20px;
+//     }
+
+//     @media (max-width: 420px) {
+//       width: 140%;
+//     }
+// }
+
+// .main-slide {
+//     opacity: 0;
+//     transition: opacity .1s, transform .2s;
+
+//     .student-tooltip {
+//         position: absolute;
+//         top: 20px;
+//         right: -140px;
+//         max-width: 186px;
+//         width: 100%;
+//         background: linear-gradient(102.51deg, #C5F7FF 4.8%, #FFFFFF 112.27%);
+//         box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.25);
+//         border-radius: 5px;
+//         padding: 15px 17px 19px;
+//         opacity: 0;
+//     }
+
+//     .student-tooltip__content {
+
+//     }
+
+//     .student-tooltip__text {
+//         font-size: 15px;
+//         font-weight: 400;
+//         line-height: 1.2;
+//     }
+
+//     &.swiper-slide-active {
+//         opacity: 1;
+//         transform: scale(1.1);
+//         z-index: 1;
+//         pointer-events: all;
+//         // transition: opacity .5s;
+
+//         & .student-tooltip {
+//             transform: scale(.85);
+//             opacity: 1;
+
+//             @media (max-width: 540px) {
+//               transform: scale(1.2);
+//               top: 90px;
+//               left: 240px;
+//             }
+
+//             @media (max-width: 330px) {
+//               transform: scale(1.2);
+//               top: 90px;
+//               left: 220px;
+//             }
+//         }
+
+//         @media (max-width: $wwa3 + px) {
+//           transform: scale(1);
+//         }
+
+//         @media (max-width: 540px) {
+//           transform: scale(.8);
+//         }
+
+//         @media (max-width: 420px) {
+//           transform: scale(.7);
+//         }
+//     }
+
+//     &.swiper-slide-next {
+//         opacity: 1;
+//         z-index: -1;
+//         position: relative;
+//         top: 100px;
+//         left: -60px;
+//         z-index: -1;
+//         transform: scale(.6);
+
+//         & .student-card {
+//         }
+
+//         @media (max-width: $wwa + px) {
+//             opacity: 0;
+//         }
+//     }
+// }
 
 .main-reg {
     display: none;
