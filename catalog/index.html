@@ -1247,7 +1247,7 @@
 	<script>
 		AOS.init();
 	
-		var animation = bodymovin.loadAnimation({
+		var anim = bodymovin.loadAnimation({
 			container: document.getElementById('lottie_1'),
 			path: '../img/main/1step.json',
 			renderer: 'svg/canvas/html',
@@ -1255,8 +1255,9 @@
 			autoplay: true,
 			name: "Hello World",
 		})
+		playAnimOnHover(anim)
 
-		var animation2 = bodymovin.loadAnimation({
+		var anim2 = bodymovin.loadAnimation({
 			container: document.getElementById('lottie_2'),
 			path: '../img/main/2step.json',
 			renderer: 'svg/canvas/html',
@@ -1264,8 +1265,9 @@
 			autoplay: true,
 			name: "Hello World",
 		})
+		playAnimOnHover(anim2)
 
-		var animation3 = bodymovin.loadAnimation({
+		var anim3 = bodymovin.loadAnimation({
 			container: document.getElementById('lottie_3'),
 			path: '../img/main/3step.json',
 			renderer: 'svg/canvas/html',
@@ -1273,8 +1275,9 @@
 			autoplay: true,
 			name: "Hello World",
 		})
+		playAnimOnHover(anim3)
 
-		var animation4 = bodymovin.loadAnimation({
+		var anim4 = bodymovin.loadAnimation({
 			container: document.getElementById('lottie_4'),
 			path: '../img/main/4step.json',
 			renderer: 'svg/canvas/html',
@@ -1282,6 +1285,8 @@
 			autoplay: true,
 			name: "Hello World",
 		})
+		playAnimOnHover(anim4)
+
 
 		// Вторая вкладка
 		const tabBtnElems = document.querySelectorAll('.tabs-btn')
@@ -1290,7 +1295,7 @@
 		tabBtnElems[1].addEventListener('click', () => {
 			if (animCon == true) {
 				animCon = false
-				var animation5 = bodymovin.loadAnimation({
+				var anim5 = bodymovin.loadAnimation({
 					container: document.getElementById('lottie_5'),
 					path: '../img/main/square_1.json',
 					renderer: 'svg/canvas/html',
@@ -1298,8 +1303,11 @@
 					autoplay: true,
 					name: "Hello World",
 				})
+				// anim5.goToAndPlay(2)
+				// anim5.setDirection(-1)
+				playAnimOnHover(anim5)
 		
-				var animation6 = bodymovin.loadAnimation({
+				var anim6 = bodymovin.loadAnimation({
 					container: document.getElementById('lottie_6'),
 					path: '../img/main/square_2.json',
 					renderer: 'svg/canvas/html',
@@ -1307,8 +1315,9 @@
 					autoplay: true,
 					name: "Hello World",
 				})
+				playAnimOnHover(anim6)
 		
-				var animation7 = bodymovin.loadAnimation({
+				var anim7 = bodymovin.loadAnimation({
 					container: document.getElementById('lottie_7'),
 					path: '../img/main/square_3.json',
 					renderer: 'svg/canvas/html',
@@ -1316,8 +1325,9 @@
 					autoplay: true,
 					name: "Hello World",
 				})
+				playAnimOnHover(anim7)
 		
-				var animation8 = bodymovin.loadAnimation({
+				var anim8 = bodymovin.loadAnimation({
 					container: document.getElementById('lottie_8'),
 					path: '../img/main/square_4.json',
 					renderer: 'svg/canvas/html',
@@ -1325,8 +1335,22 @@
 					autoplay: true,
 					name: "Hello World",
 				})
+				playAnimOnHover(anim8)
 			}
 		})
+		
+		function playAnimOnHover(anim) {
+			const parent = anim.wrapper.parentNode
+			anim.setSpeed(0)
+
+			parent.addEventListener('mouseleave', (e) => {
+				anim.setSpeed(0)
+			})
+			
+			parent.addEventListener('mouseenter', (e) => {
+				anim.setSpeed(1)
+			})
+		}
 	</script>
 
 </body>
