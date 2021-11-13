@@ -5199,6 +5199,12 @@ a.student-message-footer__support {
   }
 }
 
+.main-slider .student-card:hover {
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+}
+
 .main-slider-wrapper {
   position: relative;
   width: 400px;

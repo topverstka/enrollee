@@ -127,8 +127,11 @@
         height: 300px;
     }
 
-    @media (max-width: 420px) {
-        // justify-content: flex-start; 
+    & .student-card {
+
+        &:hover {
+            transform: none;
+        }
     }
 }
 
