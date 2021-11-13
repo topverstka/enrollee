@@ -77,8 +77,6 @@
             margin: 0 0 6px 0;
         }
     }
-
-
 }
 
 .signup__container {
@@ -486,7 +484,6 @@
         }
     }
 
-
     & .student-edit-rating__item {
         margin: 0;
     }
@@ -614,17 +611,12 @@
 
 }
 
-.signup-help__add-icon {
-
-}
-
 .signup-help__add-text {
     color: #fff;
 }
 
 .signup-help__add-textarea {
     position: relative;
-    // display: none;
 
     &._show {
         display: block;

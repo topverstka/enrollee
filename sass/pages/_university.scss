@@ -76,7 +76,6 @@
         color: $accent;
         text-decoration: underline;
         background: none;
-        // margin: 0 0 0 12px;
 
         &:hover {
             text-decoration: none;
@@ -91,7 +90,6 @@
 
 .univer__main-img {
     width: 50%;
-    // max-height: 270px;
     height: 100%;
     margin: 0 0 0 24px;
 
@@ -108,7 +106,6 @@
 }
 
 // Блок с адресами, контактами и пр.
-
 .univer__main__info {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -200,7 +197,6 @@
     }
 
     @media (max-width: 480px) {
-        // grid-template-columns: repeat(1, 1fr);
         grid-template-columns: minmax(min-content, 240px);
         justify-content: center;
     }

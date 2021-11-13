@@ -1,6 +1,5 @@
 .student-edit-main {
     display: flex;
-    // justify-content: space-between;
 }
 
 .student-edit-main__block {
@@ -198,10 +197,6 @@
     }
 }
 
-.student-edit-rating__estim {
-
-}
-
 .student-edit-rating__title {
     font-size: 14px;
     font-weight: 500;
@@ -269,10 +264,6 @@
         height: 100%;
         object-fit: contain;
     }
-
-    &:not(:last-child) {
-        // margin: 0 2px 0 0;
-    }
 }
 
 .student-edit-rating__comment {
@@ -296,19 +287,6 @@
 }
 
 // Звездный рейтинг (выбор чекбоксов)
-// .star-rating-change {
-
-//     & input {
-//         position: relative;
-//     }
-
-//     & label {
-//         position: absolute;
-//         top: 0;
-//         left: 0;
-//     }
-// }
-
 .star-rating-change {
     display: flex;
     flex-direction: row-reverse;
@@ -355,5 +333,3 @@
         opacity: 0;
     }
 }
-
-// rating-card__star_full

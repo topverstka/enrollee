@@ -7,7 +7,6 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    // width: fit-content;
 
     & .estim {
         margin: 0 24px 0 0;
@@ -276,7 +275,6 @@
     }
 
     @media (max-width: 480px) {
-        // grid-template-columns: repeat(1, 1fr);
         grid-template-columns: minmax(min-content, 240px);
         justify-content: center;
     }
@@ -335,7 +333,6 @@
 
 .faculty-review__btn-write {
     color: $accent;
-    // margin: 0 0 0 40px;
 }
 
 // Мобильная версия

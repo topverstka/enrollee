@@ -2,7 +2,6 @@
 
 // USER VARIABLES SECTION
 $ffMain: 'Maven Pro', sans-serif;
-// $ffHeader: 'PT Sans Narrow', sans-serif;
 
 $minHover: 768; // если хочешь убрать hover на телефонах, укажи - 768px
 $tr: .3s;
@@ -39,7 +38,6 @@ $bg-modal: var(--bg-modal);
 
 
 // GENERAL DOCUMENT STYLES
-
 body {
     color: $main;
     font-size: 16px;
@@ -65,74 +63,3 @@ body {
 }
 
 @import '_grid';
-
-// Для ленивой загрузки изображений
-// img[data-src] {
-//     opacity: 0;
-//     transition: all 0.2s;
-// }
-
-// section {
-//     padding-top: 60px;
-//     padding-bottom: 60px;
-// }
-
-
-
-// .text--success {
-//     font-size: 15px;
-//     text-transform: uppercase;
-//     color: #63CEA1;
-//     font-weight: 600;
-//     margin-left: 20px;
-// }
-
-// .centred--elem {
-//     position: relative;
-//     display: flex;
-//     align-items: center;
-//     flex-direction: column;
-//     justify-content: center;
-//     height: 100%;
-//     min-height: 460px;
-
-//     .page__breadcrumbs {
-//         position: absolute;
-//         top: 60px;
-//     }
-// }
-
-// .blockquote {
-//     background-color: #EFEFEF;
-//     border-left: 4px solid $accent;
-//     width: 100%;
-//     display: block;
-//     margin-left: 0;
-//     padding: 20px 16px;
-//     font-size: 16px;
-//     color: $textcolor;
-//     font-family: 'Roboto-Bold';
-
-//     p {
-//         margin: 0;
-//     }
-// }
-
-// .non--desctop {
-//     display: none;
-// }
-
-// .section-desr {
-//     display: block;
-// }
-
-
-// @media (max-width: 1023px) {
-//     section {
-//         padding: 30px 0;
-//     }
-
-//     .non--desctop {
-//         display: block;
-//     }
-// }

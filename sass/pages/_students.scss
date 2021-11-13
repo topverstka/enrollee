@@ -6,9 +6,6 @@
     }
 }
 
-.students-settings {
-}
-
 .students-settings__header {
 
     @media (max-width: $wwa3 + px) {
@@ -16,10 +13,6 @@
         grid-template-columns: 1fr 52px;
         column-gap: 8px;
     }
-}
-
-.students-settings__body {
-
 }
 
 .students__body {

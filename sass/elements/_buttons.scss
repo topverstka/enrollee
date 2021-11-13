@@ -12,7 +12,7 @@
     text-transform: uppercase;
     cursor: pointer;
 
-    img{
+    img {
         margin-left: 9px;
     }
 
@@ -20,17 +20,12 @@
         background: #C0C0C0;
         pointer-events: none;
     }
-    
-    // span{ 
-    //     position: relative;
-    //     top: 12px; 
-    // }
 
     @media (max-width: $wwa3 + px) {
-      font-size: 14px;
+        font-size: 14px;
     }
 }
-    
+
 .btn_border {
     border: 2px solid;
 
@@ -39,18 +34,19 @@
     }
 }
 
-.btn_accent{
+.btn_accent {
     overflow: hidden;
     position: relative;
-    &:after{
+
+    &:after {
         content: "";
         top: -50%;
         right: -50%;
         right: -50%;
         bottom: -50%;
         left: -50%;
-        background: linear-gradient(to bottom,rgba(229,172,142,0),rgba(255,255,255,.7) 50%,rgba(229,172,142,0));
-        transform: rotateZ(60deg) translate(-5em,7.5em);
+        background: linear-gradient(to bottom, rgba(229, 172, 142, 0), rgba(255, 255, 255, .7) 50%, rgba(229, 172, 142, 0));
+        transform: rotateZ(60deg) translate(-5em, 7.5em);
         opacity: 0;
         position: absolute;
         z-index: 1;
@@ -58,15 +54,16 @@
         animation: sheens 3s infinite;
     }
 }
-    
-.btn_full{
+
+.btn_full {
     border: 2px solid transparent;
     background: $accent;
-    color: #fff!important;
+    color: #fff !important;
+
     &:hover {
         background: #212C52;
     }
-    
+
 }
 
 .btn_center {

@@ -82,7 +82,6 @@
     }
 }
 
-
 // Основная информация о студенте
 .student-briefly__avatar {
     position: relative;
@@ -175,8 +174,6 @@
     text-align: center;
 }
 
-
-
 // Подробнее о студенте
 .student-about {
     display: none;
@@ -199,10 +196,6 @@
     font-weight: 500;
     margin: 0 0 11px 0;
     text-transform: uppercase;
-}
-
-.student-about__text {
-
 }
 
 .student-abroad {
@@ -247,10 +240,6 @@
 .student-abroad__info-text {
     font-size: 16px;
     font-weight: 400;
-}
-
-.student-about__content-help {
-
 }
 
 .student-about__list {
@@ -318,9 +307,6 @@
         width: 50%;
         height: 50%;
     }
-}
-
-.student-call-icon {
 }
 
 // Состояние сообщения
@@ -498,7 +484,6 @@
                 background-color: #fafafa;
             }
         }
-
     }
 
     & label {
@@ -566,8 +551,6 @@
 // Состояние оплаты и расценка студента
 .student-message__payment {
     display: flex;
-    // align-items: center;
-    // flex-wrap: wrap;
 
     @media (max-width: 400px) {
       flex-direction: column;
@@ -689,10 +672,6 @@ a.student-message-footer__support {
 
 .student-message-footer__btn_refuse {
     color: $accent;
-}
-
-.student-message-footer__confirm {
-
 }
 
 // Рейтинг

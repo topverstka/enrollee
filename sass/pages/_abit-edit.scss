@@ -49,18 +49,7 @@
     margin: 24px 0 0 0;
     text-transform: uppercase;
     text-decoration: underline;
-
-    // @media (max-width: $wwa2 + px) {
-    //   display: none;
-    // }
 }
-
-// .abit-edit__input {
-    
-//     & .form__field {
-//         height: 100%;
-//     }
-// }
 
 .abit-edit-main__name {
     max-width: 444px;
@@ -96,10 +85,6 @@
       position: initial;
       order: -1;
     }
-}
-
-.abit-edit-main__save {
-
 }
 
 .abit-edit-main__change-pass {

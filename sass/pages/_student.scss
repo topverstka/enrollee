@@ -312,14 +312,6 @@
     font-weight: 700;
 }
 
-.estim-like {
-
-}
-
-.like-full {
-
-}
-
 .student-modal__call-content {
     font-size: 22px;
     font-weight: 400;
@@ -362,9 +354,6 @@
     &:hover {
         transform: translate(2px,4px);
         box-shadow: none;
-    }
-
-    @media (max-width: $wwa3 + px) {
     }
 }
 
