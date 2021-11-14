@@ -182,7 +182,7 @@
             </aside>
 
             <div class="page__body page__student-profile">
-                <section class="bread">
+                <div class="bread">
                     <div class="container">
                         <div class="bread__body">
                             <span>
@@ -192,7 +192,7 @@
                             <span class="bread__current">Мой профиль</span>
                         </div>
                     </div>
-                </section>
+                </div>
 
                 <section class="student-profile">
                     <div class="container">
@@ -229,9 +229,9 @@
                     <div class="container">
                         <div class="student-profile-section__list student-edit-section__list">
                             <div class="form__block form__block_select abit-edit-info__select">
-                                <label for="problems">Universität</label>
+                                <label for="university">Universität</label>
                                 <div class="form__field form__field_select">
-                                    <select id="problems" name="">
+                                    <select id="university" name="">
                                         <option value="1">Technische Hochschule</option>
                                         <option value="2">Value 2</option>
                                         <option value="3">Value 3</option>
@@ -239,9 +239,9 @@
                                 </div>
                             </div>
                             <div class="form__block form__block_select abit-edit-info__select">
-                                <label for="problems">Faculty</label>
+                                <label for="faculty">Faculty</label>
                                 <div class="form__field form__field_select">
-                                    <select id="problems" name="">
+                                    <select id="faculty" name="">
                                         <option value="1">3D Animation for Film</option>
                                         <option value="2">Value 2</option>
                                         <option value="3">Value 3</option>
@@ -249,10 +249,10 @@
                                 </div>
                             </div>
                             <div class="form__block form__block_range abit-edit-info__select">
-                                <label for="problems">Which Semester</label>
+                                <label for="semester">Which Semester</label>
                                 <div class="form__field form__field_range">
                                     <input type="range" min="1" max="5" value="1">
-                                    <input type="number" value="1" min="1" max="5">
+                                    <input id="semester" type="number" value="1" min="1" max="5">
                                 </div>
                             </div>
                             <div class="form__block form__block_select abit-edit-info__select">
@@ -283,9 +283,9 @@
                                 </div>
                             </div>
                             <div class="form__block form__block_select abit-edit-info__select">
-                                <label for="problems">Gender</label>
+                                <label for="gender">Gender</label>
                                 <div class="form__field form__field_select">
-                                    <select id="problems" name="">
+                                    <select id="gender" name="">
                                         <option value="1">Male</option>
                                         <option value="2">Value 2</option>
                                         <option value="3">Value 3</option>
@@ -322,9 +322,9 @@
                         </div>
                         <div class="student-profile-section__list student-edit-abroad__list">
                             <div class="form__block form__block_select abit-edit-info__select">
-                                <label for="problems">Universität</label>
+                                <label for="abroad_university">Universität</label>
                                 <div class="form__field form__field_select">
-                                    <select id="problems" name="">
+                                    <select id="abroad_university" name="">
                                         <option value="1">Technische Hochschule</option>
                                         <option value="2">Value 2</option>
                                         <option value="3">Value 3</option>
@@ -332,9 +332,9 @@
                                 </div>
                             </div>
                             <div class="form__block form__block_select abit-edit-info__select">
-                                <label for="problems">Faculty</label>
+                                <label for="abroad_faculty">Faculty</label>
                                 <div class="form__field form__field_select">
-                                    <select id="problems" name="">
+                                    <select id="abroad_faculty" name="">
                                         <option value="1">3D Animation for Film..</option>
                                         <option value="2">Value 2</option>
                                         <option value="3">Value 3</option>
@@ -342,9 +342,9 @@
                                 </div>
                             </div>
                             <div class="form__block form__block_select abit-edit-info__select">
-                                <label for="problems">Durance from</label>
+                                <label for="abroad_from">Durance from</label>
                                 <div class="form__field form__field_select">
-                                    <select id="problems" name="">
+                                    <select id="abroad_from" name="">
                                         <option value="1">September 2020</option>
                                         <option value="2">Value 2</option>
                                         <option value="3">Value 3</option>
@@ -352,9 +352,9 @@
                                 </div>
                             </div>
                             <div class="form__block form__block_select abit-edit-info__select">
-                                <label for="problems">Durance To</label>
+                                <label for="abroad_to">Durance To</label>
                                 <div class="form__field form__field_select">
-                                    <select id="problems" name="">
+                                    <select id="abroad_to" name="">
                                         <option value="1">September 2021</option>
                                         <option value="2">Value 2</option>
                                         <option value="3">Value 3</option>
@@ -373,9 +373,9 @@
                         </div>
                         <div class="student-profile-section__list student-edit-abroad__list">
                             <div class="form__block form__block_select abit-edit-info__select">
-                                <label for="problems">Company name</label>
+                                <label for="company_name">Company name</label>
                                 <div class="form__field form__field_select">
-                                    <select id="problems" name="">
+                                    <select id="company_name" name="">
                                         <option value="1">Microsoft</option>
                                         <option value="2">Value 2</option>
                                         <option value="3">Value 3</option>
@@ -383,9 +383,9 @@
                                 </div>
                             </div>
                             <div class="form__block form__block_select abit-edit-info__select">
-                                <label for="problems">Job description</label>
+                                <label for="job_descr">Job description</label>
                                 <div class="form__field form__field_select">
-                                    <select id="problems" name="">
+                                    <select id="job_descr" name="">
                                         <option value="1">Motion designer</option>
                                         <option value="2">Value 2</option>
                                         <option value="3">Value 3</option>
@@ -393,9 +393,9 @@
                                 </div>
                             </div>
                             <div class="form__block form__block_select abit-edit-info__select">
-                                <label for="problems">Durance from</label>
+                                <label for="working_from">Durance from</label>
                                 <div class="form__field form__field_select">
-                                    <select id="problems" name="">
+                                    <select id="working_from" name="">
                                         <option value="1">September 2020</option>
                                         <option value="2">Value 2</option>
                                         <option value="3">Value 3</option>
@@ -403,9 +403,9 @@
                                 </div>
                             </div>
                             <div class="form__block form__block_select abit-edit-info__select">
-                                <label for="problems">Durance To</label>
+                                <label for="working_to">Durance To</label>
                                 <div class="form__field form__field_select">
-                                    <select id="problems" name="">
+                                    <select id="working_to" name="">
                                         <option value="1">September 2021</option>
                                         <option value="2">Value 2</option>
                                         <option value="3">Value 3</option>
