@@ -83,9 +83,9 @@
                         <h1 class="modal__title modal__title_lowercase new-card__title">Добавление карты</h1>
                         <form action="#" class="new-card__form">
                             <div class="form__block form__block_input">
-                                <label for="problems" class="form__label">Card number</label>
+                                <label for="card_number" class="form__label">Card number</label>
                                 <div class="form__field form__field_select new-card__pay-system-block">
-                                    <input class="new-card__num" type="text" placeholder="1234 1234 1234 1234">
+                                    <input id="card_number" class="new-card__num" type="text" placeholder="1234 1234 1234 1234">
                                     <div class="cards new-card__pay-system-list">
                                         <div class="new-card__pay-system"><img src="../img/icons/pay_systems/visa.svg" alt=""></div>
                                         <div class="icon-mastercard new-card__pay-system"><img src="../img/icons/pay_systems/mastercard.svg" alt=""></div>
@@ -96,29 +96,29 @@
                             </div>
                             <div class="new-card__form-block-row">
                                 <div class="form__block form__block_input">
-                                    <label for="problems" class="form__label">Expiry</label>
+                                    <label for="card_expiry" class="form__label">Expiry</label>
                                     <div class="form__field form__field_select">
-                                        <input class="new-card__date" type="text" placeholder="MM / YY">
+                                        <input id="card_expiry" class="new-card__date" type="text" placeholder="MM / YY">
                                     </div>
                                 </div>
                                 <div class="form__block form__block_input">
-                                    <label for="problems" class="form__label">CVC</label>
+                                    <label for="card_cvc" class="form__label">CVC</label>
                                     <div class="form__field form__field_select">
-                                        <input type="text" placeholder="CVC">
+                                        <input id="card_cvc" type="text" placeholder="CVC">
                                     </div>
                                 </div>
                             </div>
                             <div class="new-card__form-block-row">
                                 <div class="form__block form__block_input">
-                                    <label for="problems" class="form__label">Name</label>
+                                    <label for="user_name" class="form__label">Name</label>
                                     <div class="form__field form__field_select">
-                                        <input type="text" placeholder="Your name">
+                                        <input id="user_name" type="text" placeholder="Your name">
                                     </div>
                                 </div>
                                 <div class="form__block form__block_input">
-                                    <label for="problems" class="form__label">Surname</label>
+                                    <label for="user_surname" class="form__label">Surname</label>
                                     <div class="form__field form__field_select">
-                                        <input type="text" placeholder="You surname">
+                                        <input id="user_surname" type="text" placeholder="You surname">
                                     </div>
                                 </div>
                             </div>
