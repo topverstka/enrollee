@@ -200,65 +200,65 @@ document.addEventListener("DOMContentLoaded", () => {
         },
     });
 
-    const worksSlider1 = new Swiper('.works-slider_1', {
-        slidesPerView: 1.5,
-        spaceBetween: 0,
-        observer: true,
-        observeParents: true,
-        centeredSlides: true,
+    // const worksSlider1 = new Swiper('.works-slider_1', {
+    //     slidesPerView: 1.5,
+    //     spaceBetween: 0,
+    //     observer: true,
+    //     observeParents: true,
+    //     centeredSlides: true,
 
-        breakpoints: {
-            500: {
-                slidesPerView: 2,
-                spaceBetween: 16,
-                centeredSlides: false,
-            },
-            900: {
-                slidesPerView: 3,
-                centeredSlides: false,
-            },
-            1200: {
-                slidesPerView: 4,
-                spaceBetween: 26,
-                centeredSlides: false,
-            },
-        },
+    //     breakpoints: {
+    //         500: {
+    //             slidesPerView: 2,
+    //             spaceBetween: 16,
+    //             centeredSlides: false,
+    //         },
+    //         900: {
+    //             slidesPerView: 3,
+    //             centeredSlides: false,
+    //         },
+    //         1200: {
+    //             slidesPerView: 4,
+    //             spaceBetween: 26,
+    //             centeredSlides: false,
+    //         },
+    //     },
 
-        pagination: {
-            el: '.works-slider__pagination_1',
-            clickable: true,
-        },
-    });
+    //     pagination: {
+    //         el: '.works-slider__pagination_1',
+    //         clickable: true,
+    //     },
+    // });
 
-    const worksSlider2 = new Swiper('.works-slider_2', {
-        slidesPerView: 1.5,
-        spaceBetween: 16,
-        observer: true,
-        observeParents: true,
-        centeredSlides: true,
+    // const worksSlider2 = new Swiper('.works-slider_2', {
+    //     slidesPerView: 1.5,
+    //     spaceBetween: 16,
+    //     observer: true,
+    //     observeParents: true,
+    //     centeredSlides: true,
 
-        breakpoints: {
-            500: {
-                slidesPerView: 2,
-                spaceBetween: 16,
-                centeredSlides: false,
-            },
-            900: {
-                slidesPerView: 3,
-                centeredSlides: false,
-            },
-            1200: {
-                slidesPerView: 4,
-                spaceBetween: 26,
-                centeredSlides: false,
-            },
-        },
+    //     breakpoints: {
+    //         500: {
+    //             slidesPerView: 2,
+    //             spaceBetween: 16,
+    //             centeredSlides: false,
+    //         },
+    //         900: {
+    //             slidesPerView: 3,
+    //             centeredSlides: false,
+    //         },
+    //         1200: {
+    //             slidesPerView: 4,
+    //             spaceBetween: 26,
+    //             centeredSlides: false,
+    //         },
+    //     },
 
-        pagination: {
-            el: '.works-slider__pagination_2',
-            clickable: true,
-        },
-    });
+    //     pagination: {
+    //         el: '.works-slider__pagination_2',
+    //         clickable: true,
+    //     },
+    // });
 
     const studentsSlider = new Swiper('.students-section-slider', {
 
@@ -372,20 +372,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 btnText.innerText = 'More'
             }
         })
-    }
-
-    hiddenPaginationIfBulletAlone()
-    function hiddenPaginationIfBulletAlone() {
-        const sliderElems = document.querySelectorAll('.works-slider')
-        for (let i = 0; i < sliderElems.length; i++) {
-            const slider = sliderElems[i];
-            const pagin = slider.nextElementSibling
-            const bulletElems = pagin.querySelectorAll('.swiper-pagination-bullet')
-
-            if (bulletElems.length > 1) {
-                pagin.classList.add('_show')
-            }
-        }
     }
 
     tabs()

@@ -78,6 +78,11 @@
     display: flex;
     background: none;
     margin: 0 -8px 0 16px;
+    transition: .2s;
+
+    &:hover {
+        transform: scale(1.15);
+    }
 
     & svg {
         width: 100%;

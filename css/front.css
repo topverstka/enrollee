@@ -2416,6 +2416,15 @@ a.student-message-footer__support {
   display: flex;
   background: none;
   margin: 0 -8px 0 16px;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+}
+
+.estim-like:hover {
+  -webkit-transform: scale(1.15);
+      -ms-transform: scale(1.15);
+          transform: scale(1.15);
 }
 
 .estim-like svg {
