@@ -1352,6 +1352,27 @@ h2 {
   transition: background-color 0.3s, border-color 0.3s;
 }
 
+.student-message__edit {
+  width: 16px;
+  height: 16px;
+}
+
+.student-message__edit:hover .student-message__edit-icon svg path {
+  fill: var(--main);
+}
+
+.student-message__edit-icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.student-message__edit-icon svg path {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
 .student-message__suggest-list {
   display: -webkit-box;
   display: -webkit-flex;

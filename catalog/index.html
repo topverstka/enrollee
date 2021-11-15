@@ -1388,13 +1388,13 @@
 			if (window.innerWidth <= 768) {
 				for (let slider of [worksSlider1, worksSlider2]) {
 					const parent = anim.wrapper.parentNode
-					checkActiveSlide(anim)
+					checkActiveSlide(parent, anim)
 
 					slider.on('slideChangeTransitionEnd', () => {
-						checkActiveSlide(anim)
+						checkActiveSlide(parent, anim)
 					})
 
-					function checkActiveSlide(anim) {
+					function checkActiveSlide(parent, anim) {
 						if (parent.classList.contains('swiper-slide-active')) {
 							anim.setSpeed(1)
 						}
