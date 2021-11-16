@@ -615,7 +615,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Редактирование тегов в профиле студента
-    // editTagsStudentProfile()
     if (document.querySelector('.student-profile-how__list')) { editTagsStudentProfile() }
     function editTagsStudentProfile() {
         // Добавляем новые теги
@@ -623,6 +622,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const textareaBlock = document.querySelector('.add-tag__textarea-block')
         const textarea = textareaBlock.querySelector('textarea')
         const tagsBlock = document.querySelector('.student-profile-how__list')
+        const btnDelete = document.querySelector('.student-about__list-item-delete')
 
         btnAdd.addEventListener('click', addTag)
         
@@ -635,40 +635,49 @@ document.addEventListener("DOMContentLoaded", () => {
         function addTag(e) {
             e.preventDefault()
             if (!textarea.value == '') {
-                const tagClasses = tagsBlock.querySelector('.student-about__list-item').getAttribute('class').split(' ')
                 const tag = document.createElement('a')
                 tag.setAttribute('href', '#')
-                for (let tagClass of tagClasses) {
-                    tag.classList.add(tagClass)
-                }
+                tag.classList.add('student-about__list-item')
                 tag.innerHTML = textarea.value
-                // tagsBlock.append(tag)
                 tagsBlock.insertBefore(tag, tagsBlock.querySelector('.student-about__list-item-delete'))
+                
+                if (!tagsBlock.querySelectorAll('.student-about__list-item').length == 0) {
+                    btnDelete.style.display = 'block'
+                }
             }
             else {
                 valueNotEmpty()
             }
         }
 
-        // Удаляем теги
-        const btn = document.querySelector('.student-about__list-item-delete')
-        
+        // Удаляем теги        
         tagsBlock.addEventListener('click', (e) => {
             const target = e.target
+            console.log(target)
             
             if (target.classList.contains('student-about__list-item-delete')) {
                 const tagElems = tagsBlock.querySelectorAll('.student-about__list-item')
+                
+                if (tagElems.length == 0) {
+                    btnDelete.classList.remove('_active')
+                    btnDelete.innerText = 'Delete'
+                    btnDelete.style.display = 'none'
+                }
+                else {
+                    btnDelete.style.display = 'block'
+                }
+
                 for (let i = 0; i < tagElems.length; i++) {
                     const tag = tagElems[i];
                     if (!tag.classList.contains('_tag-delete')) {
                         tag.classList.add('_tag-delete')
-                        btn.classList.add('_active')
-                        btn.innerText = 'Done'
+                        btnDelete.classList.add('_active')
+                        btnDelete.innerText = 'Done'
                     }
                     else {
                         tag.classList.remove('_tag-delete')
-                        btn.classList.remove('_active')
-                        btn.innerText = 'Delete'
+                        btnDelete.classList.remove('_active')
+                        btnDelete.innerText = 'Delete'
                     }
                 }
             }
@@ -676,6 +685,12 @@ document.addEventListener("DOMContentLoaded", () => {
             if (target.classList.contains('student-about__list-item') && target.classList.contains('_tag-delete')) {
                 e.preventDefault()
                 target.remove()
+
+                if (tagsBlock.querySelectorAll('.student-about__list-item').length == 0) {
+                    btnDelete.classList.remove('_active')
+                    btnDelete.innerText = 'Delete'
+                    btnDelete.style.display = 'none'
+                }
             }
         })
     }
