@@ -1408,8 +1408,10 @@ h2 {
   height: 16px;
 }
 
-.student-message__edit:hover .student-message__edit-icon svg path {
-  fill: var(--main);
+.student-message__edit:hover img {
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .student-message__edit-icon {
@@ -1418,7 +1420,10 @@ h2 {
   height: 100%;
 }
 
-.student-message__edit-icon svg path {
+.student-message__edit-icon svg,
+.student-message__edit-icon img {
+  width: 100%;
+  height: 100%;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;

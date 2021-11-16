@@ -541,10 +541,14 @@
     height: 16px;
 
     &:hover {
-        
-        & .student-message__edit-icon svg path {
-            fill: $main;
+
+        & img {
+            transform: scale(1.2);
         }
+        
+        // & .student-message__edit-icon svg path {
+        //     fill: $main;
+        // }
     }
 }
 
@@ -553,9 +557,16 @@
     width: 100%;
     height: 100%;
 
-    & svg path {
+    & svg,
+    & img {
+        width: 100%;
+        height: 100%;
         transition: $tr;
     }
+    
+    // & svg path {
+    //     transition: $tr;
+    // }
 }
 
 // Предложения студента
