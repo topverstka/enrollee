@@ -247,7 +247,8 @@
     flex-wrap: wrap;
 }
 
-.student-about__list-item {
+.student-about__list-item,
+.student-about__list-item-delete {
     display: block;
     font-size: 16px;
     background: #fff;
@@ -255,17 +256,48 @@
     border-radius: 6px;
     box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
     margin: 0 12px 12px 0;
-
-    &:hover {
-        transform: translate(2px, 4px);
-        box-shadow: 2px 0 6px rgba(0, 0, 0, 0);
-    }
+    transition: $tr;
 
     @media (max-width: $wwa3 + px) {
       font-size: 12px;
       padding: 6px 12px;
       margin: 0 6px 6px 0;
     }
+
+    &:hover {
+        transform: translate(2px, 4px);
+        box-shadow: 2px 0 6px rgba(0, 0, 0, 0);
+    }
+
+    &._tag-delete {
+        position: relative;
+
+        &::before {
+            content: '-';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 16px;
+            height: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: #fff;
+            transform: translate(-50%,-50%);
+            background: #eb5b5b;
+            border-radius: 50%;
+        }
+
+        &:hover {
+            color: #eb5b5b;
+        }
+    }
+}
+
+.student-about__list-item-delete {
+    color: #fff;
+    background: $accent;
 }
 
 .student-call__block {

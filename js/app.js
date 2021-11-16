@@ -200,66 +200,6 @@ document.addEventListener("DOMContentLoaded", () => {
         },
     });
 
-    // const worksSlider1 = new Swiper('.works-slider_1', {
-    //     slidesPerView: 1.5,
-    //     spaceBetween: 0,
-    //     observer: true,
-    //     observeParents: true,
-    //     centeredSlides: true,
-
-    //     breakpoints: {
-    //         500: {
-    //             slidesPerView: 2,
-    //             spaceBetween: 16,
-    //             centeredSlides: false,
-    //         },
-    //         900: {
-    //             slidesPerView: 3,
-    //             centeredSlides: false,
-    //         },
-    //         1200: {
-    //             slidesPerView: 4,
-    //             spaceBetween: 26,
-    //             centeredSlides: false,
-    //         },
-    //     },
-
-    //     pagination: {
-    //         el: '.works-slider__pagination_1',
-    //         clickable: true,
-    //     },
-    // });
-
-    // const worksSlider2 = new Swiper('.works-slider_2', {
-    //     slidesPerView: 1.5,
-    //     spaceBetween: 16,
-    //     observer: true,
-    //     observeParents: true,
-    //     centeredSlides: true,
-
-    //     breakpoints: {
-    //         500: {
-    //             slidesPerView: 2,
-    //             spaceBetween: 16,
-    //             centeredSlides: false,
-    //         },
-    //         900: {
-    //             slidesPerView: 3,
-    //             centeredSlides: false,
-    //         },
-    //         1200: {
-    //             slidesPerView: 4,
-    //             spaceBetween: 26,
-    //             centeredSlides: false,
-    //         },
-    //     },
-
-    //     pagination: {
-    //         el: '.works-slider__pagination_2',
-    //         clickable: true,
-    //     },
-    // });
-
     const studentsSlider = new Swiper('.students-section-slider', {
 
         slidesPerView: 1.2,
@@ -622,13 +562,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Добавление своих тегов при регистрации
-    if (document.querySelector('.signup-help__add')) { addTags() }
+    if (document.querySelector('.add-tag__tag-list')) { addTags() }
     function addTags() {
         // Добавляем новые теги
-        const btnAdd = document.querySelector('.signup-help__add-textarea-btn')
-        const textareaBlock = document.querySelector('.signup-help__add-textarea')
+        const btnAdd = document.querySelector('.add-tag__button')
+        const textareaBlock = document.querySelector('.add-tag__textarea-block')
         const textarea = textareaBlock.querySelector('textarea')
-        const tagsBlock = document.querySelector('.signup-help__tag-list')
+        const tagsBlock = document.querySelector('.add-tag__tag-list')
 
         btnAdd.addEventListener('click', addTag)
         
@@ -641,8 +581,11 @@ document.addEventListener("DOMContentLoaded", () => {
         function addTag(e) {
             e.preventDefault()
             if (!textarea.value == '') {
+                const tagClasses = tagsBlock.querySelector('.add-tag__tag').getAttribute('class').split(' ')
                 const tag = document.createElement('div')
-                tag.classList.add('signup-help__tag')
+                for (let tagClass of tagClasses) {
+                    tag.classList.add(tagClass)
+                }
                 tag.innerHTML = `
                     <input class="signup-help__tag-input" type="checkbox" checked>
                     <span class="signup-help__tag-text">${textarea.value}</span>
@@ -669,6 +612,72 @@ document.addEventListener("DOMContentLoaded", () => {
                 }, 2000)
             }
         }
+    }
+
+    // Редактирование тегов в профиле студента
+    // editTagsStudentProfile()
+    if (document.querySelector('.student-profile-how__list')) { editTagsStudentProfile() }
+    function editTagsStudentProfile() {
+        // Добавляем новые теги
+        const btnAdd = document.querySelector('.add-tag__button')
+        const textareaBlock = document.querySelector('.add-tag__textarea-block')
+        const textarea = textareaBlock.querySelector('textarea')
+        const tagsBlock = document.querySelector('.student-profile-how__list')
+
+        btnAdd.addEventListener('click', addTag)
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') {
+                addTag(e)
+            }
+        })
+
+        function addTag(e) {
+            e.preventDefault()
+            if (!textarea.value == '') {
+                const tagClasses = tagsBlock.querySelector('.student-about__list-item').getAttribute('class').split(' ')
+                const tag = document.createElement('a')
+                tag.setAttribute('href', '#')
+                for (let tagClass of tagClasses) {
+                    tag.classList.add(tagClass)
+                }
+                tag.innerHTML = textarea.value
+                // tagsBlock.append(tag)
+                tagsBlock.insertBefore(tag, tagsBlock.querySelector('.student-about__list-item-delete'))
+            }
+            else {
+                valueNotEmpty()
+            }
+        }
+
+        // Удаляем теги
+        const btn = document.querySelector('.student-about__list-item-delete')
+        
+        tagsBlock.addEventListener('click', (e) => {
+            const target = e.target
+            
+            if (target.classList.contains('student-about__list-item-delete')) {
+                const tagElems = tagsBlock.querySelectorAll('.student-about__list-item')
+                for (let i = 0; i < tagElems.length; i++) {
+                    const tag = tagElems[i];
+                    if (!tag.classList.contains('_tag-delete')) {
+                        tag.classList.add('_tag-delete')
+                        btn.classList.add('_active')
+                        btn.innerText = 'Done'
+                    }
+                    else {
+                        tag.classList.remove('_tag-delete')
+                        btn.classList.remove('_active')
+                        btn.innerText = 'Delete'
+                    }
+                }
+            }
+            
+            if (target.classList.contains('student-about__list-item') && target.classList.contains('_tag-delete')) {
+                e.preventDefault()
+                target.remove()
+            }
+        })
     }
 
     // Мультиселект

@@ -90,6 +90,10 @@
     }
 }
 
+.student-edit-how__footer-left {
+    width: 100%;
+}
+
 .student-edit-how__footer-textarea {
     max-width: 700px;
     width: 100%;
@@ -98,6 +102,28 @@
         max-width: none!important;
     }
 }
+
+.student-edit-how__footer-tag-add {
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: none;
+    border-radius: 5px;
+    padding: 5px 12px;
+}
+
+// .student-edit-how__footer-tag-delete-block {
+//     margin: 24px 0 0 0;
+// }
+
+// .student-edit-how__footer-tag-delete {
+//     font-size: 12px;
+//     font-weight: 400;
+//     text-transform: none;
+
+//     border-radius: 5px;
+//     padding: 5px 12px;
+
+// }
 
 .student-edit-how__footer-save {
     margin: 0 0 0 24px;
