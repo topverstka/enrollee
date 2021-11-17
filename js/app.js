@@ -641,6 +641,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 tag.innerHTML = textarea.value
                 tagsBlock.insertBefore(tag, tagsBlock.querySelector('.student-about__list-item-delete'))
                 
+                textarea.value = ''
+
                 if (!tagsBlock.querySelectorAll('.student-about__list-item').length == 0) {
                     btnDelete.style.display = 'block'
                 }
@@ -653,7 +655,6 @@ document.addEventListener("DOMContentLoaded", () => {
         // Удаляем теги        
         tagsBlock.addEventListener('click', (e) => {
             const target = e.target
-            console.log(target)
             
             if (target.classList.contains('student-about__list-item-delete')) {
                 const tagElems = tagsBlock.querySelectorAll('.student-about__list-item')
@@ -673,11 +674,15 @@ document.addEventListener("DOMContentLoaded", () => {
                         tag.classList.add('_tag-delete')
                         btnDelete.classList.add('_active')
                         btnDelete.innerText = 'Done'
+                        btnAdd.classList.add('_disabled')
+                        textarea.style.pointerEvents = 'none'
                     }
                     else {
                         tag.classList.remove('_tag-delete')
                         btnDelete.classList.remove('_active')
                         btnDelete.innerText = 'Delete'
+                        btnAdd.classList.remove('_disabled')
+                        textarea.style.pointerEvents = 'all'
                     }
                 }
             }
