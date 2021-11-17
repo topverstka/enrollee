@@ -3181,7 +3181,9 @@ a.student-message-footer__support {
   height: 50px;
 }
 
-.logo__link svg {
+.logo__link svg,
+.logo__link img {
+  width: auto;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
@@ -5174,10 +5176,6 @@ a.student-message-footer__support {
         -ms-flex-pack: center;
             justify-content: center;
   }
-}
-
-.logo__link svg {
-  width: auto !important;
 }
 
 .footer__link-list {
