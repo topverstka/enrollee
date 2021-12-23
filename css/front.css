@@ -5211,7 +5211,7 @@ a.student-message-footer__support {
 
 .main {
   width: 100%;
-  background: url(../img/main-bg.png) center no-repeat, var(--main);
+  background: url(../img/main-bg.webp) center no-repeat, var(--main);
   -webkit-background-size: cover;
           background-size: cover;
   position: relative;

@@ -20,6 +20,63 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    // Ленивая загрузка изображений
+    lazyLoading(0)
+    function lazyLoading(distance) {
+        const imgElems = document.querySelectorAll('[data-src]')
+        const windowHeight = window.innerHeight
+
+        window.addEventListener('scroll', setSRC)
+
+        setSRC()
+        function setSRC() {
+            for (let i = 0; i < imgElems.length; i++) {
+                let img = imgElems[i]
+                const top = img.getBoundingClientRect().top
+        
+                if (top - windowHeight <= distance) {
+                    img.setAttribute('src', img.dataset.src)
+                    console.log(img)
+                }
+            }
+        }
+    }
+
+    // Проверяем, можно ли использовать Webp формат
+    function canUseWebp() {
+        let elem = document.createElement('canvas')
+        if (!!(elem.getContext && elem.getContext('2d'))) {
+            return elem.toDataURL('image/webp').indexOf('data:image/webp') == 0
+        }
+        return false;
+    }
+
+    window.onload = function () {
+        // Получаем все элементы с дата-атрибутом data-bg
+        let images = document.querySelectorAll('[data-bg]');
+        // Проходимся по каждому
+        for (let i = 0; i < images.length; i++) {
+            // Получаем значение каждого дата-атрибута
+            let image = images[i].getAttribute('data-bg');
+            // Каждому найденному элементу задаем свойство background-image с изображение формата jpg
+            images[i].style.backgroundImage = 'url(' + image + ')';
+        }
+    
+        // Проверяем, является ли браузер посетителя сайта Firefox и получаем его версию
+        let isitFirefox = window.navigator.userAgent.match(/Firefox\/([0-9]+)\./);
+        let firefoxVer = isitFirefox ? parseInt(isitFirefox[1]) : 0;
+    
+        // Если есть поддержка Webp или браузер Firefox версии больше или равно 65
+        if (canUseWebp() || firefoxVer >= 65) {
+            // Делаем все то же самое что и для jpg, но уже для изображений формата Webp
+            let imagesWebp = document.querySelectorAll('[data-bg-webp]');
+            for (let i = 0; i < imagesWebp.length; i++) {
+                let imageWebp = imagesWebp[i].getAttribute('data-bg-webp');
+                imagesWebp[i].style.backgroundImage = 'url(' + imageWebp + ')';
+            }
+        }
+    }
+
     headerFixed()
     function headerFixed() {
         const header = document.querySelector('.header')
