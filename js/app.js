@@ -36,7 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
         
                 if (top - windowHeight <= distance) {
                     img.setAttribute('src', img.dataset.src)
-                    console.log(img)
                 }
             }
         }
@@ -52,23 +51,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     window.onload = function () {
-        // Получаем все элементы с дата-атрибутом data-bg
         let images = document.querySelectorAll('[data-bg]');
-        // Проходимся по каждому
         for (let i = 0; i < images.length; i++) {
-            // Получаем значение каждого дата-атрибута
             let image = images[i].getAttribute('data-bg');
-            // Каждому найденному элементу задаем свойство background-image с изображение формата jpg
             images[i].style.backgroundImage = 'url(' + image + ')';
         }
     
-        // Проверяем, является ли браузер посетителя сайта Firefox и получаем его версию
         let isitFirefox = window.navigator.userAgent.match(/Firefox\/([0-9]+)\./);
         let firefoxVer = isitFirefox ? parseInt(isitFirefox[1]) : 0;
     
-        // Если есть поддержка Webp или браузер Firefox версии больше или равно 65
         if (canUseWebp() || firefoxVer >= 65) {
-            // Делаем все то же самое что и для jpg, но уже для изображений формата Webp
             let imagesWebp = document.querySelectorAll('[data-bg-webp]');
             for (let i = 0; i < imagesWebp.length; i++) {
                 let imageWebp = imagesWebp[i].getAttribute('data-bg-webp');
@@ -487,22 +479,6 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     }
 
-    
-    function checkInputEmail(form) {
-        const input = form.querySelector('input[type="email"]')
-        const value = input.value
-        const parent = input.closest('.form__block')
-
-        if (value.includes('@') == false) {
-            parent.classList.add('_error')
-            return false
-        }
-        else {
-            parent.classList.remove('_error')
-            return true
-        }
-    }
-
     signupLangMore()
     function signupLangMore() {
         const btnElems = document.querySelectorAll('.signup__checkbox-list-lang .signup__checkbox')
@@ -600,22 +576,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 })
             }
         }
-
-        // Выставление начального звездного рейтинга по значению инпута
-        // function starRatingInput(starElems, input) {
-        //     let value = parseInt(input.value)
-    
-        //     for (let i = 0; i < starElems.length; i++) {
-        //         const star = starElems[i];
-    
-        //         console.log(value)
-        //         // for (let y = 0; y < value; y++) {
-        //         for (let y = starElems.length - 1; y >= value; y--) {
-        //             const starSibling = starElems[y];
-        //             starSibling.classList.add('rating-card__star_full')
-        //         }
-        //     }
-        // }
     }
 
     // Добавление своих тегов при регистрации
