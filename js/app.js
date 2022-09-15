@@ -144,7 +144,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     setInterval(() => {
-      // slide();
+      slide();
     }, 3000);
 
     function slide() {
