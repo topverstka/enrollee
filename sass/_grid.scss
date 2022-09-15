@@ -1,19 +1,23 @@
 .container {
-    max-width: 1208px;
-    margin: 0 auto;
+  max-width: 1208px;
+  padding: 0 24px;
+  margin: 0 auto;
+
+  @media (max-width: $wwa + px) {
+    max-width: 888px;
     padding: 0 24px;
+  }
 
-    @media (max-width: $wwa + px) {
-        max-width: 888px;
-        padding: 0 24px;
-    }
-
-    @media (max-width: $wwa2 + px) {
-        max-width: 644px;
-        padding: 0 16px;
-    }
+  @media (max-width: $wwa2 + px) {
+    max-width: 644px;
+    padding: 0 16px;
+  }
 }
 
 .container_header {
-    max-width: 1368px;
+  max-width: 1368px;
+  @media (min-width: 1100px) {
+    padding-right: 0;
+    padding-left: 0;
+  }
 }

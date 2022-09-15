@@ -1,406 +1,487 @@
 .main {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: url(../img/main-bg.webp) center no-repeat, $main;
+  background-size: cover;
+
+  &::after {
+    position: absolute;
+    bottom: -150px;
+    left: 0;
     width: 100%;
-    background: url(../img/main-bg.webp) center no-repeat, $main;
-    background-size: cover;
-    position: relative; 
-    overflow: hidden;
+    height: 415px;
+    pointer-events: none;
+    content: "";
+    background: linear-gradient(
+      180deg,
+      rgba(31, 44, 81, 0) 2.82%,
+      #1f2c51 67.49%
+    );
+  }
 
-    &::after {
-        content: '';
-        position: absolute;
-        bottom: -150px;
-        left: 0; 
-        width: 100%;
-        height: 415px;
-        background: linear-gradient(180deg, rgba(31, 44, 81, 0) 2.82%, #1F2C51 67.49%);
-        pointer-events: none;
-    }
-
-    & .container {
-        height: 100%;
-    }
+  & .container {
+    height: 100%;
+  }
 }
 
 // Контент главной страницыf
 .main-body {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    position: relative;
-    z-index: 2;
-    padding: 90px 0 120px 0;
-    overflow: hidden;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 90px 0 120px 0;
+  overflow: hidden;
+  @media (min-width: 1100px) {
+    align-items: flex-start;
+    padding: 18px 0 140px 0;
+  }
 
-    @media (max-width: $wwa + px) {
-      flex-direction: column;
-    }
+  @media (max-width: $wwa + px) {
+    flex-direction: column;
+  }
 
-    @media (max-width: 620px) {
-        padding: 36px 0 30px 0;
-    }
+  @media (max-width: 620px) {
+    padding: 36px 0 30px 0;
+  }
 
-    @media (max-width: 540px) {
-      overflow: visible;
-    }
+  @media (max-width: 540px) {
+    overflow: visible;
+  }
 }
 
 .main-content {
-    max-width: 520px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 520px;
+  @media (min-width: 1100px) {
+    display: block;
+    max-width: 576px;
+    padding-top: 101px;
+    padding-left: 59px;
+  }
 }
 
 .main__slogan {
-    font-size: 22px;
-    font-weight: 500;
-    color: #fff;
-    text-transform: uppercase;
+  margin-left: -0.6px;
+  font-size: 22px;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.95px;
 
-    @media (max-width: $wwa3 + px) {
-        display: none;
-    }
+  @media (max-width: $wwa3 + px) {
+    display: none;
+  }
 }
 
 .main__title {
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 1.3;
-    color: #fff;
-    text-transform: uppercase;
-    margin: 12px 0 0 0;
+  margin: 7px 0 0 0;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.24;
+  color: #fff;
+  text-transform: uppercase;
 
-    @media (max-width: $wwa3 + px) {
-        font-size: 14px;
-        text-align: center;
-        font-weight: 500;
-        margin: 0;
-    }
+  @media (max-width: $wwa3 + px) {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+  }
 }
 
 .main__tag-list {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 10px 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 10px 0 0 0;
 }
 
 .main__tag {
-    font-size: 12px;
+  padding: 8px 16px 7px 16px;
+  margin: 0 5px 5px 0;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+  text-transform: none;
+  background: rgba(39, 176, 199, 0.4);
+  border-radius: 100px;
+  transition: $tr;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover {
     color: #fff;
-    text-transform: uppercase;
-    background: rgba(39, 176, 199, 0.4);
-    border-radius: 100px;
-    padding: 8px 15px;
-    transition: $tr;
-    margin: 0 5px 5px 0;
-    text-transform: none;
-
-    &:last-child {
-        margin-right: 0;
-    }
-
-    &:hover {
-        color: #fff;
-        background: $accent;
-    }
+    background: $accent;
+  }
 }
 
 .main-slider {
-    width: 100%;
-    height: 400px;
+  width: 100%;
+  height: 400px;
 
-    @media (max-width: $wwa + px) {
-        display: flex;
-        justify-content: center;
+  @media (max-width: $wwa + px) {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media (max-width: $wwa3 + px) {
+    height: 300px;
+  }
+
+  & .student-card {
+    &:hover {
+      transform: none;
     }
-
-    @media (max-width: $wwa3 + px) {
-        height: 300px;
-    }
-
-    & .student-card {
-
-        &:hover {
-            transform: none;
-        }
-    }
+  }
 }
 
 .main-slider-wrapper {
-    position: relative;
-    width: 400px;
-    height: 100%;
-    margin: 0 0 0 32px;
+  position: relative;
+  width: 400px;
+  height: 100%;
+  margin: 0 0 0 32px;
 
-    @media (max-width: $wwa + px) {
-        margin: 0 0 0 -64px;
-    }
+  @media (min-width: 1100px) {
+    width: 423px;
+    margin: 0 0 0 12px;
+  }
+  @media (max-width: $wwa + px) {
+    margin: 0 0 0 -64px;
+  }
 
-    @media (max-width: $wwa3 + px) {
-        transform: scale(.8);
-    }
+  @media (max-width: $wwa3 + px) {
+    transform: scale(0.8);
+  }
 
-    @media (max-width: 420px) {
-        transform: scale(.6);
-        margin: 0 0 0 -140px;
-    }
+  @media (max-width: 420px) {
+    margin: 0 0 0 -140px;
+    transform: scale(0.6);
+  }
 }
 
 .main-slide {
-    $timer: .5s;
+  $timer: 0.5s;
 
-    position: absolute;
-    z-index: 1;
-    top: 280px; 
-    left: 380px;
-    transform: translate(-50%, -50%) scale(.6);
-    opacity: 0;
-    transition: $timer;
+  position: absolute;
+  top: 280px;
+  left: 380px;
+  z-index: 1;
+  opacity: 0;
+  transition: $timer;
+  transform: translate(-50%, -50%) scale(0.568);
+
+  @media (max-width: $wwa2 + px) {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  &._active-prev {
+    animation: slidePrev $timer ease-in-out 0s forwards;
 
     @media (max-width: $wwa2 + px) {
-        transform: translate(-50%, -50%) scale(1);
-    }
-    
-    &._active-prev {
-        animation: slidePrev $timer ease-in-out 0s forwards;
-
-        @media (max-width: $wwa2 + px) {
-            animation: none;
-        }
-    
-        @keyframes slidePrev {
-            0% {
-                z-index: 1;
-                top: 50%;
-                left: 50%;
-                opacity: 0;
-                transform: translate(-50%, -50%) scale(1);
-            }
-            40% {
-                z-index: 1;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%) scale(.7);
-                opacity: 0;
-            }
-            60% {
-                opacity: 0;
-            }
-            100% {
-                z-index: 1;
-                top: 290px;
-                left: 400px;
-                transform: translate(-50%, -50%) scale(.6);
-                opacity: 1;
-            }
-        }
+      animation: none;
     }
 
-    &.slide_current {
-        z-index: 2;
+    @keyframes slidePrev {
+      0% {
         top: 50%;
         left: 50%;
-        opacity: 1;
-        transform: translate(-50%, -50%) scale(1);
-        
-        
-        &._active {
-            animation: slideCurrent $timer ease-in-out 0s forwards;
-
-            @media (max-width: $wwa2 + px) {
-                animation: slideCurrentMobile $timer ease-in-out 0s forwards;
-                
-                @keyframes slideCurrentMobile {
-                    0% {
-                        z-index: 2;
-                        top: 50%;
-                        left: 50%;
-                        opacity: 1;
-                        transform: translate(-50%, -50%) scale(1);
-                    }
-                    100% {
-                        z-index: 1;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%) scale(.6);
-                        opacity: 0;
-                    }
-                }
-            }
-            
-            & .student-tooltip {
-                animation: slideTooltipHidden $timer ease-in-out 0s forwards;
-            }
-
-            @keyframes slideTooltipHidden {
-                0% {
-                    opacity: 1;
-                }
-                40% {
-                    opacity: 0;
-                }
-                100% {
-                    opacity: 0;
-                }
-            }
-
-            @keyframes slideCurrent {
-                0% {
-                    z-index: 2;
-                    top: 50%;
-                    left: 50%;
-                    opacity: 1;
-                    transform: translate(-50%, -50%) scale(1);
-                }
-                40% {
-                    z-index: 1;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%) scale(.7);
-                    opacity: 1;
-                }
-                60% {
-                    opacity: 1;
-                }
-                100% {
-                    z-index: 1;
-                    top: 290px;
-                    left: 400px;
-                    transform: translate(-50%, -50%) scale(.6);
-                    opacity: 0;
-                }
-            }
-        }
-
-        & .student-tooltip {
-            animation: slideTooltip .3s ease-in-out 0s forwards;
-
-            @media (max-width: 420px) {
-                animation: slideTooltipMobile .3s ease-in-out 0s forwards;
-                
-                @keyframes slideTooltipMobile {
-                    0% {
-                        top: 50%;
-                        transform: translate(-20px,-50%) scale(1.6);
-                        opacity: 0;
-                    }
-                    100% {
-                        transform: translate(0,-50%) scale(1.6);
-                        opacity: 1;
-                    }
-                }
-            }
-
-            @keyframes slideTooltip {
-                0% {
-                    transform: translate(-20px,0);
-                    opacity: 0;
-                }
-                100% {
-                    transform: translate(0,0);
-                    opacity: 1;
-                }
-            }
-        }
-    }
-    
-    &.slide_next {
         z-index: 1;
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1);
+      }
+      40% {
+        top: 50%;
+        left: 50%;
+        z-index: 1;
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.7);
+      }
+      60% {
+        opacity: 0;
+      }
+      100% {
         top: 290px;
         left: 400px;
+        z-index: 1;
         opacity: 1;
-
-        @media (max-width: $wwa2 + px) {
-            top: 50%;
-            left: 400px;
-            transform: translate(-50%, -50%) scale(1);
-            opacity: 0;
-        }
-        
-        &._active {
-            animation: slideNext $timer ease-in-out 0s forwards;
-        
-            @keyframes slideNext {
-                0% {
-                    z-index: 1;
-                    top: 290px;
-                    left: 400px;
-                }
-                40% {
-                    z-index: 2;
-                    top: 320px;
-                    left: 440px;
-                    transform: translate(-50%, -50%) scale(.6);
-                }
-                100% {
-                    z-index: 2;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%) scale(1);
-                }
-            }
-
-            @media (max-width: $wwa2 + px) {
-                animation: slideNextMobile $timer ease-in-out 0s forwards;
-            
-                @keyframes slideNextMobile {
-                    0% {
-                        z-index: 1;
-                        left: 400px;
-                    }
-                    40% {
-                        z-index: 2;
-                    }
-                    100% {
-                        z-index: 2;
-                        left: 50%;
-                        opacity: 1;
-                    }
-                }
-            }
-        }
+        transform: translate(-50%, -50%) scale(0.6);
+      }
     }
+  }
 
-    & .student-card {
-        max-width: none;
-        width: 264px;
+  &.slide_current {
+    top: 31px;
+    left: 50%;
+    z-index: 2;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, 0) scale(1);
+
+    &._active {
+      animation: slideCurrent $timer ease-in-out 0s forwards;
+
+      @media (max-width: $wwa2 + px) {
+        animation: slideCurrentMobile $timer ease-in-out 0s forwards;
+
+        @keyframes slideCurrentMobile {
+          0% {
+            top: 50%;
+            left: 50%;
+            z-index: 2;
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+          }
+          100% {
+            top: 50%;
+            left: 50%;
+            z-index: 1;
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(0.6);
+          }
+        }
+      }
+
+      & .student-tooltip {
+        animation: slideTooltipHidden $timer ease-in-out 0s forwards;
+      }
+
+      @keyframes slideTooltipHidden {
+        0% {
+          opacity: 1;
+        }
+        40% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+
+      @keyframes slideCurrent {
+        0% {
+          top: 50%;
+          left: 50%;
+          z-index: 2;
+          opacity: 1;
+          transform: translate(-50%, -50%) scale(1);
+        }
+        40% {
+          top: 50%;
+          left: 50%;
+          z-index: 1;
+          opacity: 1;
+          transform: translate(-50%, -50%) scale(0.7);
+        }
+        60% {
+          opacity: 1;
+        }
+        100% {
+          top: 290px;
+          left: 400px;
+          z-index: 1;
+          opacity: 0;
+          transform: translate(-50%, -50%) scale(0.6);
+        }
+      }
     }
 
     & .student-tooltip {
-        position: absolute;
-        top: 20px;
-        right: -140px;
-        max-width: 173px;
-        width: 100%;
-        background: linear-gradient(102.51deg, #C5F7FF 4.8%, #FFFFFF 112.27%);
-        box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.25);
-        border-radius: 5px;
-        padding: 15px 17px 19px;
-        opacity: 0;
+      animation: slideTooltip 0.3s ease-in-out 0s forwards;
 
-        @media (max-width: 420px) {
+      @media (max-width: 420px) {
+        animation: slideTooltipMobile 0.3s ease-in-out 0s forwards;
+
+        @keyframes slideTooltipMobile {
+          0% {
             top: 50%;
-            right: -170px;
+            opacity: 0;
+            transform: translate(-20px, -50%) scale(1.6);
+          }
+          100% {
+            opacity: 1;
             transform: translate(0, -50%) scale(1.6);
+          }
         }
+      }
+
+      @keyframes slideTooltip {
+        0% {
+          opacity: 0;
+          transform: translate(-20px, 0);
+        }
+        100% {
+          opacity: 1;
+          transform: translate(0, 0);
+        }
+      }
+    }
+  }
+
+  &.slide_next {
+    top: 290px;
+    left: 400px;
+    z-index: 1;
+    opacity: 1;
+    @media (min-width: 1100px) {
+      top: 354px;
+      left: 430px;
     }
 
-    & .student-tooltip__text {
-        font-size: 13px;
-        font-weight: 400;
-        line-height: 1.2;
+    @media (max-width: $wwa2 + px) {
+      top: 50%;
+      left: 400px;
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(1);
     }
-}
 
-.main-reg {
-    display: none;
+    &._active {
+      animation: slideNext $timer ease-in-out 0s forwards;
 
-    @media (max-width: 600px) {
-      display: block;
+      @keyframes slideNext {
+        0% {
+          top: 290px;
+          left: 400px;
+          z-index: 1;
+        }
+        40% {
+          top: 320px;
+          left: 440px;
+          z-index: 2;
+          transform: translate(-50%, -50%) scale(0.6);
+        }
+        100% {
+          top: 50%;
+          left: 50%;
+          z-index: 2;
+          transform: translate(-50%, -50%) scale(1);
+        }
+      }
+
+      @media (max-width: $wwa2 + px) {
+        animation: slideNextMobile $timer ease-in-out 0s forwards;
+
+        @keyframes slideNextMobile {
+          0% {
+            left: 400px;
+            z-index: 1;
+          }
+          40% {
+            z-index: 2;
+          }
+          100% {
+            left: 50%;
+            z-index: 2;
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    @media (min-width: 1100px) {
+      .student-card {
+        padding-top: 16px;
+        padding-bottom: 24px;
+      }
+      .student-briefly__call {
+        right: 0px;
+        bottom: -1px;
+        width: 49px;
+        height: 49px;
+      }
+      .estim__city-icon {
+        display: none;
+      }
+      .student-briefly__avatar {
+        margin-top: 15px;
+      }
+      .student-briefly__info {
+        margin-top: 20px;
+      }
+      .student-briefly__info-subtitle {
+        margin-top: 12px;
+        margin-bottom: 4px;
+      }
+      .student-briefly__info-block-icon {
+        --size: 24px;
+        margin-left: -10px;
+      }
+      .student-briefly__info-block:last-of-type {
+        margin-top: 11px;
+        transform: translateY(-6px);
+      }
+      .student-briefly__info-block:last-of-type
+        .student-briefly__info-block-icon {
+        --size: 20px;
+        margin-top: -7px;
+        margin-left: -22px;
+      }
+      .student-briefly__info-block:last-of-type
+        .student-briefly__info-block-text {
+        transform: translateY(-4px);
+      }
+    }
+  }
+
+  & .student-card {
+    width: 264px;
+    @media (min-width: 1100px) {
+      width: 288px;
+      padding-bottom: 25px;
+    }
+    max-width: none;
+  }
+
+  & .student-tooltip {
+    position: absolute;
+    top: 20px;
+    right: -140px;
+    width: 100%;
+    max-width: 173px;
+    padding: 15px 17px 19px;
+    background: linear-gradient(102.51deg, #c5f7ff 4.8%, #ffffff 112.27%);
+    border-radius: 5px;
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    @media (min-width: 1100px) {
+      top: 48px;
+      right: -144px;
+      max-width: 187px;
+      padding: 17px 20px 19px;
     }
 
     @media (max-width: 420px) {
-        margin-top: -20px;
+      top: 50%;
+      right: -170px;
+      transform: translate(0, -50%) scale(1.6);
     }
+  }
+
+  & .student-tooltip__text {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.2;
+    @media (min-width: 1100px) {
+      font-size: 15px;
+      line-height: 1.2;
+    }
+  }
+}
+
+.main-reg {
+  display: none;
+
+  @media (max-width: 600px) {
+    display: block;
+  }
+
+  @media (max-width: 420px) {
+    margin-top: -20px;
+  }
 }

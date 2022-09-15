@@ -1,9 +1,10 @@
 .header {
   position: relative;
+  z-index: 3;
   padding: 20px 0;
+  padding-top: 18px;
   background: #fff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  z-index: 3;
 
   @media (max-width: $wwa3 + px) {
     padding: 13px 0;
@@ -13,9 +14,9 @@
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 4;
     width: 100%;
     background: #fff;
-    z-index: 4;
     transition: 0.3s ease-in-out;
 
     & .logo__link_light {
@@ -24,6 +25,12 @@
         filter: none;
         transition: $tr;
       }
+    }
+  }
+  & .logo__link {
+    @media (min-width: 1100px) {
+      height: 51px;
+      transform: translateY(4px);
     }
   }
 }
@@ -60,15 +67,22 @@
   }
 
   & .auth__login {
-    background: #fff;
+    padding-top: 14px;
+    padding-right: 20px;
+    padding-bottom: 16px;
+    padding-left: 24px;
+    /* font-weight: 600; */
+    font-size: 16px;
+    line-height: 100%;
     color: $main;
+    background: #fff;
   }
 }
 
 .header_auth {
   & .user__block {
-    display: block;
     position: relative;
+    display: block;
     margin: 0 0 0 auto;
   }
 
@@ -90,11 +104,11 @@
   position: absolute;
   top: 0;
   right: -12px;
-  width: 18px;
-  height: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 18px;
+  height: 18px;
   background: #fa3600;
   border-radius: 50%;
 
@@ -153,31 +167,31 @@
 }
 
 .menu {
-  max-width: 650px;
   width: 100%;
+  max-width: 654px;
 
   @media (max-width: $wwa + px) {
     position: fixed;
     top: 0;
     right: -100%;
-    max-width: none;
-    width: 100%;
-    height: 100%;
-    background: #f0f7f9;
     z-index: 3;
-    transition: $tr;
+    width: 100%;
+    max-width: none;
+    height: 100%;
     overflow-y: auto;
+    background: #f0f7f9;
+    transition: $tr;
 
     &._show {
       right: 0;
     }
 
     & .menu__body {
-      min-height: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      min-height: 100%;
       padding: 48px 0;
     }
 
@@ -189,14 +203,14 @@
 
 .menu-user {
   & .menu-user__box-header {
-    display: none;
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1;
+    display: none;
     width: 100%;
     height: 58px;
     background: #fff;
-    z-index: 1;
   }
 
   & .menu__body {
@@ -212,8 +226,8 @@
     @media (max-width: $wwa2 + px) {
       display: flex !important;
       min-height: 0%;
-      background: #fff;
       padding: 73px 0 75px 0;
+      background: #fff;
 
       & .menu__user-block {
         display: flex;
@@ -223,11 +237,11 @@
       }
 
       & .menu__user-avatar {
-        min-width: 106px;
         width: 106px;
+        min-width: 106px;
         height: 106px;
-        border-radius: 100%;
         overflow: hidden;
+        border-radius: 100%;
 
         & img {
           width: 100%;
@@ -237,31 +251,31 @@
       }
 
       & .menu__user-name {
+        margin: 10px 0 0 0;
         font-size: 16px;
         font-weight: 700;
         text-transform: uppercase;
-        margin: 10px 0 0 0;
       }
 
       & .menu__list {
         & a[data-user-application] {
           &::after {
-            content: attr(data-user-application);
             position: absolute;
             top: 50%;
             right: -8px;
-            width: 18px;
-            height: 18px;
-            transform: translate(100%, calc(-50% - 2px));
             display: flex;
             align-items: center;
             justify-content: center;
-            background: #fa3600;
-            border-radius: 20px;
+            width: 18px;
+            height: 18px;
+            margin: 0 0 0 13px;
             font-size: 10px;
             font-weight: 700;
             color: #fff;
-            margin: 0 0 0 13px;
+            content: attr(data-user-application);
+            background: #fa3600;
+            border-radius: 20px;
+            transform: translate(100%, calc(-50% - 2px));
           }
         }
       }
@@ -278,6 +292,9 @@
   align-items: center;
   justify-content: space-between;
 
+  @media (min-width: 1100px) {
+    padding-top: 1px;
+  }
   @media (max-width: $wwa + px) {
     flex-direction: column;
   }
@@ -291,8 +308,8 @@
     margin: 32px 0 0 0;
 
     & .btn_border {
-      color: $accent;
       margin: 0 12px 0 0;
+      color: $accent;
     }
   }
 }
@@ -301,13 +318,18 @@
   &:not(:last-child) {
     margin: 0 24px 0 0;
   }
+  &:first-child {
+    @media (min-width: 1100px) {
+      margin-right: 36px;
+    }
+  }
 
   & a {
+    position: relative;
     font-size: 16px;
     color: $main;
     text-transform: uppercase;
     transition: $tr;
-    position: relative;
 
     @media (max-width: $wwa + px) {
       color: $main !important;
@@ -318,15 +340,15 @@
     }
 
     &::before {
-      content: "";
       position: absolute;
       bottom: -2px;
       left: 50%;
       width: 0;
       height: 1px;
-      transform: translate(-50%, 0);
+      content: "";
       background: $main;
       transition: $tr;
+      transform: translate(-50%, 0);
     }
 
     &:hover {
@@ -346,6 +368,16 @@
 .auth {
   margin: 0 0 0 auto;
 
+  @media (min-width: 1100px) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0;
+    margin-left: clamp(10px, 10%, 105px);
+  }
+  @media (min-width: 1100px) {
+    padding-top: 3px;
+  }
   @media (max-width: 600px) {
     display: none;
   }
@@ -353,12 +385,26 @@
 
 .auth__signup {
   color: $accent;
+  @media (min-width: 1100px) {
+    padding-top: 13px;
+    padding-right: 19px;
+    padding-bottom: 13px;
+    padding-left: 19px;
+    font-family: "Maven Pro", sans-serif;
+
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 0.005em;
+  }
 }
 
 .auth__login {
+  margin: 0 0 0 20px;
   color: #fff;
   background: $accent;
-  margin: 0 0 0 20px;
+  @media (min-width: 1100px) {
+    margin-bottom: 1px;
+  }
 
   &:hover {
     color: #fff;
@@ -374,17 +420,17 @@
   &:hover {
     & + .user__menu {
       bottom: 0;
+      pointer-events: all;
       visibility: visible;
       opacity: 1;
-      pointer-events: all;
     }
   }
 }
 
 .user__name {
   font-size: 16px;
-  text-transform: uppercase;
   text-decoration: underline;
+  text-transform: uppercase;
 }
 
 .user__img-block {
@@ -395,8 +441,8 @@
 .user__img {
   width: 45px;
   height: 45px;
-  border-radius: 50%;
   overflow: hidden;
+  border-radius: 50%;
 
   & img {
     width: 100%;
@@ -407,17 +453,17 @@
 
 .user__menu {
   position: absolute;
-  bottom: -20px;
   right: 0;
+  bottom: -20px;
   width: 228px;
-  transform: translate(0, calc(100% + 22px));
+  padding: 30px 44px 22px;
+  pointer-events: none;
+  visibility: hidden;
   background: #fff;
   box-shadow: 2px 4px 12px rgba(132, 132, 132, 0.25);
-  padding: 30px 44px 22px;
-  visibility: hidden;
   opacity: 0;
   transition: $tr;
-  pointer-events: none;
+  transform: translate(0, calc(100% + 22px));
 
   @media (max-width: $wwa2 + px) {
     display: none;
@@ -425,45 +471,45 @@
 
   &:hover {
     bottom: 0;
+    pointer-events: all;
     visibility: visible;
     opacity: 1;
-    pointer-events: all;
   }
 
   &::before {
-    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 30px;
+    content: "";
     transform: translate(0, -100%);
   }
 }
 
 .user__list-link {
   display: block;
+  padding: 10px 0;
   font-size: 16px;
   font-weight: 400;
   text-transform: uppercase;
-  padding: 10px 0;
 
   &[data-user-application] {
     display: flex;
 
     &::after {
-      content: attr(data-user-application);
-      width: 18px;
-      height: 18px;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: #fa3600;
-      border-radius: 20px;
+      width: 18px;
+      height: 18px;
+      margin: 0 0 0 13px;
       font-size: 10px;
       font-weight: 700;
       color: #fff;
-      margin: 0 0 0 13px;
+      content: attr(data-user-application);
+      background: #fa3600;
+      border-radius: 20px;
     }
   }
 }
@@ -472,44 +518,44 @@
   display: none;
 
   @media (max-width: $wwa + px) {
-    width: 32px;
-    height: 32px;
+    position: relative;
+    z-index: 3;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 32px;
+    height: 32px;
     margin: 0 0 0 24px;
-    position: relative;
-    z-index: 3;
 
     & span {
       position: relative;
+      display: block;
       width: 100%;
       height: 3px;
-      display: block;
       background: $main;
 
       &::before {
-        content: "";
         position: absolute;
         top: -8px;
         left: 0;
         width: 100%;
         height: 3px;
+        content: "";
         background: $main;
-        transform: translate(0, -50%);
         transition: $tr;
+        transform: translate(0, -50%);
       }
 
       &::after {
-        content: "";
         position: absolute;
         bottom: -8px;
         left: 0;
         width: 100%;
         height: 3px;
+        content: "";
         background: $main;
-        transform: translate(0, 50%);
         transition: $tr;
+        transform: translate(0, 50%);
       }
     }
 
